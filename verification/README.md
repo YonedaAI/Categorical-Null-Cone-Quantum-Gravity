@@ -4,7 +4,7 @@ Run these commands after cloning.
 
 ```sh
 cd lean
-lake exe cache get Mathlib.Algebra.Star.Subalgebra Mathlib.Algebra.Ring.Subring.Basic Mathlib.GroupTheory.GroupAction.Basic Mathlib.Data.Matrix.Mul Mathlib.RingTheory.TwoSidedIdeal.Operations Mathlib.Tactic.Abel
+lake exe cache get Mathlib.Algebra.Star.Subalgebra Mathlib.Algebra.Ring.Subring.Basic Mathlib.GroupTheory.GroupAction.Basic Mathlib.Data.Matrix.Mul Mathlib.Data.Matrix.Basis Mathlib.RingTheory.TwoSidedIdeal.Operations Mathlib.Tactic.Abel
 lake build
 ```
 
@@ -12,6 +12,7 @@ Lean 4.35.0 and the mathlib revision at tag v4.35.0 are pinned in the project. A
 
 | Module | Declarations | Mathematical scope |
 | --- | --- | --- |
+| ClassicalImage | `not_surjective_of_noncommuting`, `not_surjective_to_matrix` | A semiring homomorphism from a commutative source cannot be onto a target containing two elements whose products depend on their order. Opposite matrix units supply witnesses in any finite matrix algebra with at least two indices over a nontrivial semiring. |
 | Transport | `agree_of_generates`, `natural_on_arrow`, `star_natural_on_arrow` | Ring maps agree under generation as a ring over the integers. The separate star-algebra theorem permits scalar coefficients and applies over the complex numbers. Both prove equality of a comparison square from its equation on generators. |
 | Invisible | `mem_stableKernel`, `stableKernel_le`, `map_mem_stableKernel`, `stableKernel_greatest` | On an inclusion preorder, intersecting preimages of local two-sided ideals gives the largest compatible family below them. The proofs assume ring transports with identity and composition. The ideals here are algebraic two-sided ideals. Involution and norm closure would require extra hypotheses. |
 | Pauli | `product_sign`, `cnot_involutive`, `embedding_square` | On every signed Boolean basis state, verifies the product sign and the one-bit to two-bit transport of a shift/phase word by controlled-NOT conjugation. Extension to a complex matrix algebra and spanning by character orthogonality are proved in Paper I. |

@@ -5,3 +5,7 @@
 ✔ [1306/1308] Built Cmrps.Invisible (2.0s)
 ✔ [1307/1308] Built Cmrps (848ms)
 Build completed successfully (1308 jobs).
+
+After adding Cmrps.ClassicalImage
+✔ [1315/1317] Built Cmrps.ClassicalImage (3.8s)
+Build completed successfully (1317 jobs).

@@ -17,6 +17,8 @@ The four-dimensional realization conjecture remains open. Its first physical tes
 
 The Lean project covers the shift/phase product sign and controlled-NOT embedding on signed basis states, the ring-level comparison on generators, the universal property of the stable invisible ideals on an inclusion preorder, descent to an orbit-type quotient, the triangle consistency condition and finite matrix sewing. The verification notes give exact theorem names, hypotheses and reproduction commands. [Lean sources](lean/Cmrps) · [Verification notes](verification/README.md)
 
+A follow-up traces seven of the original manuscripts to dated Git commits and checks a proposed identification of observables. Two opposite matrix units prove that a homomorphism from the commutative classical observable algebra cannot be onto the full matrix algebra. The same obstruction applies to a bounded-operator algebra on a Hilbert space of dimension at least two. [Source comparison](context/manuscript-comparison.md) · [Lean proof](lean/Cmrps/ClassicalImage.lean)
+
 ## Build the papers and readers
 
 The PDFs and HTML reading editions are included. To rebuild one manuscript, install TeX Live with `latexmk` and `make4ht`, and run the following from the repository root. The HTML renderer uses `uv` to supply its pinned Python parser.
