@@ -1,0 +1,25 @@
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\linespread{1.0}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{1.5em}
+\usepackage{amsmath,amssymb,amsthm,graphicx,xcolor,tikz,booktabs,tabularx,array,longtable}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,columns=fullflexible}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\author{Matthew Long\\\small The YonedaAI Collaboration, YonedaAI Research Collective\\\small Chicago, IL\\\small\texttt{matthew@yonedaai.com}}
+\date{26 November 2026}
+\newcommand{\series}[1]{\\[4pt]{\normalsize #1 of \emph{Categorical Null-Cone Quantum Gravity}}}
+\newcommand{\papersidebar}[1]{\AddToHookNext{shipout/foreground}{\begin{tikzpicture}[remember picture,overlay]\node[rotate=90,anchor=south,font=\footnotesize\sffamily\color{gray},inner sep=0pt] at ([xshift=30pt,yshift=.5\paperheight]current page.south west) {GrokRxiv:2026.11.#1\quad [hep-th]\quad 26 Nov 2026};\end{tikzpicture}}}

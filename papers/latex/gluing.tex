@@ -1,0 +1,1400 @@
+\documentclass[11pt,letterpaper]{article}
+\input{preamble}
+\title{Gravitational Gluing and Categorical Descent\series{Part III}}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\tr}{\operatorname{Tr}}
+\begin{document}
+\ifdefined\HCode\else\papersidebar{gluing}\fi
+\maketitle
+\begin{abstract}
+Gluing two gravitational regions requires a prescription for the fields they
+share. At a spatial interface the two descriptions must assign consistent
+charges to the same corner. At a cut in time a transition amplitude pairs
+preparations on opposite sides of a common Hilbert space. We study the relation
+between these operations in a finite boundary model. An orthogonal projector
+selects the admissible intermediate states. Given an identification of two
+candidate cuts, their amplitudes agree on specified preparations and detections
+exactly when the difference of the transported projectors has zero matrix
+elements between the corresponding probe spaces. Complete probes therefore
+determine the matching projector. A two-sector slab calculation detects a mismatch between sector selection
+and the proposed evolution while all contractions remain associative. A separate example shows how compatible local probability measures
+can fail to extend to a global state. These calculations identify data that a
+categorical account of null-cone amplitudes must supply, including the
+identification of the physical cut space and the restrictions under which its
+pairing has finite norm.
+\end{abstract}
+
+\section{A cut through a causal region}
+\label{sec:region}
+An observer sends a signal at \(p\) and receives its reply at \(q\). In
+Minkowski space the part of spacetime accessible during this experiment is
+the causal diamond \(J^+(p)\cap J^-(q)\). One can cover the diamond by
+smaller regions, separate a slice into two pieces sharing a corner, or insert
+a cut between an earlier and a later preparation. Each operation uses some
+of the same geometric data. They give maps with different sources and
+targets.
+
+Example 4.8 in Long's February manuscript equips a category of Minkowski
+diamonds and inclusions with covers \cite{long}. A cover gives a place to
+compare restrictions of field configurations. Chandrasekaran works with
+intersecting null sheets in first-order vacuum gravity. His matching rules
+involve fields, frames and orientations, and his composition law evaluates
+an amplitude between fixed external states \cite[Secs.~3.6, 4.4]{nc}.
+The question here is what one can check about the relation between these two
+constructions before computing a continuum path integral.
+
+Consider an intermediate Hilbert space of dimension two. Suppose the first
+boundary preparation reaches just the first basis state, and the final
+detector responds to that same state. Accepting only the first intermediate
+label gives amplitude one. Accepting only the second gives amplitude zero.
+Both prescriptions are regular finite sums. Either can be used as a factor
+in a chain of associative matrix products. The discrepancy lies in what is
+being summed over. The calculation generalizes to preparations and detectors
+that probe different subspaces. Their ability to distinguish two prescriptions
+is exactly the operator norm of a compression of the difference, once one
+allows all normalized vectors in the probe spaces.
+
+A boundary state space and an amplitude for a region are familiar from the
+general boundary formulation of Oeckl \cite{oeckl}. Donnelly and Freidel
+construct extended phase spaces for gauge systems with boundary and exhibit
+the surface symmetries that act when adjoining two regions \cite{df}. Our
+finite constructions use elementary representation theory and Hilbert space
+identities. Their purpose is to make a proposed comparison of gravitational
+theories sensitive to a wrong identification at a cut. They also give a precise
+meaning to agreement on a restricted family of physically preparable states.
+
+\section{Restrictions, embeddings and propagators}
+\label{sec:variance}
+Let \(\mathcal D\) be a chosen category of regions and admissible embeddings.
+An object can carry an oriented boundary, labels on its faces and an allowed
+choice of frame at a corner. An embedding must specify what happens to those
+decorations. For instance, a corner that is a boundary component in a small
+diamond can become an interior surface in a larger one. Comparing an
+observable attached to that corner requires a rule for identifying the
+measurement in the larger region. A clean test may begin with a class of
+regular cuts and a fixed boundary sector.
+
+\subsection{Classical descent}
+For a family \(F\) of scalar field configurations, write \(F(D)\to F(U)\)
+for restriction along \(U\hookrightarrow D\). Suppose \(U,V\) form a cover
+of \(D\) and \(W=U\cap V\) belongs to the site. The sheaf condition for this
+cover says that
+\begin{equation}
+ F(D)\longrightarrow F(U)\times_{F(W)}F(V)
+ \label{eq:fiber}
+\end{equation}
+is a bijection. A pair in the fiber product has exactly the same restriction
+to \(W\). The two directions of the bijection express existence and uniqueness
+of a global field with those restrictions. Intersections of diamonds need
+not themselves be diamonds. For a diamond basis one compares the data on all
+common subdiamonds, or uses a covering sieve.
+
+Gauge fields can agree through a choice of gauge transformation on \(W\).
+Keeping such a transformation as part of the overlap datum permits
+automorphisms of a local solution. On triple overlaps the identifications
+must compose coherently. A groupoid then records the descent data and
+equivalences between choices. Set-valued matching after passing to orbits
+too early can discard the map that tells the two frames how to meet.
+
+\subsection{Observable algebras}
+A net \(A\) assigns a map \(A(U)\to A(D)\) to an inclusion. A state on the
+larger algebra restricts by precomposition. This convention is used in
+locally covariant field theory \cite{bfv}. If only \(A(W)\), \(A(U)\) and
+\(A(V)\) are given, a candidate universal algebra is the pushout of
+\(A(U)\leftarrow A(W)\to A(V)\), in a specified category of algebras.
+Its universal property concerns maps \emph{out of} the assembled algebra.
+A prescription for restrictions of states has a different variance.
+A positive functional is generally not an algebra homomorphism into
+\(\CC\), so the universal property alone does not extend an arbitrary pair
+of states.
+
+Even a trivial interface illustrates a choice one must make. Take
+\(A(W)=\CC\) and two copies of the algebra of functions on two points as
+\(A(U)\) and \(A(V)\). Each local algebra is generated by an involution
+\(s=s^*\) with \(s^2=1\). Their algebraic pushout in unital complex
+star algebras has generators \(s,t\) with \(s^2=t^2=1\). Both
+generators are self-adjoint. The pushout has a representation with
+\[
+ s=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\qquad
+ t=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+\]
+Thus \(st=ts\) is an extra relation. Imposing it yields the four-point
+commutative algebra. The second choice can express independent classical
+labels. Choosing the bare pushout fails to impose that physical rule.
+Similarly a global gravitational algebra would have to encode which
+observables commute and which boundary charges are shared.
+
+\subsection{Temporal composition}
+A propagator between two boundary preparations has type
+\(T_M:\HH_{\rm in}\to\HH_{\rm out}\). Opposite orientations at an
+intermediate boundary allow one region's output to pair with the next
+region's input. In finite dimension, once this identification and its
+normalization have been fixed, inserting an orthonormal basis gives
+\begin{equation}
+ \langle b,T_2 T_1 a\rangle
+    =\sum_j \langle b,T_2 e_j\rangle\langle e_j,T_1 a\rangle .
+ \label{eq:res}
+\end{equation}
+We take the complex inner product linear in the second argument. Both sides
+of this equation are complex numbers. Neither a global field nor a map
+from an algebra pushout is its output. A proposed relation between
+these operations must supply maps that connect the types in question.
+
+\section{Fields on a common corner}
+\label{sec:corner}
+In the null-cone construction, two null sheets meet at a codimension-two
+corner. Small spacelike caps regulate their opposite ends.
+Chandrasekaran describes spatial gluing by matching the induced fields and
+identifying states under a simultaneous change of frame
+\cite[Secs.~3.6, 4.4]{nc}. For preparations of definite areas \(A_+\) and
+\(A_-\), cancellation of the charges of the simultaneous uniform boost
+requires \(A_+=A_-\). Equality of these two numbers tests one charge.
+The prescription also matches the field data in his Eq.~(3.62).
+
+Classically, suppose two Hamiltonian boundary actions have moment maps
+\(\mu_L,\mu_R\), written in the same dual Lie algebra using a common frame.
+Choose outward orientations for both sides. The charge of a simultaneous
+transformation has moment map \(\mu_L+\mu_R\). In the regular setting,
+reduction at zero involves first taking the locus
+\(\mu_L+\mu_R=0\) and then dividing by the diagonal boundary group.
+A smooth symplectic quotient requires the requisite regularity of the level
+set and action. At a stabilizer the quotient can be singular. The finite
+models below do not assume that null gravitational data form a smooth
+global quotient.
+
+\begin{example}[Relative signs]
+A boundary frame sign takes values in \(\{+1,-1\}\). Record the two signs
+\(s,t\) before either frame has been divided out. A single simultaneous
+transformation sends \((s,t)\) to \((-s,-t)\). The product \(st\) is invariant
+and distinguishes the two diagonal orbits. Each sign alone has one orbit
+under the individual sign change. The product of the individually reduced
+sets therefore has one point. It cannot carry the two values of \(st\).
+\end{example}
+
+There is a linear version of this calculation. Let a finite group \(G\)
+act unitarily on \(V_L,V_R\). Suppose the model prescribes the diagonal
+action \(U(g)=U_L(g)\otimes U_R(g)\) and requires its invariants. The average
+\begin{equation}
+ P_G=\frac1{|G|}\sum_{g\in G}U(g)
+ \label{eq:reynolds}
+\end{equation}
+is the orthogonal projection onto \((V_L\otimes V_R)^G\).
+Indeed inversion in \(G\) gives \(P_G^*=P_G\), and each group element occurs
+\(|G|\) times among products \(g h\), so \(P_G^2=P_G\). For any \(k\in G\),
+\(U(k)P_G=P_G\), and \(P_Gv=v\) on the invariant space. The averaging factor
+fixes the normalization required for repeated imposition of the same constraint.
+
+Take \(G=\mathbb Z/2\) and
+\(V_L=V_R=\CC e_+\oplus\CC e_-\), where the generator has eigenvalues
+\(1,-1\). In the tensor basis \(++,+-,-+,--\) the projector is
+\(\operatorname{diag}(1,0,0,1)\). Both \(++\) and \(--\) have cancelling
+charges, since the sign representation is self-dual. Projecting separately
+onto \(V_L^G\) and \(V_R^G\) discards \(--\). Retaining the full tensor
+product additionally keeps \(+-\) and \(-+\). The common cut space in this
+example has dimension two. The two incorrect procedures give dimensions
+one and four.
+
+\begin{proposition}[Multiplicity of a matched sector]
+For finite-dimensional unitary representations of a finite group, write
+\(V_L=\bigoplus_\rho M_{L,\rho}\otimes V_\rho\) and
+\(V_R=\bigoplus_\sigma M_{R,\sigma}\otimes V_\sigma\), with irreducible
+complex representations \(V_\rho\). Then
+\[
+ \dim (V_L\otimes V_R)^G
+   = \sum_\rho \dim M_{L,\rho}\,\dim M_{R,\rho^\vee}.
+\]
+\end{proposition}
+\begin{proof}
+The invariant part of \(V_\rho\otimes V_\sigma\) identifies with
+\(\operatorname{Hom}_G(V_\rho^\vee,V_\sigma)\). This space has dimension
+one when the representations are equivalent and vanishes otherwise by
+Schur's lemma. The group acts trivially on the multiplicity spaces.
+Summing their dimensions proves the formula.
+\end{proof}
+
+For a non-self-dual charge the right label must therefore be converted to
+the dual of the left. If one declares the right Hilbert space to have the
+opposite orientation at the outset, the dual may already be built into its
+labels. A comparison of two formulas for gluing must use the same convention.
+A dimension count can miss a wrong pairing when the two candidate
+representations have equal dimensions.
+
+\subsection{A round corner in a vacuum solution}
+A common area is only one part of the classical matching conditions.
+They can be evaluated on an actual double cone. In Minkowski space use
+coordinates \((t,r,\theta,\varphi)\), set \(c=1\), and take vertices at
+\((t,\mathbf x)=(-R,0),(R,0)\), with \(R>0\).
+The null sheets meet at the round sphere \(S\) of radius \(R\) in the
+\(t=0\) slice. Choose the cut identification \(Y\) to be the identity on
+the angular coordinates. The four-dimensional vacuum curvature vanishes,
+but the corner has a nonzero expansion along each of its null normals.
+It is therefore a useful first comparison for the transport of extrinsic
+data.
+
+Normalize the future null normals by
+\(\ell=\partial_t+\partial_r\) and
+\(n=(\partial_t-\partial_r)/2\), so that \(g(\ell,n)=-1\).
+Define \(K^{(\ell)}=\tfrac12\mathcal L_\ell q\) and
+\(K^{(n)}=\tfrac12\mathcal L_n q\), pulled back to \(S\).
+Writing \(\sigma_{AB}\) for the unit sphere metric gives
+\begin{align}
+ q_{AB}&=R^2\sigma_{AB},\\
+ K^{(\ell)}_{AB}&=R\sigma_{AB},&
+ K^{(n)}_{AB}&=-\tfrac12 R\sigma_{AB}.
+ \label{eq:round-corner}
+\end{align}
+Indeed differentiating \(r^2\sigma_{AB}\) along the two normal fields
+gives \(2r\sigma_{AB}\) and \(-r\sigma_{AB}\), respectively.
+The expansions are \(2/R\) and \(-1/R\). The two trace-free parts vanish.
+In this frame the normal connection one-form
+\(\varpi_A=-n_b\nabla_A\ell^b\) is zero. The tangential derivative of the
+radial unit vector is tangent to the sphere, so it does not contribute
+when contracted with \(n\).
+
+Use a second frame differing by a smooth rapidity
+\(\gamma:S\to\mathbb R\). Thus \(\ell'=e^\gamma\ell\) and
+\(n'=e^{-\gamma}n\). Their inner product stays fixed. Upon tangential
+projection the terms in \(\mathcal L_{e^\gamma\ell}g\) proportional to
+derivatives of \(e^\gamma\) vanish, since each contains a factor of the
+normal covector. Consequently
+\begin{equation}
+ q'=q,\quad K^{(\ell')}=e^\gamma K^{(\ell)},\quad
+ K^{(n')}=e^{-\gamma}K^{(n)},\quad
+ \varpi'=\varpi+d\gamma .
+ \label{eq:boost}
+\end{equation}
+The last equality follows by differentiating \(e^\gamma\ell\) explicitly:
+the derivative of the exponential gives
+\(-n_b\ell^b\,d\gamma=d\gamma\).
+These are the four matching rules of Chandrasekaran, Eq.~(3.62), for
+\(Y=1\) in this convention \cite{nc}.
+For example choose \(\gamma=\varepsilon\cos\theta\) with constant
+\(\varepsilon\). Then
+\(\varpi'_\theta=-\varepsilon\sin\theta\) even though the induced metric,
+its determinant and the area \(4\pi R^2\) are unchanged. A comparison
+which merely tests equality of the coordinate components
+\(\varpi'_\theta\) and \(\varpi_\theta\) would incorrectly reject this
+change of frame. The \(d\gamma\) term specifies how the observable must be
+transported. In contrast \(d\varpi'=d\varpi\) compares the curvature of
+the normal connection directly.
+
+The converse mistake is possible too. Suppose only the total area is used
+to declare that two intrinsic corner metrics match. A round sphere and a
+nonspherical ellipsoid in a flat spatial slice can be rescaled to have the
+same area. No intrinsic isometry identifies them. For an ellipsoid of
+revolution parametrized by
+\[
+ (a\sin\theta\cos\varphi,\ a\sin\theta\sin\varphi,\ c_0\cos\theta),
+ \qquad a>0,\ c_0>0,\ a\ne c_0,
+\]
+the intrinsic Gaussian curvature is
+\[
+ \mathcal K(\theta)=
+ \frac{c_0^2}{(a^2\cos^2\theta+c_0^2\sin^2\theta)^2}.
+\]
+To check this, the first fundamental form has coefficients
+\(E=a^2\cos^2\theta+c_0^2\sin^2\theta\) and \(G=a^2\sin^2\theta\).
+The magnitudes of the two principal curvatures are
+\(ac_0/E^{3/2}\) and \(c_0/(a\sqrt E)\). Their product gives the displayed
+formula. It has different values at the pole and the equator whenever
+\(a\ne c_0\). Uniform rescaling preserves that distinction. The ellipsoid
+is a local spacelike cut with null normals. We do not assume it is
+the intersection of two complete light cones with smooth vertices.
+The example isolates the failure of area to determine an intrinsic metric.
+The actual matching rule requires an angular identification \(Y\) such
+that \(q_+=Y^*q_-\).
+
+\subsection{The surviving relative boost}
+The charge conjugate to a corner boost also records the orientation
+choice. At a fixed angular label strip off the unit solid-angle measure
+and let \(k_\pm=\varrho_{S,\pm}^2/(8\pi G_N)\) be the area density
+charges of the two faces, following Eq.~(3.63) of Chandrasekaran.
+Write \(\Gamma_R,\Gamma_L\) for their boost coordinates, and put
+\[
+ k=(k_++k_-)/2,\quad d=k_+-k_-,\qquad
+ \gamma=\Gamma_R-\Gamma_L,\quad
+ \alpha=(\Gamma_R+\Gamma_L)/2.
+\]
+The corner contribution to the canonical one-form is
+\begin{equation}
+ k_+\,\delta\Gamma_R-k_-\,\delta\Gamma_L
+       =k\,\delta\gamma+d\,\delta\alpha .
+ \label{eq:relative}
+\end{equation}
+This identity precedes the constraint. Opposite orientations produce the
+minus sign. The matching of induced metrics sets \(d=0\).
+On the constraint surface, tangent variations have \(\delta d=0\);
+the pullback of the two-form in this sector is
+\(\delta k\wedge\delta\gamma\). A simultaneous shift
+\((\Gamma_R,\Gamma_L)\mapsto(\Gamma_R+\beta,\Gamma_L+\beta)\) changes
+\(\alpha\) while leaving \(\gamma\) fixed. It is a null direction of this
+two-form. Dividing out this shift leaves the relative boost and its common
+conjugate charge, as in Eq.~(3.64) \cite{nc}. Variations of the angular
+identification and charges enter the full expression in Eq.~(3.66).
+Equation~\eqref{eq:relative} is the boost sector of that result.
+
+For the constant mode on the round sphere the integrated charge is
+\(\mathcal K_S=A/(8\pi G_N)=R^2/(2G_N)\). If a comparison sums both
+outward charges with the same intrinsic sign before imposing the matching
+condition, it assigns \(2\mathcal K_S\) to a uniform simultaneous boost,
+where Eq.~\eqref{eq:relative} gives zero charge for the matched gauge
+shift. Fixing an external frame can make a boost at a genuine exterior
+boundary observable. An artificial internal seam carries different data.
+The transformation at this seam is simultaneous on the two copies. This
+is the feature represented by the diagonal finite group action above.
+
+\section{The physical cut projector}
+\label{sec:projector}
+Let \(H\) be a finite-dimensional Hilbert space of extended boundary data.
+An orthogonal projection \(P:H\to H\) selects the physical data for the cut.
+Write \(K=\im P\) with the induced inner product and
+\(\iota:K\hookrightarrow H\) for the isometric inclusion. Then
+\(\iota^*\iota=1_K\) and \(\iota\iota^*=P\).
+For a left preparation kernel \(A:X\to H\) and a right transition kernel
+\(B:H\to Y\), passage to physical states gives
+\begin{equation}
+ (B\iota)(\iota^*A)=BPA .
+ \label{eq:sew}
+\end{equation}
+Choosing an orthonormal basis of \(K\) resolves the identity on \(K\).
+Representing that resolution on \(H\) gives \(P\).
+This places Eq.~\eqref{eq:res} and the projected contraction in the
+same convention without adding a constraint twice.
+
+A diagonal special case has \(H=\CC^I\) for a finite label set \(I\) and
+\(P e_i=p_i e_i\) with \(p_i\in\{0,1\}\). In the column convention for
+amplitudes,
+\[
+ (BPA)_{yx}=\sum_{i\in I} B_{yi}\,p_i\,A_{ix}.
+\]
+A change of basis in \(H\) generally makes \(P\) nondiagonal. The amplitude
+stays the same if \(A,B,P\) transform together. Carrying across only the
+selected numerical labels can change the physical subspace.
+
+\begin{lemma}[Repeated cuts]
+For two fixed intermediate projections \(P_1,P_2\) and three kernels
+\(A:X_0\to H_1\), \(B:H_1\to H_2\), \(C:H_2\to X_3\),
+contracting either adjacent pair first gives
+\[
+ (C P_2 B)P_1 A=C P_2(BP_1 A).
+\]
+A cylinder acting as the identity on the physical subspace has extended
+kernel \(P_i\), and inserting a second copy there leaves the contraction
+unchanged.
+\end{lemma}
+\begin{proof}
+Matrix multiplication is associative. The second assertion follows from
+\(P_i^2=P_i\). Equivalently, insert the isometries \(\iota_i\) and their
+adjoints in Eq.~\eqref{eq:sew}.
+\end{proof}
+
+A non-unit weight \(w\) on one admissible label would give \(w^2\) after
+inserting two copies of the same weighted diagonal matrix. A resolution of
+the identity written in a nonorthogonal basis can include a nontrivial
+weight, but the dual basis or inverse Gram matrix also occurs. For example,
+in \(K=\CC\) let \(v=2e\) with \(e\) of norm one. Then
+\(|v\rangle\langle v|=4\cdot 1_K\). Dividing by the Gram factor
+\(\langle v,v\rangle=4\) restores the identity. A repeated-cylinder check
+can expose a normalization error before one compares different cuts.
+
+More generally, let \(F:\CC^n\to H\) map coefficient vectors to
+preparations, and suppose \(F\) has independent columns. The span inherits
+the Gram matrix \(G=F^*F\). The projector onto the span is
+\(FG^{-1}F^*\), since this operator fixes the columns of \(F\) and vanishes
+on their orthogonal complement. If the columns are dependent one first
+divides the coefficient space by \(\ker F\), or uses the inverse on
+\((\ker F)^\perp\). A finite positive Gram matrix in a model therefore tells
+one how to remove a redundant label. The operation presupposes a specified
+pairing of preparations.
+
+\subsection{Observables on the matched space}
+A restriction to physical states has a natural linear map on observables:
+compress an extended observable \(a\) to
+\(c(a)=\iota^*a\iota\) on \(K=\im P\). Although this map preserves the
+adjoint and the unit, it can fail to preserve multiplication.
+This matters when \(c\) is proposed as one leg of the functor to
+star algebras. For two bounded operators \(a,b\) on \(H\),
+\begin{equation}
+ c(ab)-c(a)c(b)=\iota^* a(1-P)b\iota .
+ \label{eq:compress}
+\end{equation}
+The extra term is a path through the discarded sector between the two
+insertions. A measurement on one cut alone can miss it.
+
+\begin{proposition}[Multiplicative compression]
+\label{prop:multiplicative}
+For a unital complex star subalgebra \(\mathcal B\subseteq
+\operatorname{End}(H)\), the restriction of \(c\) to \(\mathcal B\) is an
+algebra homomorphism if and only if \(P\) commutes with every element of
+\(\mathcal B\).
+\end{proposition}
+\begin{proof}
+If \(P\) commutes with \(\mathcal B\), then
+\((1-P)b\iota=0\) for all \(b\in\mathcal B\), so
+Eq.~\eqref{eq:compress} gives multiplicativity.
+Conversely take \(a=b^*\). The right side is the positive operator
+\(((1-P)b\iota)^*((1-P)b\iota)\). If the compression is
+multiplicative, this positive operator vanishes, hence
+\((1-P)b\iota=0\). Thus \(K\) is invariant under every \(b\).
+Applying the same argument to \(b^*\) makes \(K^\perp\) invariant
+under \(b\). Consequently \(P b=b P\).
+\end{proof}
+
+For a worked boundary algebra take the two sign representations on each
+side of the seam above. Write \(Z=\operatorname{diag}(1,-1)\) and let
+\(X\) interchange the two signs. The diagonal gauge transformation on the
+extended space is \(G_d=Z\otimes Z\). Its invariant-vector projector
+is \(P=(1+G_d)/2\). The full algebra of invariant operators consists of
+all matrices commuting with \(G_d\), which are exactly the two diagonal
+blocks for its \(+1\) and \(-1\) eigenspaces. Each block is
+two-dimensional as a state space. Restriction to the \(+1\) block gives a
+surjective star homomorphism from
+\(M_2(\CC)\oplus M_2(\CC)\) onto \(M_2(\CC)\).
+The other block is its kernel. The comparison distinguishes an invariant
+extended observable from its action on the selected physical sector.
+
+Consider the insertions \(a=X\otimes 1\) and \(b=1\otimes X\).
+Each changes parity and thus has zero compression to \(K\).
+Their product \(ab=X\otimes X\) preserves parity and interchanges
+\(e_+\otimes e_+\) with \(e_-\otimes e_-\) on \(K\).
+Hence \(c(ab)\) is a nonzero involution even though
+\(c(a)c(b)=0\). Working with the full invariant extended algebra permits
+the joint observable directly. Building a joint measurement only from
+the two independently compressed charged insertions would make the signal
+vanish. In a gauge theory a pair of charged insertions may require
+a specified connector to define a gauge-invariant observable. Here the
+common diagonal action states explicitly how the finite labels are
+identified between the two factors.
+
+The lost signal can be read in normalized states. Let
+\[
+ \psi_\pm=\frac{e_+\otimes e_+\ \pm\ e_-\otimes e_-}{\sqrt2}.
+\]
+Every product of observables invariant under the \emph{separate} sign
+changes is diagonal in the tensor basis and has the same expectation on
+\(\psi_+\) and \(\psi_-\). In particular the area-like label probabilities
+are each \(1/2\). By contrast the joint invariant \(X\otimes X\) has
+expectations \(+1\) and \(-1\), respectively, since it interchanges the two
+terms in each vector. Tracing over one factor on either state gives the
+same maximally mixed single-factor density matrix.
+Thus local probabilities can agree and still leave a measurable relative
+phase at the seam.
+
+This model gives a concrete order for comparing observables on a glued
+region. Specify the shared gauge action, form its invariant observables,
+restrict to the physical states, and check multiplication on the proposed
+domain. If two competing prescriptions each claim to give a physical matrix
+algebra, the expectations on \(\psi_\pm\) test whether they have both
+retained the joint invariant. In the gravitational problem the area
+constraint is accompanied by the local matching of the metric, normal
+curvatures and connection in Eq.~(3.62). Which gravitational observable
+plays the role of the joint insertion is a question about those data.
+The sign model provides the algebraic test without identifying the
+gravitational answer in advance.
+
+\section{Which changes of cut can be detected}
+\label{sec:detection}
+Compare cuts with extended Hilbert spaces \(H,H'\), orthogonal projections
+\(P,Q\), and a proposed unitary identification \(U:H\to H'\).
+This identification is an input. In gravity constructing it from moved
+boundary frames would itself be a result. For vectors \(\ell,r\in H\)
+reached by the left preparation and time-reversed right preparation,
+define the two amplitudes
+\begin{equation}
+ a(\ell,r)=\langle r,P\ell\rangle,\qquad
+ a'(\ell,r)=\langle Ur,QU\ell\rangle .
+ \label{eq:probe}
+\end{equation}
+The use of \(U\) on both sides means that the external experiments have
+already been identified. If a change of cut changes either adjacent kernel
+in another way, the identification of those kernels requires its own test.
+
+Let \(L\) and \(R\) be the spans of the available preparations and
+detections in \(H\). For a fixed pair of exterior maps one may take
+\(L=\im A\) and \(R=\im B^*\). Write \(\Pi_L,\Pi_R\) for orthogonal
+projections onto these spaces. When several maps are available, take the
+span of their images, provided any left experiment can be paired with any
+right experiment under comparison. Amplitudes are linear in the incoming
+vector and conjugate-linear in the outgoing vector. Equality on all such
+pairs thus implies equality on the two spans.
+
+\begin{theorem}[Comparison on accessible boundary data]
+\label{thm:criterion}
+In the setting of Eq.~\eqref{eq:probe}, put \(D=P-U^*QU\).
+The following conditions are equivalent.
+\begin{enumerate}
+\item \(a(\ell,r)=a'(\ell,r)\) for all \(\ell\in L,\ r\in R\).
+\item \(D(L)\subseteq R^\perp\).
+\item \(\Pi_R D\Pi_L=0\).
+\end{enumerate}
+If \(L,R\) are nonzero, the maximal absolute discrepancy for \emph{all}
+unit vectors in the two spaces is
+\begin{equation}
+ \max_{\substack{\ell\in L,\ r\in R\\
+                  \|\ell\|=\|r\|=1}}
+ |a(\ell,r)-a'(\ell,r)|=\|\Pi_R D\Pi_L\| .
+ \label{eq:discrepancy}
+\end{equation}
+In particular complete preparations and detections give the same amplitudes
+if and only if \(UP=QU\).
+\end{theorem}
+\begin{proof}
+Subtract the second amplitude from the first to obtain
+\(\langle r,D\ell\rangle\). This vanishes for every \(r\in R\) exactly when
+\(D\ell\) belongs to \(R^\perp\). Applying that statement to each vector in
+\(L\) gives the first two equivalences. For \(\ell\in L,\ r\in R\) the same
+difference is \(\langle r,\Pi_R D\Pi_L\ell\rangle\). Cauchy-Schwarz bounds
+its modulus by the norm on the right of Eq.~\eqref{eq:discrepancy}. If
+the compression is zero, both sides vanish. Otherwise choose a unit vector
+in \(L\) attaining the norm, which exists in finite dimension, and let
+\(r\) be its normalized image. For \(L=R=H\) the compression equals
+\(D\). The equation \(D=0\) is equivalent to \(UP=QU\) by unitarity.
+\end{proof}
+
+With one fixed pair \(A,B\), the tested condition is \(BDA=0\). Measuring
+only one exterior amplitude could leave a discrepancy undetected.
+Equation~\eqref{eq:discrepancy} refers to coherently superposable and
+normalized boundary vectors. If the apparatus can realize only a few
+vectors in those spaces, that equation gives an upper bound on the
+discrepancy of available experiments. Recovering a complex amplitude from
+transition probabilities also requires phase-sensitive preparations or
+interference measurements.
+
+\begin{example}[Equal dimension at two cuts]
+\label{ex:swap}
+Set \(H=H'=\CC^2\), \(U=1\),
+\(P=|e_0\rangle\langle e_0|\) and \(Q=|e_1\rangle\langle e_1|\) for
+orthonormal \(e_0,e_1\). Choose the exterior maps
+\(A:\CC\to\CC^2,\ A z=z e_0\) and \(B=A^*\).
+Then \(BPA=1\) and \(BQA=0\). The trace and rank of \(P\) equal those
+of \(Q\). Every fixed-cut contraction obeys the preceding lemma.
+If a physical frame change interchanges \(e_0\) and \(e_1\) and the
+external maps are also transported, the swap unitary intertwines \(P,Q\)
+and restores equality of the two amplitudes. The measured discrepancy
+therefore depends on which identification the boundary experiment fixes.
+\end{example}
+
+The same projectors become indistinguishable for incomplete probes.
+Let \(L=R\) be the line spanned by \((e_0+e_1)/\sqrt 2\).
+Both amplitudes on its normalized generator equal \(1/2\). In this case
+\(D\) maps the probe line to its orthogonal complement. Agreement in this
+restricted experiment says exactly what the theorem permits even though
+the selected intermediate sectors are orthogonal.
+
+A continuous perturbation of the identification gives a quantitative test.
+Keeping \(P=|e_0\rangle\langle e_0|\), set
+\(v_\theta=\cos\theta\,e_0+\sin\theta\,e_1\) with \(0\leq\theta\leq\pi/2\)
+and \(Q_\theta=|v_\theta\rangle\langle v_\theta|\).
+For \(U=1\), the self-adjoint matrix \(P-Q_\theta\) has trace zero
+and determinant \(-\sin^2\theta\). Its norm is \(\sin\theta\).
+The single probe \(e_0\) sees the smaller difference \(\sin^2\theta\).
+A measurement confined to an eigenstate of the original sector can
+therefore underestimate a small coherent error at first order in the
+rotation angle.
+
+\subsection{Moving a cut through a slab}
+A geometric change of cut can change both of the pieces being sewn.
+Assume the two spacelike cuts bound a slab with unitary evolution
+\(U:H_0\to H_1\) on the chosen extended model. Let \(A:X\to H_0\)
+denote the region before that slab and \(B:H_1\to Y\) the region after it.
+A measurement at the exterior uses \(a\in X,\ b\in Y\). Assign the slab
+to the later piece, select the physical sector \(P\) on the earlier cut,
+and the total map is \(BUPA\). Assign the same slab to the earlier piece,
+select \(Q\) at the later cut, and the total map is \(BQUA\).
+The exterior kernels of these two decompositions are thus \((A,BU)\) and
+\((UA,B)\). Their difference factors exactly as
+\begin{equation}
+ BUPA-BQUA=B(UP-QU)A.
+ \label{eq:slab}
+\end{equation}
+Writing \(\ell=Aa\) and \(r=U^*B^*b\) reduces its matrix element to the
+difference in Eq.~\eqref{eq:probe}. Here the transport is dynamical.
+A coordinate change of one and the same surface uses a frame identification
+in place of the slab evolution. The algebraic test has the same form only
+after the two maps on either side have been identified by the relevant rule.
+
+For an open experiment the operator \(B(UP-QU)A\) measures a possible
+inconsistency between a transfer and a sector selection. When
+\(UP=QU\), either placement of the admissible cut gives the same map.
+Choosing a candidate \(U\) that does not satisfy this relation
+may be exposed by exterior states. It does not produce two incompatible
+physical predictions of a theory that already supplies an intertwining
+propagator. The two-sector example in particular tests a proposed
+identification. It gives no evidence for a failure of gravitational
+diffeomorphism invariance.
+
+\begin{example}[A two-reading transfer]
+In a fixed extended basis let
+\[
+ U_\theta=
+ \begin{pmatrix}\cos\theta&-\sin\theta\\
+                 \sin\theta&\cos\theta\end{pmatrix},
+ \qquad P=|e_0\rangle\langle e_0|.
+\]
+Use \(A z=z e_0\) and \(B v=\langle e_1,v\rangle\).
+The earlier placement gives \(B U_\theta P A=\sin\theta\).
+Using the transported sector
+\(Q=U_\theta P U_\theta^*\) at the later cut also gives \(\sin\theta\).
+If the later placement instead projects onto the original label \(e_0\),
+it gives \(B P U_\theta A=0\). At \(\theta=\pi/2\) the transition
+probabilities for these prescriptions are one and zero. At
+\(\theta=0\) even that detector distinguishes nothing. This is a
+calculation in a finite model with a declared slab transfer. It displays
+how both adjacent kernels change when moving a cut.
+\end{example}
+
+When the exterior states are fixed, there is a comparable test for a
+slab described by a general bounded operator \(S:H_0\to H_1\).
+Equation~\eqref{eq:slab} still holds with \(S\) in place of \(U\).
+Put \(L=\im A\subseteq H_0\) and \(R_1=\im B^*\subseteq H_1\).
+Equality of the two total maps holds exactly when
+\(\Pi_{R_1}(SP-QS)\Pi_L=0\).
+Its proof uses the same orthogonality argument and requires neither an
+inverse nor common dimensions of the two cut spaces. When \(S\) is an
+isometry, pulling both detections back by \(S^*\) need not suffice to
+recover every discrepancy. Components of \(QS\ell\) orthogonal to
+\(\im S\) can still be detected at the target. The isometric refinement
+proposition concerns a comparison using only the \emph{transported}
+preparations and detections. If its hypotheses yield the full
+intertwining relation, this possible leakage vanishes as well.
+
+\subsection{A local transport equation}
+Given a one-parameter family of cuts, a differential test identifies
+where an inconsistency appears. Work in a fixed finite-dimensional
+trivialization of the extended cut spaces. Let \(H(t)=H(t)^*\) be a
+continuous family of Hamiltonians and let the slab propagator \(U(t,0)\)
+satisfy \(i\hbar\,\partial_tU=H(t)U\), \(U(0,0)=1\). Let \(P(t)\) be a
+differentiable family of orthogonal matching projectors. If the external
+preparations move by \(U\), complete agreement for all \(t\) means
+\(P(t)=U(t,0)P(0)U(t,0)^*\). No differentiability of the actual
+gravitational clock projection is assumed here.
+
+\begin{proposition}[Transport along a family of cuts]
+\label{prop:diff}
+Under these hypotheses the propagated sectors agree at every time if
+and only if
+\begin{equation}
+ \dot P(t)+\frac{i}{\hbar}[H(t),P(t)]=0
+ \label{eq:defect}
+\end{equation}
+at every time. For an approximate assignment, with \(t\ge0\),
+\[
+ \|P(0)-U(t,0)^*P(t)U(t,0)\|
+ \leq \int_0^t
+ \left\|\dot P(s)+\frac{i}{\hbar}[H(s),P(s)]\right\|\,ds .
+\]
+\end{proposition}
+\begin{proof}
+The derivative of the transported-back projector is
+\[
+ \frac d{dt}(U^*P U)=U^*
+ \left(\dot P+\frac{i}{\hbar}[H,P]\right)U.
+\]
+It vanishes exactly when the expression in parentheses does.
+The initial value is \(P(0)\), which proves the equivalence.
+Integrate the derivative in the finite-dimensional normed space of
+operators and apply the triangle inequality and unitary invariance of
+the norm.
+\end{proof}
+
+Differentiating \(P^2=P\) gives
+\(P\dot P P=(1-P)\dot P(1-P)=0\). The commutator in
+Eq.~\eqref{eq:defect} has the same vanishing diagonal blocks.
+A first-order defect transfers vectors between the selected range and
+its orthogonal complement. Measurements confined to the range at the
+initial time can therefore miss it to first order. The rotated
+rank-one example exhibits the corresponding quadratic dependence when
+both probes are restricted to that range.
+
+In a finite model a smooth clock \(C(t)\) whose spectrum maintains a gap
+about a window boundary has a smooth spectral projection there. A circle
+in the complex plane enclosing the chosen eigenvalues expresses it as a
+contour integral of the resolvent of \(C(t)\). If an eigenvalue crosses
+the boundary, the rank of the selected projection can jump and no such
+fixed contour exists over the crossing. Unitary transport preserves rank.
+A comparison of sharp clock sectors through that event therefore requires
+either a transported window, a smaller interval of cuts, or a rule that
+changes the boundary experiment. Smooth energy filters of the kind used
+in Appendix E.1 have different behavior at a crossing, since the
+corresponding eigenvalue weight can vary continuously.
+
+The differential test depends on a connection or a trivialization.
+Under a time-dependent unitary \(V(t)\), the new propagator from zero to
+\(t\) is \(V(t)U(t,0)V(0)^*\).
+Substitution in the evolution equation gives
+\[
+ H'=VHV^*+i\hbar\,\dot V V^*,\qquad P'=VPV^* .
+\]
+The extra term cancels the derivatives of the moving basis in
+\(\dot P'+i[H',P']/\hbar\). Conjugating the derivative
+of \(U^*P U\) also shows that the norm bound in Proposition~\ref{prop:diff} is
+frame invariant. Applying Eq.~\eqref{eq:defect} to a sequence of
+unrelated coordinate bases without this term would test the motion of
+the coordinates as well as the proposed dynamics.
+
+\subsection{Adding boundary labels under refinement}
+An embedding of a coarse space in a larger one is often more natural
+than a unitary isomorphism. With \(U^*U=1_H\), the expression \(U^*QU\)
+is a positive contraction. It need not be a projection. An exact comparison
+on all coarse probes imposes a further condition on its range.
+
+\begin{proposition}[Isometric refinement]
+\label{prop:refine}
+Let \(U:H\to H'\) be an isometry and \(P,Q\) orthogonal projections on
+\(H,H'\). Then \(U^*QU=P\) if and only if \(QU=UP\). When this holds,
+\(\im U\) reduces \(Q\), and \(Q\) can still have any orthogonal projection
+on \((\im U)^\perp\).
+\end{proposition}
+\begin{proof}
+Suppose \(U^*QU=P\). For \(x\in\im P\),
+\[
+ \|(1-Q)Ux\|^2=\|x\|^2-\langle x,Px\rangle=0.
+\]
+For \(x\in\ker P\), \(\|QUx\|^2=\langle x,Px\rangle=0\). Decomposing
+any \(x\) into these summands gives \(QUx=UPx\). Conversely the
+intertwining equation and \(U^*U=1\) give \(U^*QU=P\).
+Invariance of \(\im U\) follows from intertwining. Self-adjointness makes
+its orthogonal complement invariant as well. A projector there has no
+matrix elements against \(\im U\).
+\end{proof}
+
+For example, embed \(\CC\) on the first coordinate of \(\CC^2\).
+If the refined sector is the diagonal line through \((1,1)\), compression
+of its projector to the coarse line gives the scalar \(1/2\).
+That scalar fails the repeated-cylinder check for a one-state cut.
+Conversely, adding a second orthogonal sector to a previously matching
+sector changes the dimension while leaving all original matrix elements
+intact. Refinement agreement on the coarse probes consequently cannot by
+itself determine the entropy of new fine sectors.
+
+\subsection{A sufficient gluing rule for a diagram}
+Take a category whose objects are decorated cuts and whose generating arrows
+are region pieces. Work first in the free path category on this graph.
+Choose a projector \(P_s\) at every object \(s\) and a linear operator
+\(T_e:P_s H_s\to P_t H_t\) for each generator \(e:s\to t\). On a path
+define the map by composition. This gives a functor from the free category because
+concatenation composes operators and the empty path acts as the identity.
+
+Suppose the intended geometric category identifies paths through specified
+pairs of decompositions of the same region. The assigned operators descend
+to the quotient category exactly when they agree on every generating
+relation. For necessity, equal arrows must have equal images. For sufficiency,
+composing an equality of operators on either side preserves it, as does
+transitivity. All path equivalences generated by the relations therefore
+have equal images. Theorem~\ref{thm:criterion} checks the special case
+where two decompositions have transported exterior kernels and differ
+only by a matching projector. It says nothing about decompositions that
+change the exterior kernels arbitrarily. Constructing a presentation
+which generates all physical changes of cut remains a geometric problem.
+
+This elementary observation fixes the role of associativity in the
+conjectured functor \(Z\). Associativity makes a path of declared pieces
+unambiguous. The additional relations declare when two paths represent a
+single cobordism. In particular, the identity for disjoint \emph{closed}
+amplitudes is a scalar relation. Extending it to a symmetric monoidal functor
+on boundaries requires specified Hilbert space identifications under
+disjoint union, coherence for their permutations and compatibility with
+the region maps.
+
+\section{Positive pairings and the sum over states}
+\label{sec:analytic}
+Appendix E.1 of Chandrasekaran's manuscript gives five conditions on
+Lorentzian preparations. The first concerns diffeomorphisms preserving
+boundary conditions and independence of intermediate cuts, including
+allowed pairings of matching labelled boundaries. The second imposes
+conjugation under orientation reversal and positivity of the Gram forms
+obtained by gluing to reflected preparations. The third gives multiplication
+of closed amplitudes under disjoint union and normalizes the empty
+configuration. The fourth gives continuous unitary time translations.
+The last uses smooth compactly supported energy filters on preparations,
+finiteness for compatible closures, and a positive spectral measure with a
+lower bound on its support \cite[App.~E.1]{nc}. The finite projections
+used here do not model all five conditions. In particular the physical
+time evolution, closed trace and energy generator are independent inputs.
+
+Suppose a complex vector space of formal preparations has a
+positive semidefinite sesquilinear form \(b\), computed by gluing and reflection.
+Cauchy-Schwarz implies \(b(n,w)=0\) for all \(w\) whenever \(b(n,n)=0\).
+The null vectors form a linear subspace \(N\), so \(b\) induces an inner
+product on the quotient. If \(T\) is to act on that quotient, it must
+satisfy \(T N\subseteq N'\) at the target cut. Boundedness in the induced
+norm then yields a map of Hilbert completions.
+
+For a concrete example give \(\CC^2\) the pairing
+\(b(z,w)=\overline{z_0}w_0\). Its radical is \(\CC e_1\). The matrix
+interchanging \(e_0\) and \(e_1\) preserves the ordinary Euclidean norm of
+coefficient vectors, but it sends the null preparation \(e_1\) to one of
+physical norm one. Two representatives of a single physical state can then
+have different images. Checking positivity on a cut and checking that the
+next region acts on the cut space are distinct operations.
+
+For temporal sewing of two fixed pieces, Eq.~(4.29) in Chandrasekaran
+resolves the identity at a spacelike cap with matched data. Its Eq.~(4.30)
+bounds the absolute sum by the norms of the two exterior states, using
+unitarity \cite[Sec.~4.4]{nc}. In ordinary Hilbert space language if
+\(x=Aa,\ y=B^*b\in H\), then for an orthonormal basis \(\{e_j\}\),
+\begin{equation}
+ \sum_j|\langle y,e_j\rangle\langle e_j,x\rangle|
+       \leq \|y\|\|x\|.
+ \label{eq:cauchy}
+\end{equation}
+The bound applies when \(P=1\) on the physical Hilbert space. For an extended
+space use \(\iota^*Aa,\iota^*B^*b\in K\). Bounded \(A,B\) suffice here.
+An operator-valued distribution at a point or a generalized eigenstate
+requires a prescription to produce finite-norm vectors first.
+
+\subsection{Clock windows and their transport}
+The projector in the comparison theorem has a counterpart in the source
+with a specific physical meaning. In Appendix E.3, Chandrasekaran denotes
+by \(P_D\) the clock projector for a causal diamond and writes the
+transformation of both the averaged clock \(\widehat{\bar u}_*\) and
+\(P_D\) under the unitary \(V\) induced by a boundary identification
+\cite[Eq.~(E.16)]{nc}. A change of variables by the angular map \(Y\)
+identifies the null generators before this conjugation. This example fixes
+which part of the cut data a categorical comparison must calculate.
+The uniform boost charge in the preceding section and the clock are
+different observables.
+
+For clarity, suppose a clock \(C\) on \(H\) is self-adjoint. Its spectral
+measure \(E_C\) gives a projection \(P=E_C(I)\) for an allowed Borel
+window \(I\). Relabel the cut by a unitary \(V\) and keep the numerical
+window fixed in the identified clock convention. Then
+\begin{equation}
+ C'=VCV^*,\qquad E_{C'}(I)=V E_C(I)V^* .
+ \label{eq:spectral-cov}
+\end{equation}
+For a finite spectrum this follows by mapping each eigenspace by \(V\).
+For a self-adjoint unbounded \(C\) the conjugated operator has domain
+\(V\operatorname{Dom}C\), and the transported projection-valued measure
+represents \(C'\) by the spectral theorem. If the convention for reading
+the clock also changes, its window must transform with it.
+In particular, if \(C'=VCV^*+s1\), the correct comparison uses \(I+s\).
+Holding \(I\) fixed then selects different preparations near a window
+endpoint.
+
+To see the effect, consider the smallest clock model with an admitted
+state and an excluded state. Let \(c_0<c_1\) be two possible clock
+readings and let \(C=\operatorname{diag}(c_0,c_1)\).
+Choose an upper endpoint strictly between the readings, so
+\(P=|0\rangle\langle0|\). View a matrix
+\(a=|0\rangle\langle0|\) as a preparation. A clock-selected closure in
+the finite model gives
+\(\tr(PaP)=1\). Let \(V\) exchange the two readings. The transported
+preparation and projector are \(a'=|1\rangle\langle1|=P'\), so
+\(\tr(P'a'P')=1\). If only the preparation is transformed,
+\(\tr(Pa'P)=0\). The calculation compares the same two outcomes as
+Example~\ref{ex:swap}, now through the closed trace rather than an
+external vector. The values \(c_0,c_1\) are labels of the model.
+Identifying an actual gravitational pair of such eigenstates would require
+constructing the clock spectrum of the chosen sector.
+
+For general admissible preparations the source's Eqs.~(E.15a,b) read
+\[
+ \zeta_L(\operatorname{cl}_\Sigma a)=\tr_{\HH_\Sigma}\widehat a,
+ \qquad
+ \langle a,b\rangle_\Sigma
+    =\tr_{\HH_\Sigma}(\widehat a^*\widehat b).
+\]
+The second formula is a reflected pairing. In a \(d\)-dimensional
+clock-selected sector the trace is defined on every matrix, and
+\(|\tr_{\HH_\Sigma} a|\le d\|a\|\), the estimate in Eq.~(E.17).
+Summing \(\langle e_j,a e_j\rangle\) over an orthonormal basis proves it.
+In an extended space the trace on \(PH\) of the compression
+\(\iota^*a\iota\) is \(\tr_H(PaP)\), which explains the projector
+placement in the two-reading calculation.
+
+One must distinguish restricting each preparation to an allowed cut
+from projecting only after a series of unrestricted transitions. With
+\(P=|0\rangle\langle0|\), let \(a=|1\rangle\langle0|\).
+Projecting a preparation at each end gives \(PaP=0\); its reflected
+norm in that restricted matrix space is zero. The path
+starting in \(|0\rangle\), passing through \(|1\rangle\), and returning
+has \(\tr(Pa^*aP)=1\). An extra projection at the intermediate cut
+removes that path. Hence a model that allows an insertion which changes
+the sector must specify which windows apply at its two ends. This is
+a domain question about the experiment. Eq.~(E.16) transports windows
+already belonging to a declared boundary identification.
+
+\subsection{The measure in a filtered closure}
+A compactly supported energy filter in Appendix E.1 is a function of the
+generator of boundary translations. It need not be idempotent. In a
+finite model take distinct energies \(\epsilon_j\ge\epsilon_0\), with
+eigenspace projectors \(\Pi_j\) of ranks \(m_j\), a Hamiltonian
+\(H_b=\sum_j\epsilon_j\Pi_j\) and
+\(T(t)=e^{-itH_b/\hbar}\). For \(g\in C_c^\infty(\mathbb R)\), Fourier
+inversion with the sign convention of Eq.~(E.4) gives
+\begin{equation}
+ F_g=\int_{\mathbb R}\check g(t)T(t)\,dt
+       =\sum_j g(\epsilon_j)\Pi_j,\qquad
+ \check g(t)=\frac{1}{2\pi\hbar}\int_{\mathbb R}g(E)e^{iEt/\hbar}\,dE .
+ \label{eq:filter}
+\end{equation}
+The rapid decay of \(\check g\) gives convergence in operator norm.
+Closing the reflected pair as in Eq.~(E.5) therefore produces
+\begin{equation}
+ \tr(F_g^* F_h)
+   =\sum_j m_j\overline{g(\epsilon_j)}h(\epsilon_j)
+   =\int_{\mathbb R}\overline{g(E)}h(E)\,d\nu(E),\qquad
+ \nu=\sum_j m_j\delta_{\epsilon_j}.
+ \label{eq:measure}
+\end{equation}
+Here \(m_j\) is the multiplicity of an energy in this one matrix
+representation. A trace on a direct sum of matrix blocks can also carry
+weights on the blocks. The two sources of multiplicity must be identified
+before comparing a spectral count.
+
+Take a three-dimensional physical space with \(H_b\) diagonal of spectrum
+\(0,E,E\) for \(E>0\). A smooth filter equal to one at zero and zero at
+\(E\) closes to \(1\); a filter zero at zero and one at \(E\) closes to
+\(2\) in the reflected norm squared of Eq.~\eqref{eq:measure}.
+The single formula \(\tr 1=3\) leaves ambiguous which window has the
+larger weight. Swapping the multiplicities of the two energies retains
+the total dimension and changes those filtered measurements. With all
+compactly supported filters available, the measurements determine a finite
+spectral measure. An isolating bump about each eigenvalue determines its
+mass. When an admissible boundary frame preserves the Hamiltonian by
+unitary conjugation, transporting its filters and trace preserves this
+whole family of numbers.
+
+The Euclidean continuation of this finite translation is the positive
+cylinder \(C_s=e^{-sH_b/\hbar}\) for \(s>0\). Composing two half cylinders
+and reflecting gives
+\[
+ \langle x,C_s x\rangle=\|C_{s/2} x\|^2,\qquad
+ \tr C_s = 1+2e^{-sE/\hbar}
+\]
+in the three-state example. The \(\tau\)-closure of a cylinder in
+Appendix E.2 obeys the corresponding positivity under its assumptions
+\cite[Eq.~(E.8)]{nc}. In the finite model,
+\(\tr C_s^n /(\tr C_s)^n\) is the \(n\)th trace moment of the normalized
+matrix \(C_s/\tr C_s\). Thus the same spectral weights affect a replica
+calculation even when two proposed cut spaces have the same dimension.
+The energies in this example belong only to its chosen Hamiltonian.
+A comparison of black-hole entropy would require the actual clock or
+energy ensemble and gravitational measure derived in the source.
+
+In an infinite-dimensional sector, Euclidean damping and finite norm of
+individual states must be checked separately. For example on
+\(\ell^2(\mathbb N)\) take \(H_b e_j=0\) for all \(j\).
+Then \(C_s=1\) is bounded and satisfies reflection positivity, while
+\(\tr C_s\) is infinite. Even a compact filter equal to one at zero
+has infinite trace. Equation~\eqref{eq:cauchy} still bounds any one
+matrix element sewn between two finite-norm vectors. Thus that estimate
+does not provide the finite spectral weight in Eq.~(E.5). In the causal
+diamond case Chandrasekaran invokes finite dimension for a fixed clock
+range. In the boundary sector for anti-de Sitter space he instead uses
+a thermal bound to obtain finite rank on bounded energy intervals
+\cite[App.~E.3]{nc}. These are different reasons for a closed contraction
+to exist.
+
+A finite-window estimate gives a version of the latter argument useful
+for the comparison. Let \(\Pi\) and \(\Theta\) be finite-rank orthogonal
+projections of ranks \(r\) and \(s\), and write \(\|\cdot\|_2\) for the
+Hilbert-Schmidt norm. For any bounded \(B\),
+\[
+ \|\Pi B\Theta\|_2^2
+  =\sum_{i\le r}\sum_{j\le s}|\langle f_i,B e_j\rangle|^2
+  \le \min(r,s)\|B\|^2
+\]
+in orthonormal bases of the ranges. The sum over \(i\) for fixed \(j\)
+is at most \(\|B e_j\|^2\), giving the bound with \(s\). Taking adjoints
+gives the bound with \(r\). If a net of bounded insertions \(B_i\)
+converges strongly to \(B\), the finitely many indicated matrix elements
+converge. Hence the compressed difference tends to zero in reflected norm,
+which is the step used in Eq.~(E.18). Without the window a strongly
+convergent sequence can fail this test: the rank-one projections onto the
+successive coordinate vectors in \(\ell^2(\mathbb N)\) converge strongly
+to zero and all have Hilbert-Schmidt norm one.
+
+To remove windows for a fixed Hilbert-Schmidt preparation \(a\), choose
+increasing finite-rank projections \(P_n\) tending strongly to the identity.
+For a finite-rank sum \(f=\sum_k |u_k\rangle\langle v_k|\),
+\(\|P_n fP_n-f\|_2\to0\) term by term. For a general \(a\) approximate
+it in Hilbert-Schmidt norm by such an \(f\). Left and right
+multiplication by orthogonal projections are contractions in that norm,
+so \(\|P_n aP_n-a\|_2\le2\|a-f\|_2+\|P_n fP_n-f\|_2\).
+This recovers the reflected amplitude for this preparation.
+A moving sequence of states whose support escapes each window is a
+different question. It is one reason a physical cut comparison must
+specify both the states being compared and how its regulator moves.
+
+\subsection{Two infinite cuts without energy filters}
+Appendix E restricts the allowed closures by its spectral and finiteness
+condition. Outside that filtered domain, the estimate in
+Eq.~\eqref{eq:cauchy} does not bound the absolute sum over two
+independent intermediate indices after inserting a resolution at each cut.
+There is a distinction between composing bounded operators successively
+and treating all terms of a double series as an absolutely integrable
+family. An explicit example quantifies the gap.
+
+\begin{example}[A block Fourier kernel]
+\label{ex:fourier}
+Let \(H=\bigoplus_{n\geq1}\CC^{d_n}\) with \(d_n=4^n\), and let
+\(F=\bigoplus_{n\geq1}F_{d_n}\) be a block diagonal unitary, each
+\(F_d\) the discrete Fourier transform in its normalized convention.
+Put \(x=y\in H\), with every entry in block \(n\) equal to
+\(1/(n\sqrt{d_n})\). Thus \(\|x\|^2=\sum_{n\geq1}n^{-2}<\infty\).
+The scalar \(\langle y,Fx\rangle\) is finite. The formal double expansion
+of this amplitude in the two coordinate bases is
+\[
+ \sum_{i,j}\overline{y_i}F_{ij}x_j .
+\]
+Within block \(n\), every one of the \(d_n^2\) terms has modulus
+\(1/(n^2 d_n^{3/2})\). Hence the absolute block sum is
+\(\sqrt{d_n}/n^2=2^n/n^2\) and the full absolute sum diverges.
+\end{example}
+
+For the same example the normalized Fourier transform sends a constant
+vector to the first coordinate vector times the square root of the block
+size. The actual amplitude is therefore
+\(\sum_{n\geq1}1/(n^2\sqrt{d_n})\). Computing \(Fx\) first or \(F^*y\)
+first gives that value. Finite-dimensional cutoffs tending strongly to the
+identity also recover it as an operator matrix element. Indeed for
+orthogonal cutoffs \(P_m,Q_n\to1\) strongly the difference between
+\(\langle y,Q_n F P_m x\rangle\) and \(\langle y,Fx\rangle\) is bounded by
+\(\|y\|\|F\|\|(P_m-1)x\|+\|(Q_n-1)y\|\|F\|\|x\|\).
+This estimate does not license arbitrary permutations of the individual
+terms in the double sum. Absolute convergence of a single resolution in
+Eq.~(4.30) remains intact.
+
+One can impose exactly such a finite energy window on the example.
+Assign energy \(n\) to every vector in the \(n\)th block. A smooth
+compactly supported filter then meets only finitely many blocks and
+the filtered double series is absolutely summable. For a filter equal
+to one on the first \(N\) levels and zero on all higher levels, its
+absolute sum is \(\sum_{n=1}^N2^n/n^2\). It has no uniform upper
+bound as the support grows. Thus fixed-window sewing and removal of all
+windows are distinct assertions. The example tests extrapolation beyond
+the single-cut estimate. It supplies no obstruction to the filtered
+closures for which the preprint gives its trace bounds.
+
+These two limits matter in a gravitational application. Removing an
+energy filter from amplitudes changes their domain or norm bounds.
+Removing a regulator from a corner can also change the state space.
+A proposed comparison has to specify both limiting spaces, the
+identifications into them and the topology in which the sewn matrix
+elements converge. Reordering a finite projected sum tests none of these
+limits.
+
+\section{States on an overlapping cover}
+\label{sec:states}
+Even prescribed local probability states with equal overlap restrictions
+may fail to extend to a positive global state. The example below uses
+ordinary commutative finite-dimensional algebras. It illustrates why local
+state compatibility needs its own hypothesis during spatial descent.
+The sheaf treatment of measurement contexts and marginal distributions by
+Abramsky and Brandenburger places such extension problems in a more general
+setting \cite{ab}.
+
+Consider three binary labels \(a,b,c\in\{+1,-1\}\) and the three pair
+contexts \(ab,bc,ca\). On each pair assign probability \(1/2\) to the two
+unequal outcomes and zero to the two equal outcomes. Each one-label
+marginal is uniform. Thus all overlap restrictions agree.
+A putative distribution on the eight global assignments would have to
+assign probability one to each of \(a\ne b,\ b\ne c,\ c\ne a\). Finite
+additivity and positivity make their intersection an event of probability
+one. It is empty because the first two inequalities imply \(a=c\).
+The prescribed local states have no joint probability distribution.
+The obstruction comes from the cycle of contexts. Moving around its
+three edges would reverse a binary value three times and return it to its
+starting label. A loop in a cover of gravitational regions does not itself
+produce a contradiction. To apply this test one would need actual local
+boundary observables, their identified overlaps, and a jointly testable
+extension requirement. No gravitational claim about a particular diamond
+cover follows from this example. It rules out using overlap agreement as a general proof of state
+descent.
+
+By contrast, consider only the pair contexts \(ab,bc\) with joint
+distributions \(p_{ab},p_{bc}\) and a common marginal \(p_b\). A joint
+distribution exists:
+\[
+ p(a,b,c)=
+ \begin{cases}
+   p_{ab}(a,b)p_{bc}(b,c)/p_b(b), & p_b(b)>0,\\
+   0, & p_b(b)=0 .
+ \end{cases}
+\]
+Summing over \(c\) gives \(p_{ab}\) wherever the marginal is positive,
+and the entries for a zero marginal vanish by positivity. Summing over
+\(a\) gives \(p_{bc}\) by the same argument. This construction assumes
+conditional independence of \(a,c\) given \(b\). A general joint extension
+need not have it. For uniform independent pair marginals one can correlate
+\(a,c\) perfectly or leave them independent, with the same pair data.
+Even on this acyclic cover existence need not imply uniqueness.
+A set-valued sheaf condition as in Eq.~\eqref{eq:fiber} asks for both.
+
+\section{A comparison of gravitational preparations}
+\label{sec:gravity}
+A suitable first experiment has two neighboring vacuum regions with
+regular null faces meeting a specified corner and spacelike caps carrying
+initial and final data. Choose a state with specified boundary area range,
+orientation and smearing. The independent categorical construction should
+specify what a preparation is, how it pairs with a reflected preparation
+and which interface observables encode the corner data. Matching local
+star algebras on the two sides supplies part of this information. For a
+fixed state it also induces the familiar map between cyclic GNS spaces.
+It does not specify the preparation made by a different region or the
+relative phase of two transition kernels.
+
+To see the phase issue, keep the observable algebra and state fixed on
+every boundary. On a path of regions suppose unitary kernels \(T_M\)
+implement prescribed transformations of observables by conjugation.
+The replacements \(T'_M=e^{i\theta_M}T_M\) induce the same conjugations.
+Their composition agrees with \(T'_{M_2\circ M_1}\) exactly when
+\(\theta_{M_2\circ M_1}-\theta_{M_2}-\theta_{M_1}\) is an integer multiple
+of \(2\pi\). Conditions on phases that can be absorbed into boundary-state
+choices are a further freedom. An algebra comparison alone cannot fix
+a relative phase between decompositions of a closed experiment. A system
+of normalized preparations or a corresponding dynamical datum must be
+included in a comparison of amplitudes.
+
+Once both theories produce kernels, transport the adjacent preparations
+into a common cut space and select the same corner data. Compare the
+normalized matrix elements in the physically available preparation and
+detection spaces. If those spaces are small, classify the undetected
+discrepancy by the compression in Theorem~\ref{thm:criterion}.
+If either construction changes the external kernels on moving the cut, test
+their transport before attributing any disagreement to a sector projector.
+An explicit mismatch could thereby be assigned to a particular operation,
+such as reversing the orientation of a charge or normalizing the reflected
+pairing.
+
+For a change of frame with boundary actions \(V(g)\) on \(H\) and
+\(V'(g)\) on \(H'\), a physical transport should intertwine these actions on
+the common data. In a finite diagonal-group model this suffices to
+intertwine the averaging projectors of Eq.~\eqref{eq:reynolds} by linearity.
+A noncompact surface symmetry group may have no normalized Haar measure,
+and a required invariant may only exist as a distribution. The normalized
+finite average then has no automatic continuum counterpart. Reconstructing
+the physical inner product directly from gravitational preparations is one
+possible way to address that question.
+
+The July representation-theoretic manuscript distinguishes its finite
+geometric construction from the problem of Lorentzian reconstruction
+\cite{cond}. Likewise the invariant spaces and finite kernels used here
+already come with boundary labels, a pairing and cut identifications. An
+intrinsic construction of them from pregeometric data would require,
+among other steps, an identification of the measurements that determine
+a frame and of the causal order that distinguishes the two caps.
+The corner calculation can therefore be carried out on a prescribed
+geometry before addressing the origin of that geometry.
+
+\subsection{Reconstructing the comparison from amplitudes}
+It is possible to state a finite realization problem in which the
+identification of cut Hilbert spaces is an output. This reverses the
+hypothesis of Theorem~\ref{thm:criterion}, which starts from a proposed
+transport. One needs labelled, independently defined preparations in the
+two theories and their complex overlaps, including phases. The labels
+represent the same exterior boundary experiment in the two constructions.
+
+\begin{theorem}[Comparison from reflected preparations]
+\label{thm:gram}
+Let \(s\) range over a collection of cut objects and let \(J_s\) be a
+finite set of preparation labels. In theories \(k=1,2\) suppose that
+\(\{v^k_{sj}:j\in J_s\}\) spans a finite-dimensional Hilbert space
+\(K_s^k\). Suppose also that for every generator \(e:s\to t\) a kernel
+\(T_e^k:K_s^k\to K_t^k\) is given. There exists a family of unitaries
+\(W_s:K_s^1\to K_s^2\) mapping every labelled preparation to its
+counterpart and intertwining every generator if and only if the following
+equalities hold for all indicated labels:
+\begin{align}
+ \langle v^1_{si},v^1_{sj}\rangle
+    &=\langle v^2_{si},v^2_{sj}\rangle ,
+ &&i,j\in J_s,                                           \label{eq:gram}\\
+ \langle v^1_{ti},T^1_e v^1_{sj}\rangle
+    &=\langle v^2_{ti},T^2_e v^2_{sj}\rangle ,
+ &&i\in J_t,\ j\in J_s.                                 \label{eq:mixed}
+\end{align}
+The family is unique with the specified action on preparations.
+\end{theorem}
+\begin{proof}
+For either theory let \(F_s^k:\CC^{J_s}\to K_s^k\) map the \(j\)th
+coordinate vector to \(v^k_{sj}\).
+Equation~\eqref{eq:gram} makes the positive Gram matrices
+\((F_s^k)^*F_s^k\) equal. Consequently
+\(\|F_s^1 c\|^2=\|F_s^2 c\|^2\) for all coefficient vectors \(c\).
+In particular the two maps have the same kernel. The prescription
+\(W_s(F_s^1 c)=F_s^2 c\) is well-defined and linear. It preserves the
+inner product by the Gram equality, has range \(K_s^2\) by the spanning
+hypothesis, and is unique on \(K_s^1\) by that same hypothesis.
+Equation~\eqref{eq:mixed} now gives
+\[
+ \langle W_t v^1_{ti},
+        (W_t T_e^1-T_e^2 W_s)v^1_{sj}\rangle=0 .
+\]
+The vectors in the first slot span \(K_t^2\), so every difference in the
+second slot vanishes. Spanning at the source gives the operator identity.
+Conversely an intertwining family of unitaries with the stated action
+preserves both sets of matrix elements.
+\end{proof}
+
+This construction uses only measured amplitudes in the finite algebraic
+sense. It does not require one to guess a preferred basis of physical
+states. A linear dependence between two putative preparations appears as
+a null vector in the common Gram matrix. This allows coefficient labels
+to be redundant without assigning extra states to a cut. The construction
+also shows why measuring a Gram matrix on each object does not suffice:
+the mixed matrices in Eq.~\eqref{eq:mixed} specify how a region acts
+between the resulting quotient spaces.
+
+A simple test uses three preparations in a two-dimensional cut space:
+\(v_1=e_0,\ v_2=e_1,\ v_3=(e_0+e_1)/\sqrt2\). The Gram matrix is
+\[
+ \begin{pmatrix}
+  1&0&1/\sqrt2\\
+  0&1&1/\sqrt2\\
+  1/\sqrt2&1/\sqrt2&1
+ \end{pmatrix}.
+\]
+It kills the coefficient vector \((-1/\sqrt2,-1/\sqrt2,1)\).
+If a second construction declares these three labels to be orthogonal
+unit vectors, it gives a different reflected amplitude even before
+evolution. If it gives the same Gram matrix and interchanges the labels
+\(e_0,e_1\) on a transfer with an identity transfer in the first theory,
+Eq.~\eqref{eq:mixed} detects the discrepancy through the amplitude from
+\(e_0\) to \(e_1\). A matching object dimension and matching counts of
+preparation labels would miss both tests.
+
+The unitaries in Theorem~\ref{thm:gram} also intertwine every product of
+the generator kernels. This is a consequence of inserting \(W_t^*W_t=1\)
+at each intermediate cut. If the first theory obeys a relation between
+two paths, the corresponding operator relation holds in the second.
+A separate argument is needed to say that a pair of geometric paths
+belongs to the intended relation. Similarly, matching transition kernels
+on a spanning set does not identify all observable algebras by itself.
+One must decide which insertions count as observables and add their
+matrix elements or an equivalent generating condition.
+
+For infinite-dimensional cuts one can repeat the Gram argument on
+finite linear combinations of preparations. Dense span in each of the
+two completed cut spaces yields a unitary extension. For bounded
+transition maps the intertwined equality extends by continuity. For an
+unbounded field insertion one needs a common invariant core or another
+precise uniqueness statement for the operators. Equality of matrix
+elements on a merely dense set can leave room for different
+self-adjoint extensions. An independently derived finite sector with
+bounded insertions would avoid that difficulty in an initial comparison.
+
+\subsection{Recovering a complex overlap}
+A reflected preparation often gives a squared norm directly. If the
+experiment also allows coherent sums of two preparations with controlled
+relative phase, four such closures determine their complex overlap.
+Write \(q(v)=\|v\|^2\), with the linearity convention of
+Eq.~\eqref{eq:res}. For \(v,w\) in the same physical cut space, direct
+expansion gives
+\begin{align}
+ 4\,\operatorname{Re}\langle v,w\rangle
+   &=q(v+w)-q(v-w),\\
+ 4\,\operatorname{Im}\langle v,w\rangle
+   &=q(v-iw)-q(v+iw).
+ \label{eq:polar}
+\end{align}
+The sign in the second equality depends on the convention for the inner
+product. Taking \(v=v_{ti}\) and \(w=T_e v_{sj}\) supplies the mixed
+matrix element in Eq.~\eqref{eq:mixed} from closures on the outgoing
+cut. These formulas require knowledge of the normalization of the sums.
+Changing the normalization of a reflected amplitude changes the recovered
+matrix element, even when the corresponding normalized rays are unchanged.
+
+For example, let \(v=e_0\) and
+\(w_\pm=(e_1\pm i e_0)/\sqrt2\). The probabilities
+\(|\langle e_j,w_\pm\rangle|^2\) are each \(1/2\). But
+\(\langle v,w_\pm\rangle=\pm i/\sqrt2\), and
+\(q(v-iw_\pm)-q(v+iw_\pm)=\pm2\sqrt2\).
+This experiment uses a common reference phase between the two
+preparations on the outgoing boundary. It gives a direct readout for a
+phase difference which was invisible to fixed-basis transition
+probabilities.
+
+A superselection rule can deny that reference by preventing the
+superposition of distinct charge sectors. The interference measurement
+then applies separately within the sectors where coherent additions are
+allowed. Eq.~(E.1c) of Chandrasekaran imposes positivity on specified
+linear combinations of preparations with matching boundaries in the
+admissible domain \cite{nc}. It does not assert access to arbitrary
+superpositions of preparations with incompatible boundary sources.
+The labels used in Theorem~\ref{thm:gram} must therefore specify the
+sector and the allowed combinations. If only real superpositions are
+available, the first line of Eq.~\eqref{eq:polar} still measures the real
+part, while the imaginary part requires additional information.
+
+\subsection{Relative phases around a cycle}
+A preparation labelled only as a ray has a phase ambiguity. If every
+region kernel is known only up to a scalar phase, even a full set of
+matrix elements of its induced transformation on observables leaves a
+cycle measurement undetermined. This ambiguity can be written directly
+on a diagram. Let \(T_e:K_s\to K_t\) be unitary and
+\(T'_e=z_eT_e\) with \(|z_e|=1\). Rephasing the entire cut basis at \(s\)
+by \(w_s\) gives the relation \(z_e=w_t\overline{w_s}\) for a phase
+that can be absorbed in boundary conventions. Along any closed oriented
+walk the edge phases then multiply to one, using inverses for reverse
+traversal.
+
+Conversely, on a connected graph with reverse transport available, suppose
+every such product is one. Choose a base object \(s_0\), assign it phase
+one, and let \(w_s\) be the product of the edge phases along any path
+from \(s_0\) to \(s\). Two paths followed in opposite directions form
+a closed walk, so this value is well-defined. Appending one edge yields
+\(z_e=w_t\overline{w_s}\). This gives a finite test for removable boundary
+phases. It does not assume that all physical phases around loops must be
+trivial. A measured nontrivial product matters only for paths that the
+candidate geometric theory declares to represent the same process.
+
+For a square of cuts \(a,b,c,d\) compare paths \(a\to b\to d\) and
+\(a\to c\to d\). Suppose every physical space is \(\CC\) and all kernels
+have modulus one. All conjugations on the algebra \(\CC\) agree. The
+relative phase
+\[
+ z_{bd}z_{ab}\overline{z_{cd}z_{ac}}
+\]
+is invariant under the four choices of object phases \(w_a,w_b,w_c,w_d\).
+It equals the phase that would appear between coherent alternatives
+through the two paths. Treating the paths as one and the same geometric
+decomposition requires the ratio to equal one after all boundary action
+phases have been accounted for. The compact calculation displays the
+extra information carried by a normalized gluing amplitude.
+
+\section{Conclusion}
+The choice of a cut fixes which boundary preparations can propagate through
+a shared interface. In a finite extended Hilbert space that choice is an
+orthogonal projector. A disagreement between two choices is visible
+precisely through its matrix elements between accessible preparations and
+detections. An algebraic comparison of two local theories would gain physical
+content by deriving those matrix elements from both sides for a decorated
+diamond with a movable cut. The geometric identification of the boundary
+data and convergence of the resulting continuum amplitudes are the next
+inputs required by that experiment.
+
+\begin{thebibliography}{9}
+\bibitem{long}
+M. Long, \emph{Quantum Gravity and Emergent Spacetime from Perspectival
+Structure}, YonedaAI Research Collective (24 February 2026).
+\href{https://yonedaai.com/papers/pdf/quantum-gravity-emergent-spacetime.pdf}{Manuscript}.
+\bibitem{nc}
+V. Chandrasekaran, \emph{An algebraic quantization of gravity from the null
+cone} (2026). \href{https://arxiv.org/abs/2611.34924v1}{arXiv:2611.34924v1}.
+\bibitem{oeckl}
+R. Oeckl, \emph{A ``general boundary'' formulation for quantum mechanics and
+quantum gravity}, Phys.\ Lett.\ B 575 (2003), 318--324.
+\href{https://arxiv.org/abs/hep-th/0306025}{arXiv:hep-th/0306025}.
+\bibitem{df}
+W. Donnelly and L. Freidel, \emph{Local subsystems in gauge theory and
+gravity}, JHEP 09 (2016), 102.
+\href{https://arxiv.org/abs/1601.04744}{arXiv:1601.04744}.
+\bibitem{bfv}
+R. Brunetti, K. Fredenhagen and R. Verch, \emph{The generally covariant
+locality principle: A new paradigm for local quantum physics},
+Commun.\ Math.\ Phys.\ 237 (2003), 31--68.
+\href{https://arxiv.org/abs/math-ph/0112041}{arXiv:math-ph/0112041}.
+\bibitem{ab}
+S. Abramsky and A. Brandenburger, \emph{The sheaf-theoretic structure of
+non-locality and contextuality}, New J.\ Phys.\ 13 (2011), 113036.
+\href{https://arxiv.org/abs/1102.0264}{arXiv:1102.0264}.
+\bibitem{cond}
+M. Long, \emph{A Representation-Theoretic Foundation for Quantum Gravity},
+YonedaAI Research Collective (7 July 2026).
+\href{https://yonedaai.com/papers/pdf/library/condensed-representation/part6-condensed-quantum-gravity.pdf}{Manuscript}.
+\end{thebibliography}
+\end{document}

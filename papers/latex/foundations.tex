@@ -1,0 +1,518 @@
+\documentclass[11pt,letterpaper]{article}
+\input{preamble}
+\title{Categorical Foundations of Null-Cone Quantization\series{Part I}}
+\newcommand{\alg}{\mathbf{Alg}_{*}}
+\newcommand{\F}{\mathcal F}
+\newcommand{\Dcat}{\mathcal D}
+\newcommand{\Probes}{\mathcal P}
+
+
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\sat}{\widehat K}
+\ifdefined\HCode\else\papersidebar{foundations}\fi
+\begin{document}
+\maketitle
+\begin{abstract}
+A measurement supported on a small causal diamond can depend on the frame at its corner. Enlarging the region changes which frame can be read and which states can be prepared. We ask when an observable defined through local measurements still represents the same observable after this change. Starting with positive moments of words in labelled probes, we construct a local involutive algebra and characterize the substitutions of probe words that induce homomorphisms. The criterion tests every ambient preparation obtained by acting on a cyclic state with a word. Agreement of the unconditioned states alone can miss a sector, as an inclusion of diagonal matrices into two by two matrices demonstrates. An intersection over all outgoing embeddings gives the largest compatible family of invisible relations contained in the local ones. An ordered binary probe protocol realizes these tests explicitly. Its parity and sign rules reconstruct a matrix algebra and intertwine a proper embedding implemented by a controlled flip. Applied to gravitational null cones, the test requires an explicit prescription for transporting a dressed corner observable. For a linear canonical sector rephasing cannot repair a mismatch in the transported bracket. Constructing this transport for gravitational diamonds remains open.
+\end{abstract}
+
+\section{Introduction}
+
+Place a mark on a cross section of a light cone and measure the area of a patch around it. The reading uses both the metric and a rule for finding the marked patch. Suppose a second observer has access to a larger diamond. The first observer's mark can now lie in the interior. Knowledge of the larger boundary can determine the same observable only if it also determines how to find the old patch. This problem already concerns a pair of regions. It precedes the problem of reconstructing an entire spacetime from observations.
+
+The two starting constructions describe different parts of this situation. Example~4.8 of Long's February paper uses inclusions of Minkowski diamonds to define a site \cite{long}. Chandrasekaran takes two characteristic null sheets with regulated vertices and a common corner. He reduces first-order vacuum gravity and quantizes the resulting radiative and boundary data \cite[Secs.~3--4]{nc}. The local calculations suggest a common object of study. To compare theories on a category, however, one also needs the map for an arrow and an independently specified meaning for both of its endpoints.
+
+Long's related reconstruction program uses a finite weighted graph to illustrate the passage from relational inputs to a distance \cite[Sec.~5]{cond}. The graph example specifies its inputs and can be evaluated without a continuum gravitational model. We adopt the same discipline for observables. A probe label, its calibration and the moments measured in admissible preparations are inputs. We give their algebraic content explicitly. Obtaining these data from an actual measurement theory on a site remains a physical task.
+
+The results below concern algebraic and categorical conditions on a candidate quantization. The finite Weyl example realizes the conditions on a proper arrow. For continuum null data we establish a necessary bracket test on a putative linear canonical sector and identify the boundary measurement needed to evaluate it. If a polynomial in local probes has zero action in every locally prepared representation, may we impose the same relation after embedding the region? A larger apparatus can prepare vectors that the smaller apparatus cannot reach. Even one such vector can distinguish two operators that agree on the smaller cyclic space. Section~\ref{sec:transport} gives a necessary and sufficient test. Section~\ref{sec:example} computes an example in which every unconditioned local moment agrees. Section~\ref{sec:completion} constructs the largest family of relations that survives all embeddings. Section~\ref{sec:comparison} explains which further data enter a comparison with a null-cone algebra.
+
+\section{Diamonds and physical contexts}
+\label{sec:diamonds}
+
+\subsection{Geometric inputs}
+
+Fix a time-oriented, four-dimensional Lorentzian spacetime $(M,g)$ for this comparison. For timelike separated events $p\ll q$, put
+\[
+ D(p,q)=J^+(p)\cap J^-(q).
+\]
+The definition uses the causal structure of $g$. In ordinary Minkowski coordinates the tips $( -T,\boldsymbol 0)$ and $(T,\boldsymbol 0)$ enclose the set $|t|+|\boldsymbol x|\le T$ in units with $c=1$. The common cross section at $t=0$ is the sphere $|\boldsymbol x|=T$. Its area $4\pi T^2$ uses a metric scale. A constant rescaling $g\mapsto\lambda^2 g$ leaves the causally defined subset fixed while multiplying its area by $\lambda^2$. Even the full list of inclusions between these subsets cannot distinguish the two scales. A sector that assigns areas requires some additional calibration.
+
+A cover of open diamond interiors is useful for recording which local descriptions overlap. It loses direct access to a measurement made on a cap or a corner. For the gravitational problem a region carries its boundary as part of the object. One may attach the boundary data to an object over an open interior or keep the regulated region itself as an object. Either construction needs a rule for comparing boundary measurements. Sheaf restriction on the interior alone does not specify that rule.
+
+Chandrasekaran replaces the tips by spacelike caps. The null sheets meet transversely at a corner, and the cap embeddings and Lorentz frames enter the description. Surface transformations can act on the retained variables through charges. Where the generators focus before a proposed corner, a second regular patch can be needed to describe a smooth spacetime \cite[Sec.~3, Figs.~7--10]{nc}. For the first comparison choose patches on which the sheets reach the corner without a caustic. Restricting the geometry this way avoids a separate choice about continuing characteristic data through a focusing point.
+
+\subsection{Arrows with boundary information}
+
+A decorated object specifies the region, the orientation of its two null sheets, the cap and corner labels, and the frame information required by its admissible measurements. It can carry finitely or infinitely many probe labels. An arrow $f:D\to E$ specifies a geometric embedding and a substitution for the probes of $D$ in the measurement language of $E$. The substitution might use an internal reference system in $E$. A future construction could give several physically distinct ways to keep the reference system. Such arrows need not be identified.
+
+For example, let $0<S<T$ and consider the concentric Minkowski diamonds just described. The sphere $t=0,|\boldsymbol x|=S$ lies inside the larger diamond. Its definition in these coordinates uses the common central worldline, the reference event $t=0$, and a distance rule. A mark at one point of the sphere uses an angular reference as well. Losing that angular reference leaves the whole-sphere area measurable in this symmetric example and changes the status of an individual marked patch. An embedding of sets, a rule for locating the patch, and an equality of area observables under fluctuations are three different pieces of information.
+
+We take $\Dcat$ to be a small category of chosen decorated objects and arrows. For example one may choose a set of regular diamonds in a fixed atlas, with a prescribed set of decorations above each, and only the arrows generated by a chosen set of embedding prescriptions and their identities. This makes the outgoing-arrow intersection in Eq.~\eqref{eq:saturated} a set-indexed intersection. Identities preserve all labels. Composite substitutions implement successive changes of reference. These requirements concern words before imposing state-dependent identifications. In designing a family one can start with two objects and one proper inclusion together with the required identities on both objects. A family of invertible changes of frame on one object can also be tested. A construction on a full poset of diamonds must handle every arrow of that poset, including two-step embeddings whose composite is itself a permitted arrow.
+
+There are two separate uses for covariance here. The categorical axioms require observables to move consistently along arrows. Physical covariance requires choices of labels or frames related by a symmetry to give the correct transformation law. The category can encode some of these transformations as invertible arrows. It then still matters whether a change of frame acts as a gauge redundancy or as a physical surface symmetry on the observables. Donnelly and Freidel's construction of subsystems with boundaries gives classical examples where transformations of boundary data have nontrivial generators \cite{df}. Quotienting every such transformation at the outset could discard the charge one wants to compare. Harlow and Wu construct the symplectic structure from a variational principle with specified boundary conditions \cite{hw}. Hopfm\"uller and Freidel identify gravitational canonical degrees of freedom on a null surface and track contributions at its corners \cite{hf}. Chandrasekaran, Flanagan and Prabhu study symmetries and charges at general null boundaries \cite{cfp}. For causal diamonds, matching past and future boundary symmetries restricts the full symmetry algebra \cite{cp}. These results supply physical candidates for the actions to be compared.
+
+\subsection{Variance}
+
+For an arrow $f:D\to E$ the algebra map sought here has direction $A(f):A(D)\to A(E)$. A positive normalized functional $\omega$ on $A(E)$ restricts to $\omega\circ A(f)$ on $A(D)$. This convention agrees with the locally covariant formulation of quantum field theory, where admissible spacetime embeddings carry observable algebras forward \cite{bfv}. The category used there has a specified geometric metric and a specified class of morphisms. Choosing the analogous arrows for dynamical null boundaries is part of the gravitational problem.
+
+A Grothendieck topology $J$ specifies covering sieves. A sheaf $S$ on $(\mathcal C,J)$ carries restriction maps and a gluing law for matching sections. These are meaningful before one chooses a multiplication, an involution, or a class of positive states. A complex algebra of observables can arise from additional operations on probes or through a presentation with relations. The proof of covariance below starts after the choice of these operations. In particular, a cover does not imply that the algebra of its union is a colimit of the local algebras.
+
+\section{Observables from probe moments}
+\label{sec:probes}
+
+\subsection{Operations and moments}
+
+For every object $D$ let $L_D$ be a set of names for calibrated operations. It might name a smeared boundary displacement, a reading in a specified cap frame, or a bounded function of a corner area. Put $\F_D=\mathbb C\langle L_D,L_D^{*}\rangle$, the free unital complex associative star algebra on $L_D$. A word records a sequence of operations. An empty sequence gives the unit, and taking its adjoint reverses the order of the adjoints. A prescribed unital complex star algebra of words with state-independent relations can equally serve as $\F_D$. We assume all substitutions preserve such relations if they have already been imposed.
+
+The word algebra includes coherent linear combinations of sequences. Positivity concerns a measurement of $a^{*}a$ for every such linear combination $a$. Access to marginal distributions for separate operations does not supply these data. For example, two self-adjoint generators $X$ and $Z$ require an ordering convention before one can ask for the moment of $XZ$. The complex part of an ordered moment is invisible to a list containing only the means of $X$ and $Z$. A specified preparation must come with moments of the entire word algebra.
+
+\begin{definition}[Calibration data]
+For each $D$ choose a nonempty set $\Probes_D$ of linear functionals $\omega:\F_D\to\mathbb C$ such that $\omega(1)=1$ and $\omega(a^*a)\ge0$ for all $a\in\F_D$. For each arrow $f:D\to E$ specify a unital star homomorphism $T_f:\F_D\to\F_E$. Assume $T_{\id_D}=\id_{\F_D}$ and $T_{gf}=T_gT_f$.
+\end{definition}
+
+A calibration need not use the Hilbert space one eventually hopes to reconstruct. For a finite instrument one can give tables of word moments and require consistency under linear combinations. In a physical model one could instead obtain the moments from a preparation and composition law for interfaces in a site. The inputs must specify enough of this law to evaluate all words in the chosen domain. Defining the moments by copying a candidate null-cone Hilbert space would be legitimate calibration of an instrument against that model, but it would remove independence from a test of the model.
+
+There is also a distinction between a sheaf of readouts and the word algebra. A readout restricted to an open subregion has a contravariant restriction. Reinterpreting a measurement made on the smaller apparatus inside a larger one calls for a covariant change of its support and reference labels. A physical model may provide both. In this paper $T_f$ names the latter operation and contains the choice that must be justified for a gravitational embedding.
+
+\subsection{The algebraic representation}
+
+For each calibration $\omega$, the semi-inner product of words is
+\[
+ \langle b,c\rangle_\omega=\omega(b^*c).
+\]
+Let $N_\omega=\{b:\omega(b^*b)=0\}$. Cauchy Schwarz for a positive functional gives $\omega(d^*b)=0$ for all $d$ when $b\in N_\omega$. Thus $\omega(d^*ab)=0$ for every $a,d$, as one sees by replacing $d$ by $a^*d$. Taking $d=ab$ proves that $ab\in N_\omega$. We may form the pre-Hilbert space $\mathcal H_\omega^0=\F_D/N_\omega$ and the representation $\pi_\omega(a)[b]=[ab]$. The vector $[1]$ is cyclic on this algebraic domain. This is the algebraic GNS construction \cite{gns}.
+
+Completing $\mathcal H_\omega^0$ gives a Hilbert space. A left multiplication can represent an unbounded operator on it. All products and kernels below use the common invariant pre-Hilbert domain. A passage to bounded exponentials, closures of individual operators, or a von Neumann algebra requires more hypotheses. Explicit bounded probes offer one way to formulate a later analytic version. Their bounds must be uniform over the representations if one uses a supremum norm.
+
+\begin{definition}[Local probe algebra]
+The invisible ideal $K_D$ and the algebra $Y(D)$ are
+\begin{equation}
+ K_D=\bigcap_{\omega\in\Probes_D}\ker\pi_\omega,\qquad
+ Y(D)=\F_D/K_D .                                        \label{eq:local}
+\end{equation}
+Write $q_D:\F_D\to Y(D)$ for the quotient.
+\end{definition}
+
+Kernels of star representations are two-sided star ideals. Indeed, for $a$ acting as zero, multiplication on the left or right preserves the zero action. The adjoint identity on the domain makes every matrix element of $\pi_\omega(a^*)$ zero as well. Every $K_D$ is proper because $\omega(1)=1$. Each $\omega$ factors through $q_D$: its value is the matrix element at the cyclic vector. Every state class we call calibrated on $Y(D)$ is obtained from such a chosen $\omega$. The quotient itself may admit many other states.
+
+\begin{lemma}[Null words]\label{lem:null}
+A word polynomial $a\in\F_D$ lies in $K_D$ if and only if
+\begin{equation}
+  \omega\big(b^*a^*ab\big)=0
+             \quad\text{for all }\omega\in\Probes_D,\ b\in\F_D .
+                                                        \label{eq:null}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The displayed number equals the squared norm of $\pi_\omega(a)[b]$. Every vector in the algebraic domain has the form $[b]$. Vanishing of every such norm says exactly that $\pi_\omega(a)=0$ for every chosen $\omega$.
+\end{proof}
+
+The left ideal $N_\omega$ tests only the cyclic vector. Even for bounded operators a projector can annihilate the cyclic vector without being the zero operator. Formula~\eqref{eq:null} quantifies over the changes of preparation that can be synthesized from words. If $\omega(b^*b)>0$, the normalized vector $[b]/\|[b]\|$ has expectation
+\[
+ \omega_b(x)=\frac{\omega(b^*xb)}{\omega(b^*b)} .
+\]
+For $[b]=0$, left multiplication by any word also gives the zero vector, so this case supplies no additional constraint. In a laboratory interpretation $b$ is allowed to be an algebraic operation without having unit norm. Calling $\omega_b$ a vector-conditioned state refers only to this formula. A realization by an admissible physical preparation needs its own interpretation.
+
+\subsection{Separation by independent probes}
+
+The choice of calibrated probes leaves an experimentally relevant freedom. Adding a preparation can shrink $K_D$ and reveal a degree of freedom. If $\Probes_D\subseteq\Probes'_D$, then $K'_D\subseteq K_D$ and there is a surjection $Y'(D)\to Y(D)$. The direction follows because the better-resolved algebra imposes fewer identifications. With any unitary matrix representation as a finite example, a full family of vector states separates its represented operators by norms. A single cyclic state can already suffice for that representation while failing to separate other representations of the same raw algebra.
+
+The Yoneda lemma identifies an object with its representable functor on a sufficiently rich category of tests. It does not make a chosen finite set of measurements separating. The failure is simple for a two-state classical system: an apparatus that only measures the constant function $1$ yields identical results in both pure states. Adding its full collection of powers and sums still gives constants. To recover a chosen observable algebra one must show that the tests distinguish the relations and the sectors relevant to it. In Eq.~\eqref{eq:local} the quotient records exactly the portion accessible to the stipulated moments. It gives a concrete interpretation to one possible reconstruction from perspectives.
+
+\subsection{Faithfulness in a local representation}
+
+A selected state can be faithful on one algebra of observables and nonfaithful on another algebra built from the same raw words. For a concrete algebra of bounded operators on $\mathcal H$, a vector $\Omega$ is separating when $A\Omega=0$ implies $A=0$. In this case $\langle\Omega,A^*A\Omega\rangle>0$ for every nonzero $A$. The joint GNS kernel of this single state on the concrete algebra is zero. Its kernel on a free algebra of symbols still contains any polynomial identity satisfied by the represented operators. It is the latter sort of quotient that occurs in Eq.~\eqref{eq:local}.
+
+In Minkowski vacuum field theory the Reeh-Schlieder property gives cyclicity for local regions under the usual field-theoretic hypotheses. If the spacelike complement of a region contains another open region for whose algebra $\Omega$ is cyclic, locality also gives separation for the first algebra. In fact $A\Omega=0$ implies $AB\Omega=BA\Omega=0$ for every $B$ in the commuting algebra, and boundedness of $A$ extends vanishing from this dense set to all of $\mathcal H$. If the raw algebras are precisely such faithful concrete local algebras and the relative action is already an inclusion, the single unconditioned vacuum suffices for the test of the zero ideal in this special situation. The diagonal matrix example uses a nonfaithful source state on its raw algebra.
+
+Cyclicity or separation cannot be transferred from that argument by calling a diamond state a vacuum. One needs a common representation, a commuting complement and the stated cyclicity. Curved geometries can admit Reeh-Schlieder states with suitable additional hypotheses, as the constructions of Sanders illustrate \cite{sanders}. For the proposed boundary construction the choice of cap, clock and frame fixes a distinct representation problem. A null-cone gravitational state might satisfy an appropriate separation result on a sector, but the choice of a Gaussian in one patch supplies no such theorem about every larger patch. If a sector projector has been imposed, faithfulness on the surviving algebra also leaves open whether the discarded sector is accessible to a larger apparatus. These observations explain when the matrix mechanism is relevant without assuming it must occur in gravity.
+
+\subsection{Analytic control of the probe maps}
+
+Suppose each chosen $\pi_\omega(a)$ extends to a bounded operator for the measurements under study. If $\|a\|_D=\sup_{\omega\in\Probes_D}\|\pi_\omega(a)\|$ is finite for each $a$ in a unital star subalgebra of probes, it gives a $C^*$-seminorm there. Its kernel is $K_D$ restricted to those probes, and completion after quotient gives a specific $C^*$-algebra. Boundedness in each representation separately does not by itself guarantee finiteness of the supremum. Replacing $a$ by a bounded function selected uniformly across all preparations can address this first difficulty.
+
+The algebraic transport criterion checks zero seminorms. To extend the map between the specified completions one needs norm control. A sufficient condition is
+\[
+ \|T_f a\|_E\le\|a\|_D \qquad\text{for every bounded probe polynomial }a .
+\]
+It follows, for instance, if every normalized ambient vector pullback has expectation on $a^*a$ bounded by $\|a\|_D^2$. Indeed, the algebraic vectors $[b]$ are dense in the Hilbert completion, so the supremum of the target norms on unit vectors is obtained by taking a supremum over these vectors. Taking the further supremum over $\omega$ gives the inequality. A norm-preserving map gives an isometric inclusion of completions. On an algebraic quotient, equal kernels need not on their own provide the estimate for a pair of separately chosen norms.
+
+For unbounded gravitational fields a densely defined symmetric operator can admit distinct self-adjoint extensions. The exponentials formed from these extensions can differ even when the operators agree on the smaller symmetric domain. To infer equality of the exponentiated observables by transport one can exhibit essential self-adjointness on a common transported invariant core and show that the relevant intertwiners act there. If two generators are compared jointly, products or sums also need compatible domains. Directly comparing bounded functions of the fields avoids forming those products, but it requires agreeing on the spectral measures which define the functions. A sequence of cutoff calculations converging on one fixed state will in general control neither norm estimates uniform over probes nor equality of two self-adjoint extensions. In a null-cone measurement all such claims must specify the smearings, the sector and the norm or topology used in taking the cutoff away.
+
+\section{Transport between regions}
+\label{sec:transport}
+
+\subsection{The test on an embedding}
+
+An arrow that lifts probe words need not carry $K_D$ into $K_E$. For a target word $b\in\F_E$ and preparation $\omega\in\Probes_E$ with $\omega(b^*b)>0$, the source functional $\omega_b\circ T_f$ is positive and normalized. The word $b$ may involve measurements in $E$ that have no counterpart in $D$.
+
+\begin{theorem}[Ambient preparation criterion]\label{thm:transport}
+Fix $f:D\to E$. The following are equivalent.
+\begin{enumerate}
+\item There exists a unital star homomorphism $Y(f):Y(D)\to Y(E)$ satisfying $Y(f)q_D=q_ET_f$.
+\item $T_f(K_D)\subseteq K_E$, or equivalently $K_D\subseteq T_f^{-1}(K_E)$.
+\item Whenever $a\in K_D$, every normalized ambient vector-conditioned state $\omega_b$ satisfies
+\[
+  (\omega_b\circ T_f)(a^*a)=0.
+\]
+Here $\omega$ and $b$ range over the target preparations and words specified above.
+\end{enumerate}
+When the map exists it is unique. It is injective if and only if the containment in the second condition is an equality.
+\end{theorem}
+\begin{proof}
+If the map exists then $q_Da=0$ implies $q_ET_f(a)=0$, proving the containment. Conversely the containment makes $q_Da\mapsto q_ET_f(a)$ well defined and compatible with every algebra operation. Surjectivity of $q_D$ gives uniqueness. The kernel consists of the classes of words in $T_f^{-1}(K_E)$.
+
+By Lemma~\ref{lem:null} the condition $T_f(a)\in K_E$ says $\omega(b^*T_f(a)^*T_f(a)b)=0$ for all $\omega,b$. If $\omega(b^*b)>0$ divide by this number. If $[b]=0$, the expression already vanishes. The homomorphism property of $T_f$ identifies the result with the third condition.
+\end{proof}
+
+The criterion distinguishes existence and injectivity. If new observables can act on states in an enlarged region, the source may have imposed too many zero relations. A map then fails to exist. If an embedding erases distinctions that remained visible at the source, the induced map has a nonzero kernel. Checking ordinary commutation relations at the target can miss both problems. Those relations may still hold after one has discarded an entire summand of the source.
+
+\begin{corollary}[Functoriality]\label{cor:functor}
+If the criterion holds for every arrow, $D\mapsto Y(D)$ and $f\mapsto Y(f)$ define a functor $\Dcat\to\alg$. It suffices to verify the containment on arrows generating $\Dcat$ under composition.
+\end{corollary}
+\begin{proof}
+Containments compose. Precomposition with $q_D$ gives the same maps for $Y(g)Y(f)$ and $Y(gf)$, and $q_D$ is surjective. Identity maps follow by the same argument.
+\end{proof}
+
+The category $\alg$ used here has unital complex star algebras and unital complex-linear star homomorphisms. A net with isotony usually requires injective structure maps. This is an application of the equality case in Theorem~\ref{thm:transport}. Brunetti, Fredenhagen and Verch treat state spaces as contravariant choices over an already specified covariant theory \cite[Sec.~3.1]{bfv}. Here one starts before the local word relations have acquired a covariant quotient. One can impose an additional condition by specifying calibrated state spaces. In that case a functor of algebras with injective arrows need not pull the admissible state class into itself. The latter assertion is a condition on the selected preparations.
+
+\subsection{Sufficient calibration conditions}
+
+If every ambient $\omega_b\circ T_f$ factors through $q_D$ as a positive functional, the criterion holds. For instance, it suffices for that functional to be a convex combination of calibrated source states. Tests of this kind use only moments and can be easier than listing an ideal. No positivity assertion about an arbitrary quotient is needed here: the source states in the convex combination were already defined on $Y(D)$.
+
+There is also a useful condition for injectivity. Suppose the arrow passes the criterion and every $\rho\in\Probes_D$ is the pullback of a target state $\omega\in\Probes_E$. If $T_f(a)\in K_E$, substitute $T_f(b)$ as the target preparation word in Lemma~\ref{lem:null}. It yields $\rho(b^*a^*ab)=0$ for every source $b$. Hence $a\in K_D$, proving injectivity. Requiring pullbacks of all source states is sufficient here, and it can be replaced by any family that separates these norms.
+
+For a state extension result the physical constraints matter. Target preparations restricted to fixed area or to a fixed boundary clock may exclude extensions of a given local state. Conversely a local state prepared with a rigid external frame may become a mixture after that frame is forgotten. In such cases a proposed functor should specify the comparison of state classes and separately identify the ideals. Hilbert-space dimension or algebra type alone cannot check the support of a calibration.
+
+\section{A missing diagonal sector}
+\label{sec:example}
+
+\subsection{A calculation with a selected state}
+
+Consider two objects with one proper arrow. Use the diagonal algebra $\F_D=\mathbb C^2$ at the source, the matrix algebra $\F_E=M_2(\mathbb C)$ at the target, and the unital inclusion $T_f(a_0,a_1)=\mathrm{diag}(a_0,a_1)$. These are word algebras with known state-independent relations. Write $v_0,v_1$ for the standard basis of $\mathbb C^2$, $e_0=(1,0)$ and $e_1=(0,1)$ for the source projections, and $E_{ij}=|v_i\rangle\langle v_j|$ for matrix units.
+
+Choose the source state $\rho(a)=a_0$ and target state $\omega(B)=\langle v_0,Bv_0\rangle$. The only locally calibrated states in this example are respectively $\rho$ and $\omega$. They satisfy $\omega T_f=\rho$ on the entire raw source algebra. Every word in diagonal matrices has the same expectation when evaluated in the small apparatus and then pulled back from the large one.
+
+At the source $\rho(b^*e_1^*e_1 b)=0$ for every $b=(b_0,b_1)$. Thus $K_D=\mathbb C e_1$ and $Y(D)$ consists of the first coordinate only. At the target every vector equals $Bv_0$ for some $B$, so $\mathcal H_\omega^0$ is naturally $\mathbb C^2$ and $\ker\pi_\omega=0$. In particular the image of the source projection $e_1$ is visible. The target preparation word $b=E_{10}$ witnesses this with the calculation
+\begin{equation}
+ \omega(b^*b)=1,\qquad
+ \omega\big(b^*T_f(e_1)^*T_f(e_1)b\big)=1.       \label{eq:witness}
+\end{equation}
+Theorem~\ref{thm:transport} therefore forbids a homomorphism satisfying the desired quotient diagram. Abstractly there is a unital embedding $\mathbb C\to M_2(\mathbb C)$ by scalar matrices. It sends every representative of the zero class to zero and thus cannot send $q_D(e_1)$ to $E_{11}$. The obstruction concerns the specified action on measurements.
+
+\subsection{A repair of the calibration}
+
+Permit the source apparatus to prepare either coordinate state. The new $K_D$ is zero. Every target vector-conditioned state restricted to the diagonal algebra is a convex combination of these states, with weights $|\langle v_i,v\rangle|^2$ for the normalized vector $v$. The larger calibration therefore gives an injective transport with precisely the original formula $T_f$. In this example admitting a second preparation changes the observable algebra before any geometric change has been made.
+
+There is a different choice at the target. If all target operations preserve the span of $v_0$ and their adjoints do too, the cyclic sector cannot reach $v_1$. For a diagonal target algebra with the same vector state the invisible ideal contains the second projection, and the original one-coordinate source quotient maps isomorphically to the target quotient. These two repairs make distinct predictions about whether acting with $E_{10}$ is possible. An apparatus whose allowed operations are restricted to gauge-invariant transitions, for example, should treat that restriction as input when deciding which repair fits the physics.
+
+The matrix calculation isolates one precise way in which adding a boundary operation can invalidate transport. The local invariant subspace is small although the marginal moments agree for every original word. The observable discrepancy in Eq.~\eqref{eq:witness} is a norm that could be tested directly in any finite realization of these operations.
+
+\subsection{A map that exists and loses information}
+
+Let $\F_D=\F_E=\mathbb C^2$ with identity label substitution but distinct preparations. Let both coordinate states be admissible at $D$ and only the first at $E$. Now $K_D=0$ and $K_E=\mathbb Ce_1$. A unique unital map $Y(D)\to Y(E)$ exists, namely $(a_0,a_1)\mapsto a_0$. It has kernel $\mathbb Ce_1$. All labels moved consistently, but the sole target preparation loses sensitivity to a source distinction. It makes the equality criterion for isotony operational: a positive norm witnessed by a source preparation must survive somewhere in the target representation family.
+
+\section{Relations stable under all embeddings}
+\label{sec:completion}
+
+\subsection{The intersection over accessible measurements}
+
+If one works only with $K_D$, changing the calibration at one object can invalidate several arrows at once. There is a canonical algebraic alternative that uses all the originally chosen measurements in all larger contexts. For a small category, put
+\begin{equation}
+ \sat_D=\bigcap_{\substack{f:D\to E\\ E\in\Dcat}}T_f^{-1}(K_E),
+ \qquad Y^{\mathrm{ext}}(D)=\F_D/\sat_D .                  \label{eq:saturated}
+\end{equation}
+These are enlargements reachable by arrows regardless of their temporal location. The identity is included, so $\sat_D\subseteq K_D$. A class in $Y^{\mathrm{ext}}(D)$ names an operation of $D$ that can be distinguished from zero by a word preparation in at least one accessible target, or is zero if no such preparation exists.
+
+\begin{theorem}[Largest compatible ideals]\label{thm:largest}
+Each $\sat_D$ is a proper two-sided star ideal, and $T_f(\sat_D)\subseteq\sat_E$ for every $f:D\to E$. If a family of two-sided star ideals $I_D$ satisfies $I_D\subseteq K_D$ and $T_f(I_D)\subseteq I_E$ on all arrows, then $I_D\subseteq\sat_D$ for every $D$. The quotients $Y^{\mathrm{ext}}$ form a functor. The pointwise equality $\sat_D=K_D$ for every $D$ holds exactly when the original quotients themselves admit the prescribed transport on all arrows.
+\end{theorem}
+\begin{proof}
+Preimages and intersections of star ideals are star ideals. The identity arrow supplies containment in the proper ideal $K_D$. For $a\in\sat_D$, an arrow $f:D\to E$, and any $g:E\to B$, the composite $gf$ occurs in the defining intersection for $D$. Thus $T_gT_f(a)\in K_B$, proving $T_f(a)\in\sat_E$. The quotients now inherit composition and units from $T$.
+
+If $a\in I_D$, for every $f:D\to E$ we have $T_f(a)\in I_E\subseteq K_E$. Taking the intersection proves maximality. If the original ideals are already compatible, choose $I_D=K_D$ in this argument to obtain equality. Conversely equality makes them compatible by the first assertion.
+\end{proof}
+
+There is a canonical surjection $Y^{\mathrm{ext}}(D)\to Y(D)$ for each object. In the first matrix example this is the map that forgets the second coordinate. It can have a nonzero kernel even though the calibration and the word algebra at $D$ were never altered. Its extra classes record information that some larger apparatus can resolve. A strict operational interpretation that allows only preparations physically performable inside $D$ may therefore prefer $Y(D)$ and a smaller class of arrows.
+
+The order in the theorem matters. Among compatible choices of relations that do not destroy any observed local distinction, $\sat$ imposes as many relations as possible. Equivalently, $\F_D/I_D$ surjects onto $\F_D/\sat_D$ for any such compatible $I$. Choosing the zero ideal everywhere would also give a functor and might retain many words that no allowed experiment distinguishes. The intersection removes exactly those words invisible in every permitted enlargement.
+
+Applying the intersection operation twice gives the same family of ideals. The family produced by the first application is compatible, so the equality assertion of the theorem applies to it on the second application. This property becomes useful if the category of tests changes. Adding a new embedding can shrink an ideal by making a new measurement reachable. Deleting an embedding can enlarge it. Both effects are governed by which target operators and cyclic preparations the new arrows expose.
+
+\subsection{Injectivity and branching}
+
+Transport for the extended algebra can still lose information. Writing $f:D\to E$, its kernel is
+\[
+ \frac{T_f^{-1}(\sat_E)}{\sat_D}.
+\]
+The numerator tests only arrows out of $D$ which factor through $f$. A word might survive somewhere else above $D$ and yet vanish in all the contexts reached above $E$.
+
+For instance, let the only proper arrows be $D\to E$ and $D\to B$. Use $\mathbb C^2$ at every object with identity raw maps. At $D$ and $E$ calibrate only the first coordinate. At $B$ calibrate both. The intersection at $D$ is zero because of the branch through $B$, and at $E$ it equals $\mathbb Ce_1$. Thus the extended algebra maps onto $\mathbb C$ along the first branch and is injective along the second. Both arrows coexist in a functor. An isotonic net on this index category would require a different calibration at $E$ or a different physical identification of its observables.
+
+\begin{proposition}[Detection above a given arrow]\label{prop:faith}
+The extended map for $f:D\to E$ is injective exactly when every $a\notin\sat_D$ has a witness above $E$: there are $g:E\to B$, $\omega\in\Probes_B$ and $b\in\F_B$ such that
+\[
+ \omega\big(b^*T_{gf}(a)^*T_{gf}(a)b\big)>0 .
+\]
+\end{proposition}
+\begin{proof}
+For a given $a$, existence of such a witness is equivalent by Lemma~\ref{lem:null} to $T_gT_f(a)\notin K_B$ for some $g$. By definition this is equivalent to $T_f(a)\notin\sat_E$. The assertion follows from the kernel formula.
+\end{proof}
+
+This condition refers to the transmission of a specific observable distinction. Having common refinements of all charts will help only if the refinements preserve the witnesses. A change of chart can project onto a new superselection sector or discard a boundary label. An existence assertion for refinements of the underlying geometric regions says nothing on its own about the norm in the displayed test.
+
+\subsection{A preparation description of the intersection}
+
+The extra probes visible in Eq.~\eqref{eq:saturated} can also be expressed entirely as local moment functionals. Define $\Probes^{\mathrm{ext}}_D$ to consist of every $\omega_b\circ T_f$ for $f:D\to E$, $\omega\in\Probes_E$ and $\omega(b^*b)>0$. These functionals are states on $\F_D$. They need not lie in $\Probes_D$.
+
+\begin{proposition}[States of enlarged apparatuses]\label{prop:extstates}
+The invisible ideal computed on $\F_D$ from $\Probes^{\mathrm{ext}}_D$ equals $\sat_D$.
+\end{proposition}
+\begin{proof}
+If $a\in\sat_D$, then for every such $f$, $T_f(a)$ kills every vector in the algebraic domain at every $\omega\in\Probes_E$. In particular it kills the vector $[T_f(c)b]$ for all $c\in\F_D$. Its squared norm after acting on that vector, divided by $\omega(b^*b)$, is $(\omega_b\circ T_f)(c^*a^*ac)$. Lemma~\ref{lem:null} puts $a$ in the invisible ideal for the enlarged family.
+
+Conversely suppose $a$ is in that ideal. Take $c=1$ and vary $f,\omega,b$. The squared norm becomes $\omega(b^*T_f(a)^*T_f(a)b)/\omega(b^*b)$. It vanishes for every admissible nonzero vector $[b]$, hence $T_f(a)\in K_E$ for every $f$. Intersecting their preimages gives $a\in\sat_D$.
+\end{proof}
+
+The formula answers a practical question about a finite model. Which preparations must be supplied to the small apparatus if it is to use the extended algebra? The restrictions of all reachable target vector preparations suffice. One can discard any preparations whose removal preserves the joint kernel. For the diagonal algebra it suffices to add the second coordinate state. In a continuum model a physical obstruction may prevent collecting these restrictions in one admissible family, for example if geometric energy bounds depend on the size of the apparatus. The extended algebra remains an algebraic construction in that situation.
+
+\section{Comparison with a null-cone algebra}
+\label{sec:comparison}
+
+\subsection{The map at one object}
+
+Let $N(D)$ denote an independently specified unital star algebra that one proposes to obtain by reducing and quantizing null data. It could initially be a common algebraic domain of smeared observables. Assume temporarily that a physical dictionary gives a map $j_D:L_D\to N(D)$, with an adjoint prescribed for each adjoint label. For a free word algebra it extends uniquely to a star homomorphism $\sigma_D:\F_D\to N(D)$. For an algebra already subject to relations, this extension exists only if the chosen elements satisfy the relations.
+
+For $Y(D)$ in Eq.~\eqref{eq:local}, the dictionary defines a homomorphism precisely if $K_D\subseteq\ker\sigma_D$. An isomorphism requires
+\begin{equation}
+ K_D=\ker\sigma_D,\qquad
+ \langle j_D(L_D)\rangle_{*,1}=N(D),                    \label{eq:obj}
+\end{equation}
+where the second expression is the unital complex star algebra generated by the images. The same assertions hold with $\sat_D$ when testing the extended observable assignment. These follow from the first isomorphism theorem. They give two tests: examine the relations among the proposed observables, and determine whether every observable in the target algebra lies among their generated polynomials. A match on expectation values in a single state generally establishes neither.
+
+\begin{proposition}[Moment characterization]\label{prop:moments}
+Let $\mathcal W_D$ be a nonempty family of positive normalized functionals on $N(D)$ whose algebraic GNS representations have zero joint kernel. Suppose $\sigma_D$ is onto. If the source calibration consists exactly of the pullbacks $\nu\circ\sigma_D$ for $\nu\in\mathcal W_D$, then $K_D=\ker\sigma_D$.
+\end{proposition}
+\begin{proof}
+Words in $\ker\sigma_D$ give zero in all the norms of Lemma~\ref{lem:null}. If $\sigma_D(a)\ne0$, choose $\nu$ such that $\pi_\nu(\sigma_D(a))$ acts nontrivially. A vector $[b]$ in its algebraic domain witnesses this action. Surjectivity provides $c\in\F_D$ with $\sigma_D(c)=b$. The resulting source squared norm at $c$ for $\nu\circ\sigma_D$ is positive. Thus $a\notin K_D$.
+\end{proof}
+
+The joint-kernel condition asks the represented family to separate operators. Individual cyclic vectors need not be separating. For independent reconstructions the hypothesis on moments must be established by calculation. One way is to predict word moments using preparations on the site and compare them with the moments independently computed after quantizing the null sheets. Equality of all these moments in corresponding separating state families, together with generation, is enough at a single object. If a site construction defines its positive functionals by pulling back the null-cone states, the proposition becomes a consistency check on the dictionary.
+
+\subsection{Naturality and symmetries}
+
+Assume maps for $Y$ and $N$ have been defined on the same $\Dcat$, and that objectwise isomorphisms $\eta_D:Y(D)\to N(D)$ have been found. To compare the assignments as functors one must have
+\begin{equation}
+ \eta_E\,Y(f)=N(f)\,\eta_D\qquad (f:D\to E).            \label{eq:nat}
+\end{equation}
+If the domain algebras are algebraically generated by the probe labels, it suffices to test Eq.~\eqref{eq:nat} on those labels.
+
+\begin{lemma}[Naturality on generators]\label{lem:generator}
+Two unital complex star homomorphisms out of a unital star algebra generated by $S$ coincide if they agree on $S$. The comparison square in Eq.~\eqref{eq:nat} therefore commutes if it commutes on a generating family of its source.
+\end{lemma}
+\begin{proof}
+The equalizer of the two homomorphisms contains $1$ and is closed under addition, complex scalar multiplication, multiplication and involution. An equalizer that contains $S$ is therefore the whole algebra.
+\end{proof}
+
+The claim has variants with additional hypotheses. If $S$ generates a norm-dense star subalgebra of a $C^*$-algebra, continuity of star homomorphisms passes equality to the closure. For a von Neumann algebra and an ultraweakly dense star subalgebra the analogous step needs ultraweak continuity. If two unbounded operators agree on a domain, equality of the associated closed operators requires control of their domains, for example a common core for both closures.
+
+For a boundary frame symmetry represented by an automorphism $s_D$ of the decorated object, Eq.~\eqref{eq:nat} also demands $\eta_DY(s_D)=N(s_D)\eta_D$. It compares the action on observables. If one also wants a chosen representation to implement this action unitarily, one must select a state or state sector with the relevant covariance properties. If $s_D$ labels a gauge equivalence, one must instead show the intended observables descend through that equivalence. Confusing the two cases can turn a measurable charge into a formal zero.
+
+Given a star isomorphism $\eta_D$ and a state $\nu$ on $N(D)$, define $\omega=\nu\circ\eta_D$. Sending $[a]_\omega$ to $[\eta_D(a)]_\nu$ preserves squared norms and inner products. Surjectivity of $\eta_D$ gives the full algebraic cyclic domain as range, so the map extends to a unitary of the Hilbert completions. It intertwines the actions on the cyclic domains. One still has to identify the admissible classes of states defined by clocks, boundary conditions and finite measurements.
+
+\subsection{An obstruction from a loop}
+
+Equality of the algebra types at every object can coexist with inequivalent functors. Consider the one-object category associated to the group of order two. Its nonidentity arrow $s$ satisfies $s^2=1$. Two assignments both take the object to $\mathbb C^2$. The first sends $s$ to the identity. The second sends $s$ to the automorphism $\tau(a_0,a_1)=(a_1,a_0)$. Both assignments preserve composition.
+
+A natural isomorphism between them would have a surjective component $\eta$ satisfying $\eta=\tau\eta$. Surjectivity would force $\tau$ to fix every element. It moves $e_0$ to $e_1$, so no natural isomorphism exists. The nonexistence here concerns every possible choice of objectwise identification. Along a single noninvertible arrow without independently fixed frame labels an apparent mismatch can sometimes be removed by changing the comparison at its target. The group relation makes that remedy impossible in this example. For physical changes of boundary frame the actions on charges are candidate observables with which to detect such a failure.
+
+\section{A finite noncommutative realization}
+\label{sec:finite}
+
+\subsection{An ordered probe protocol}
+
+A positive example can test more of the proposal than a single isomorphism between two abstract algebras. We construct a model with a proper enlargement, an explicit state, noncommuting observables and a change of generator signs forced by the ordering of measurements. Both the probe moments and the target operator matrices can be calculated before comparing them.
+
+Let $V_m=\mathbb F_2^m$. At an object indexed by $m\ge1$, a word is built from self-adjoint labels $x_i,z_i$, with $1\le i\le m$. Begin with the freely generated unital complex star algebra subject only to these adjoint conditions. The local readout protocol processes an ordered word into a sign $\epsilon\in\{+1,-1\}$ and two parity strings $a,b\in V_m$. The initial record is $(1,0,0)$. Reading $x_j$ on the right multiplies the sign by $(-1)^{b_j}$ and adds the $j$th unit vector to $a$. Reading $z_j$ adds that vector to $b$ and leaves the sign alone. The final readout is $\epsilon$ if both strings vanish, and zero otherwise. Extend the readout to linear combinations by complex linearity and call it $\lambda_m$. The sign is a calibration of ordered products. A list of the marginal single-label distributions, all with zero mean, could not determine this protocol.
+
+One can check positivity before choosing an operator realization. Introduce formal basis elements $w(a,b)$, one for every pair of parity strings, and use the multiplication
+\begin{align}
+ w(a,b)w(c,d)&=(-1)^{b\cdot c}w(a+c,b+d),               \label{eq:twist}\\
+ w(a,b)^*&=(-1)^{a\cdot b}w(a,b).                       \label{eq:invol}
+\end{align}
+In the two orders of a triple product the exponents are $b\cdot c+(b+d)\cdot e$ and $d\cdot e+b\cdot(c+e)$, which agree modulo two. The adjoint formula reverses the product since both sides of $(w(a,b)w(c,d))^*=w(c,d)^*w(a,b)^*$ have exponent $a\cdot b+c\cdot d+a\cdot d$. The unit is $w(0,0)$. These formulas define a unital star algebra $B_m$ over $\mathbb C$.
+
+Sending $x_j$ and $z_j$ to $w(e_j,0)$ and $w(0,e_j)$ gives an onto star homomorphism $r_m$ from the raw algebra to $B_m$. The all-$x$-then-all-$z$ word maps to $w(a,b)$ with positive sign. The protocol says $\lambda_m=\ell_m r_m$, where $\ell_m$ selects the coefficient of $w(0,0)$. The coefficient of the unit in $w(a,b)^*w(c,d)$ is one if $(a,b)=(c,d)$ and zero otherwise. In particular
+\[
+ \ell_m(t^*t)=\sum_{a,b}|t_{a,b}|^2,\qquad
+ t=\sum_{a,b}t_{a,b}w(a,b).
+\]
+The state $\ell_m$ is faithful in the sense that $\ell_m(t^*t)=0$ implies $t=0$. The locally invisible ideal for $\{\lambda_m\}$ is exactly $\ker r_m$. Vanishing of the norm with $b=1$ in Lemma~\ref{lem:null} already forces $r_m(a)=0$ in this example. Every such $a$ also kills the other preparations because $r_m$ is a homomorphism. Consequently $Y_m\simeq B_m$. Positivity and the quotient were obtained from the sign and parity rules alone.
+
+\subsection{A separate operator construction}
+
+For the target take the Hilbert space with orthonormal basis $|s\rangle$ indexed by $s\in V_m$. Position labels add a parity and phase labels test a parity:
+\[
+ X(a)|s\rangle=|s+a\rangle,\qquad
+ Z(b)|s\rangle=(-1)^{b\cdot s}|s\rangle .
+\]
+These independently specified matrices obey $Z(b)X(c)=(-1)^{b\cdot c}X(c)Z(b)$. The candidate comparison $\eta_m$ sends $w(a,b)$ to $X(a)Z(b)$. Matrix multiplication reproduces Eq.~\eqref{eq:twist}, and taking the adjoint reproduces Eq.~\eqref{eq:invol}.
+
+To determine its range one can isolate each matrix unit. The orthogonality of the characters of $V_m$ gives
+\begin{equation}
+ |s+a\rangle\langle s|
+   =2^{-m}\sum_{b\in V_m}(-1)^{b\cdot s}X(a)Z(b).       \label{eq:unit}
+\end{equation}
+Indeed, applying the right side to $|t\rangle$ yields the vector $|t+a\rangle$ times $2^{-m}\sum_b(-1)^{b\cdot(s+t)}$. This factor equals one if $t=s$. If $t\ne s$, pairing characters whose indices differ at a coordinate where $s+t$ is nonzero makes the sum vanish. Equation~\eqref{eq:unit} proves surjectivity onto $M_{2^m}(\mathbb C)$. Both vector spaces have dimension $2^{2m}$, proving injectivity.
+
+The normalized matrix trace agrees with the prescribed moment state. A shift with $a\ne0$ has zero diagonal. A pure phase with $b\ne0$ has equally many diagonal entries of the two signs, so its trace also vanishes. The operator $X(0)Z(0)$ is the identity. These give all the coefficient values of $\ell_m$. Thus matrix units, the adjoint and the distinguished state agree at each object. The algebraic GNS space of the trace has dimension $2^{2m}$, while the original Hilbert space on which the matrices were defined has dimension $2^m$. An algebra isomorphism and a choice of state determine the former via cyclic reconstruction. They alone do not identify it with whichever Hilbert space was first used to write the matrices.
+
+\subsection{Transport through a change of frame}
+
+Use two decorated objects with $m=1$ and $m=2$. Suppose the operational description prescribes the small flip as a simultaneous flip of both large parity labels and tests the small phase against the first large phase. The substitutions are
+\[
+ T_f(x_1)=x_1x_2,\qquad T_f(z_1)=z_1
+\]
+in the corresponding quotient algebras. For a raw star homomorphism on the free algebra with self-adjoint generators one must ensure the representative of the flip is itself self-adjoint. Choose $(x_1x_2+x_2x_1)/2$ as the raw substitution; the two orderings have the same image $w((1,1),(0,0))$ under $r_2$ because the two flip generators commute in the quotient. The $z$ substitution already respects adjoints. These two rules suffice on a category with one nonidentity arrow.
+
+The underlying injection of label pairs is
+\[
+ (a,b)\longmapsto ((a,a),(b,0)).
+\]
+It preserves the sign $(-1)^{b\cdot c}$ because $(b,0)\cdot(c,c)=bc$. Distinct pairs at the source give distinct target pairs, proving injectivity on the basis. These two properties and Eq.~\eqref{eq:invol} prove that the substitutions induce an injective star homomorphism on the probe quotients.
+
+The target Hilbert space gives an independent embedding rule. Copy the shift of the source system to a second bit by the permutation unitary
+\[
+ U|s,t\rangle=|s,t+s\rangle,\qquad
+ N(f)(A)=U(A\otimes 1)U^* .
+\]
+Conjugation sends $X(1)\otimes1$ to $X(1)\otimes X(1)$, since undoing the controlled flip, shifting $s$, and reapplying the controlled flip shifts the second coordinate as well. The phase $Z(1)\otimes1$ commutes with $U$ since the first coordinate is unchanged by $U$. Thus $\eta_2Y(f)=N(f)\eta_1$ on the flip and phase generators. Lemma~\ref{lem:generator} proves it for every word. The normalized trace at the larger object restricts to the smaller trace because unitary conjugation preserves it and the second tensor factor carries an identity. The comparison is now an isomorphism of the two functors on this category, with the stated pair of distinguished states.
+
+The sign information affects the prediction for a mixed word. For one bit $x_1z_1$ has square $-1$ on both sides. The algebra of commutative functions of two independent binary outcomes would instead give a square of $+1$. Merely matching the two individual binary spectra would give the wrong comparison. A gravitational test of null-cone brackets has to retain the ordering or equivalent phase information in its moment data.
+
+\subsection{Rephasings and loops}
+
+The ordered basis also exposes a potential ambiguity when a symmetry permutes probes. On one bit consider an exchange of $x$ and $z$. A literal relabeling $w(a,b)\mapsto w(b,a)$ fails to respect the prescribed product. For example $w(1,0)w(0,1)=w(1,1)$, whereas $w(0,1)w(1,0)=-w(1,1)$. The consistent map is
+\[
+ \theta(w(a,b))=(-1)^{ab} w(b,a).
+\]
+It preserves multiplication since the relative sign incurred on exchanging the two ordered words is precisely the relative sign of bringing the $z$ operations back to the chosen side. Directly, the exponents on the two sides of $\theta(w(a,b)w(c,d))=\theta(w(a,b))\theta(w(c,d))$ are $bc+(a+c)(b+d)$ and $ab+cd+ad$, which agree modulo two. It preserves the adjoint and satisfies $\theta^2=1$. In the matrix realization it is implemented by the unitary that sends $|s\rangle$ to $2^{-1/2}\sum_{t=0}^1(-1)^{st}|t\rangle$. It interchanges the shift and diagonal phase. The extra sign is fixed by the transformations of generators and the product law, even though neither generator by itself carries this sign.
+
+These finite examples model the algebraic work required of a realization claim. The sign rule, state, tensor embedding and calibrated frame change are specific choices that can fail separately. A finite Weyl system solves this comparison for those data. A solution for a continuum radiative field would also have to control the smearing space, the central phase, domains of the exponentials and the relation to the edge modes.
+
+\section{A linear canonical sector}
+\label{sec:weyl}
+
+\subsection{A phase that survives the choice of generators}
+
+The finite calculation has a direct test for a linear space of smeared gravitational variables. Work at a fixed solution and suppose a chosen sector of linearized, reduced observables closes under a constant bracket. Let $V_D$ be its real vector space of smearing labels, with antisymmetric bilinear form $\Omega_D$ giving that bracket in a specified convention. At this stage the labels already incorporate any quotient by gauge directions that the model requires. Degeneracies of the form are permitted. A vector in its radical gives a central label but need not represent zero. Its physical meaning and whether a sector fixes its value are independent choices.
+
+Choose units for the labels that absorb the coefficient of the bracket into $\Omega_D$. For this discussion let $W_D(v)$ denote an algebraic basis indexed by $v\in V_D$, and set
+\begin{align}
+ W_D(u)W_D(v)&=\exp[-i\Omega_D(u,v)/2]\,W_D(u+v),       \label{eq:weyl}\\
+ W_D(v)^*&=W_D(-v),\qquad W_D(0)=1.                    \nonumber
+\end{align}
+Finite complex linear combinations with these operations form the algebraic Weyl algebra for the additive group considered as discrete. Bilinearity gives associativity. The twisted group basis here records linear independence by construction. A specified representation can of course have additional null relations. Brunetti, Fredenhagen and Verch construct a covariant free-field algebra from a symplectic map and Weyl generators on curved backgrounds \cite[Sec.~2]{bfv}. Equation~\eqref{eq:weyl} uses that algebraic mechanism to formulate a local check on a linear sector of candidate null data.
+
+Suppose an embedding acts by a real-linear map $j_f:V_D\to V_E$ and may change a phase convention $\chi_f:V_D\to U(1)$, with $\chi_f(0)=1$. Seek a star homomorphism of the form
+\begin{equation}
+ W_D(v)\longmapsto \chi_f(v)W_E(j_fv).                  \label{eq:weylmap}
+\end{equation}
+A rephasing can change some multiplication phases. It leaves the commutator phase of two unitary generators unchanged. This observation distinguishes a physical bracket mismatch from an ordering convention in this sector.
+
+\begin{proposition}[Preservation of the bracket]\label{prop:weyl}
+The formula in Eq.~\eqref{eq:weylmap} extends to a unital star homomorphism of the algebraic Weyl algebras in Eq.~\eqref{eq:weyl} if and only if
+\[
+ \Omega_E(j_fu,j_fv)=\Omega_D(u,v)
+ \quad\text{and}\quad
+ \chi_f(u+v)=\chi_f(u)\chi_f(v)
+\]
+for all $u,v$. When it exists, this map is injective exactly when $j_f$ is injective.
+\end{proposition}
+\begin{proof}
+From Eq.~\eqref{eq:weyl} the product $W(u)W(v)W(u)^*W(v)^*$ is the scalar $\exp[-i\Omega(u,v)]$. In its image every factor of $\chi_f$ cancels with its conjugate. Hence $\exp[-i(\Omega_D(u,v)-\Omega_E(j_fu,j_fv))]=1$. Replace $u$ by $tu$ for every real $t$. The only real number $s$ such that $\exp[-its]=1$ for every real $t$ is zero. Bilinearity and real linearity now give preservation of the form. Comparing the coefficient of $W_E(j_f(u+v))$ in the product of two proposed images gives the character condition on $\chi_f$.
+
+Conversely, those two conditions preserve products and the unit. A unitary-valued character satisfies $\chi_f(-v)=\overline{\chi_f(v)}$, which proves preservation of adjoints. If $j_f$ is injective, distinct basis labels have distinct images up to nonzero scalars, proving injectivity on all finite sums. If $v\ne0$ lies in the kernel of $j_f$, then $W_D(v)-\chi_f(v)1$ is a nonzero source element whose image is zero.
+\end{proof}
+
+Continuous dependence of $\chi_f$ on a label is not required for this algebraic statement. It would be relevant if one asked to recover a strongly continuous group of unitaries and its self-adjoint generator. Likewise, results about Cauchy completion of these algebras require a norm and a choice of regularity. The string of implications in the proof is valid before either choice.
+
+\subsection{The reduced corner bracket}
+
+A proposed transport of gravitational probes has a possible input for $\Omega$. For a dressed radiative observable $O$ and a surface charge $H_\xi$ generating a change of the boundary embedding or frame, Chandrasekaran obtains $\{O,H_\xi\}=\delta_\xi O$ on the reduced phase space \cite[Eqs.~(3.32)--(3.33)]{nc}. A simultaneous transformation of bulk fields and embedding can be gauge, while varying the embedding relative to fixed bulk fields can yield a surface charge. This distinction gives a concrete reason to retain the frame on a nested diamond.
+
+Linearization can now be used for a specific calculation. Fix a classical solution and define the linearized readings $u=dO$ and $v=dH_\xi$ by their action on admissible tangent variations. With a compatible reduced Poisson bivector their pairing at that solution is the value of $\{O,H_\xi\}$. Suppose the same reference patch is constructed in a larger region, with corresponding linearized smearings $j_fu,j_fv$. The necessary equality given by Proposition~\ref{prop:weyl} reads
+\[
+  \Omega_E(j_fu,j_fv)=\delta_\xi O\big|_D ,
+\]
+where the source and target conventions for the symplectic form and units must agree. One can test each side by varying the reference data within the prescribed boundary conditions. If the finite change of frame itself ceases to exist in the larger system, the map $j_f$ on the putative charge may already be undefined.
+
+For example, suppose a proposed target substitution treats the entire relative displacement as gauge and sets the smeared target charge to zero. Then $j_fv=0$ and the left side vanishes. A nonzero source variation $\delta_\xi O$ at even one solution prevents an embedding of this form on that canonical sector. Arbitrary rephasing cannot repair the failure since the commutator is unchanged. To apply this conditional obstruction one must produce the allowed displacement and compute the nonzero variation in the proposed boundary class. For a location-independent total area and a pure relabeling of its surface the variation could vanish. A patch with relational position or a displacement having a component along the null generators is a different candidate.
+
+The bracket test and the ambient preparation test use different information. Preservation of $\Omega$ addresses algebraic Weyl relations on a linear subspace. It can hold while selected representations impose incompatible additional relations. To see this, choose a one-dimensional $V=\mathbb R$ with zero bilinear form at both objects. The raw algebras and identity map pass Proposition~\ref{prop:weyl}. At the source calibrate only the character $W(v)\mapsto1$ and at the target only $W(v)\mapsto e^{iv}$. At the source $W(1)-1$ acts as zero on the entire GNS space. At the target its value is $e^{i}-1\ne0$. Theorem~\ref{thm:transport} excludes an induced map for these calibrations. The failed relation fixed a central sector. No change in the raw bracket recorded that choice.
+
+\subsection{Composition and the physical limit}
+
+Suppose successive embeddings $D\to E\to B$ obey the phase and form conditions. Direct substitution in Eq.~\eqref{eq:weylmap} gives
+\[
+ j_{gf}=j_gj_f,\qquad
+ \chi_{gf}(v)=\chi_f(v)\chi_g(j_fv).
+\]
+Checking these equations on each composite compares the transported observables through either route. The phases are measurable relative to a calibration of the unit and of the gate preparing the displacement. If changes of frame are allowed to redefine the generators at every object by a character, one must specify which choices count as equivalent. The fixed conventions in Eq.~\eqref{eq:weyl} make the test meaningful without identifying those freedoms.
+
+This linear argument uses only the value of a bilinear bracket on a specified tangent sector and an algebraic choice of exponentiated generators. In a nonlinear characteristic reduction the brackets of observables can be field dependent. One tangent-space calculation then constrains transport near its base solution. Obtaining a family over solutions would require transporting the brackets and state domains together. Quantizing their field dependence and checking nonlinear relations are further conditions. A nonperturbative gravitational calculation could reduce to the displayed test on a suitable linear subspace; passing it would only settle that subspace.
+
+\section{A first gravitational test}
+
+\subsection{An area measurement}
+
+Choose a regular, decorated diamond with a fixed cap frame and an angular chart for a patch of its corner. A possible starting probe is a smooth real smearing of the induced area measure,
+\[
+ A_D[u]=\int_{S_D}u\,dA .
+\]
+The label $u$ must have a meaning under the chosen changes of frame. The observable on the gravitational reduced phase space must be invariant under the transformations identified as gauge, with the prescribed action under residual surface symmetries. This requirement concerns even the definition of the word $A_D[u]$ before quantization.
+
+For a bounded probe one can choose a bounded continuous function of a self-adjoint realization of area, if a self-adjoint realization with the required sector and dressing has already been constructed. On the categorical side the moments of the same function should be prescribed by an independent way of finding the patch and reading its area. Denote that site-side label by $x_u$. The first equation for a single embedding is then
+\[
+    \sigma_E(T_fx_u)=N(f)\sigma_D(x_u).
+\]
+The symbol $N(f)$ must be supplied by a construction on gravitational data. Reusing the left side as its definition would make the test empty.
+
+In a pair of concentric, flat diamonds one can identify a central clock and the outgoing generators used to pick the patch. The induced formula in the fixed solution gives a baseline for the substitution. To test a gravitational model one must then vary the radiative or corner data within the chosen boundary conditions. Two such variations can keep a chosen cap label fixed while changing how the null generators reach the corner. The two independent constructions must agree on the transported observable for those variations too. This distinguishes a test of the map on an algebra from an agreement at one background configuration.
+
+\subsection{Observable failures}
+
+A target preparation with nonzero value of
+\[
+ \omega\big(b^*\sigma_E(T_fa)^*\sigma_E(T_fa)b\big)
+\]
+for a word $a$ that acts as zero in every source calibration would identify a failure of the proposed dictionary and transports to coexist, provided the target moment and the source invisibility were established with the same calibration and boundary prescriptions. Here $\omega$ is a calibration on $N(E)$ and $b\in N(E)$. The source proof can require more than showing that one mean vanishes. Lemma~\ref{lem:null} specifies which vectors must be tested. A finite sample of moments can provide a witness of nonzero action, but generally cannot establish a universal zero relation without additional structure.
+
+A different failure would occur if an allegedly transported charge had inequivalent transformation under a known change of cap frame. The one-object example demonstrates the algebraic form of that obstruction. In the gravitational setting one must compute the actual surface action and its implementing algebra, with possible central terms treated consistently. Classifying the local algebra only as a type I factor in a chosen Gaussian representation, as in Chandrasekaran's construction \cite[Secs.~4--5]{nc}, leaves its embedding, distinguished state and boundary action undetermined.
+
+A successful area calculation would establish a common subalgebra only after its chosen functions and their relations have been checked. Establishing the comparison for the full local algebra also requires the radiative generators and their cross relations with the corner. A check on one diamond must extend to every chosen embedding, including composites. A program that begins with a small category and enlarges it as the transport rules become available has a test at each step.
+
+\subsection{Dynamics and the choice of observables}
+
+A functor out of a category of inclusions expresses how measurements behave on embedded systems. Propagation from data on an incoming cap to outgoing data uses an additional transition map. Composition at a common cut uses a pairing and a prescription for matching and summing over the shared variables. Even an isomorphism of nets cannot reconstruct a time generator if two theories have the same kinematic algebra and choose different self-adjoint Hamiltonians in it. Use one object with algebra $M_2(\mathbb C)$ and choose a zero Hamiltonian in one model and a diagonal Hamiltonian with distinct eigenvalues in the other. The two identity kinematic functors agree, whereas an off-diagonal matrix evolves nontrivially in the second model.
+
+Chandrasekaran's Eq.~(6.13) provides a one-loop vacuum relation for the mean metric and its connected fluctuations in the states and prescription used there \cite[Sec.~6.2]{nc}. Long's Conjecture~6.3 proposes a geometric consistency condition for the Einstein equations \cite{long}. To compare these statements one would need a reconstruction of the metric observable, an appropriate state, and a dynamical relation between the two sides. The algebraic argument here determines whether there is a common observable on which the two calculations could be performed, once the required transports and preparations have been given.
+
+\section{Conclusion}
+
+Positive probe moments determine which word relations hold on every vector generated by a local apparatus. A larger apparatus can violate such a relation even when every original moment restricts correctly. The ambient preparation criterion detects this failure and the intersection over accessible targets gives the largest compatible family of locally invisible relations. Both results depend on what is measured and on which embeddings are admitted. The next physical calculation is to transport a specified dressed corner measurement across a proper diamond inclusion, compute it independently from null data and from context probes, and check whether the two answers agree on an explicit class of preparations.
+
+\begin{thebibliography}{99}
+\bibitem{long} M. Long, \emph{Quantum Gravity and Emergent Spacetime from Perspectival Structure}, YonedaAI Research Collective, 24 February 2026. \href{https://yonedaai.com/papers/pdf/quantum-gravity-emergent-spacetime.pdf}{Manuscript}.
+\bibitem{cond} M. Long, \emph{A Representation-Theoretic Foundation for Quantum Gravity}, Part VI of \emph{Toward a Condensed Representation Theory of Physics}, YonedaAI Research Collective, 7 July 2026. \href{https://yonedaai.com/papers/pdf/library/condensed-representation/part6-condensed-quantum-gravity.pdf}{Manuscript}.
+\bibitem{nc} V. Chandrasekaran, \emph{An algebraic quantization of gravity from the null cone}, 25 November 2026. \href{https://arxiv.org/abs/2611.34924v1}{arXiv:2611.34924v1}.
+\bibitem{bfv} R. Brunetti, K. Fredenhagen and R. Verch, \emph{The generally covariant locality principle: a new paradigm for local quantum physics}, Commun.\ Math.\ Phys.\ 237 (2003), 31--68. \href{https://arxiv.org/abs/math-ph/0112041}{arXiv:math-ph/0112041}.
+\bibitem{df} W. Donnelly and L. Freidel, \emph{Local subsystems in gauge theory and gravity}, JHEP 09 (2016), 102. \href{https://arxiv.org/abs/1601.04744}{arXiv:1601.04744}.
+\bibitem{gns} S. Waldmann, \emph{A remark on the deformation of GNS representations of $*$-algebras}, Rep.\ Math.\ Phys.\ 48 (2001), 389--396. \href{https://arxiv.org/abs/math/0012071}{arXiv:math/0012071}.
+\bibitem{hw} D. Harlow and J.-Q. Wu, \emph{Covariant phase space with boundaries}, JHEP 10 (2020), 146. \href{https://arxiv.org/abs/1906.08616}{arXiv:1906.08616}.
+\bibitem{hf} F. Hopfm\"uller and L. Freidel, \emph{Gravity degrees of freedom on a null surface}, Phys.\ Rev.\ D 95 (2017), 104006. \href{https://arxiv.org/abs/1611.03096}{arXiv:1611.03096}.
+\bibitem{cfp} V. Chandrasekaran, E. E. Flanagan and K. Prabhu, \emph{Symmetries and charges of general relativity at null boundaries}, JHEP 11 (2018), 125. \href{https://arxiv.org/abs/1807.11499}{arXiv:1807.11499}.
+\bibitem{cp} V. Chandrasekaran and K. Prabhu, \emph{Symmetries, charges and conservation laws at causal diamonds in general relativity} (2019). \href{https://arxiv.org/abs/1908.00017}{arXiv:1908.00017}.
+\bibitem{sanders} K. Sanders, \emph{On the Reeh-Schlieder property in curved spacetime} (2008). \href{https://arxiv.org/abs/0801.4676}{arXiv:0801.4676}.
+\end{thebibliography}
+\end{document}

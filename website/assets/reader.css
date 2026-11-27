@@ -1,0 +1,28 @@
+body.reader{margin:0;max-width:none;padding:0;background:#f6f5ef;color:#192932;color-scheme:light}
+.reader-nav{display:flex;justify-content:space-between;gap:1rem;align-items:center;background:var(--ink);color:var(--paper);padding:.95rem max(5vw,calc((100vw - 54rem)/2));font:500 .94rem/1.5 var(--sans)}
+.reader main{width:min(48rem,90%);margin:0 auto;padding:clamp(2rem,5vw,4rem) 0 5rem;font:400 clamp(1.04rem,1.45vw,1.17rem)/1.65 Georgia,serif;overflow-wrap:break-word}
+.reader main .maketitle{margin:0 auto 1.8rem;text-align:left}
+.reader h1.titleHead{margin:.1rem 0 1rem;font:400 clamp(2.5rem,5vw,4.5rem)/1.02 var(--serif);letter-spacing:-.03em;text-align:left}
+.reader .author,.reader .date,.reader .author span,.reader .date span{font:400 .95rem/1.55 var(--sans);text-align:left}.reader .date{margin-top:.5rem}
+.reader main p{margin:.85rem 0;text-indent:0}.reader .abstract{width:auto;margin:1.5rem 0 2.5rem}
+.reader .abstract span,.reader .abstract p{font-size:inherit}
+.reader :is(h2,h3,h4){margin:1.75em 0 .4em;text-align:left;font-family:var(--serif);font-weight:400;line-height:1.13;letter-spacing:-.018em}
+.reader :is(h2.sectionHead,h2.likesectionHead,h2.abstracttitle){font-size:clamp(1.9rem,3.5vw,2.65rem)}.reader :is(h3.subsectionHead,h3.likesubsectionHead){font-size:1.65rem}
+.reader .contents{border-block:1px solid #bac5c1;padding:.65rem 0;font:500 .95rem/1.65 var(--sans)}
+.reader summary{cursor:pointer}.reader .contents ul{list-style:none;padding-left:.5em}
+.reader .mathframe,.reader .math-display,.reader .par-math-display{box-sizing:border-box;max-width:100%;margin:1rem 0;overflow-x:auto;padding:.25em .15em .45em;overscroll-behavior-x:contain}
+.reader .mathframe table{margin-inline:auto}.reader table td{vertical-align:middle}
+.reader .mathframe td{overflow-wrap:normal;word-break:normal}
+.reader .mathframe math[display=block]{margin:.3rem auto}.reader main img{max-width:100%;height:auto}
+.reader .newtheorem{margin:1.25rem 0;padding:.4rem .85rem;border-left:2px solid #53807b}
+.reader main a{color:#195c5b}.reader pre{max-width:100%;overflow:auto;font-size:.83em}
+.reader .titlemark{color:#466660}.reader .bibitem,.reader .bibitem-p{margin:.7em 0;padding-left:1.5em;text-indent:-1.5em}
+@media(max-width:540px){.reader main{width:91%}.reader .mathframe{font-size:.9em}.reader .description{margin-left:0}.reader dd{margin-left:.75rem}}
+@media print{.reader-nav,.contents,.skip{display:none}.reader main{width:100%;padding:0}.reader .mathframe{overflow:visible}}
+.reader .author{display:block;white-space:normal;margin:0}
+.reader .author span{white-space:normal}
+.reader .maketitle>.series-label{font:600 .78rem/1.5 var(--sans);letter-spacing:.065em;text-transform:uppercase;color:#3c6660;margin:0 0 .7rem}
+.reader .abstracttitle span{font:inherit}
+.reader .inline-math{display:inline-block;vertical-align:middle;max-width:100%;overflow-x:auto;overflow-y:auto;line-height:normal;padding-block:.1em}
+
+.reader h4{font-size:1.3rem}

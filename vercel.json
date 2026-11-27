@@ -1,0 +1,7 @@
+{
+  "framework": null,
+  "buildCommand": "python3 scripts/build_site.py",
+  "outputDirectory": "dist",
+  "trailingSlash": true,
+  "headers": [{"source": "/(.*)", "headers": [{"key":"X-Content-Type-Options","value":"nosniff"}]}]
+}

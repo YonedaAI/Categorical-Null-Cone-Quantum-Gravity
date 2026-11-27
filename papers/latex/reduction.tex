@@ -1,0 +1,1188 @@
+\documentclass[11pt,letterpaper]{article}
+\input{preamble}
+\title{Derived Gauge Reduction and Quantum Observable Algebras\series{Part II}}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cZ}{\mathcal Z}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\begin{document}
+\ifdefined\HCode\else\papersidebar{reduction}\fi
+\maketitle
+\begin{abstract}
+A boundary frame can carry a measurable charge even when a simultaneous change of two frames
+is gauge. We compute the reduced Poisson algebra, the Koszul complex and a quantum normalizer
+quotient for a family of linear frame constraints. A relative coordinate and its momentum
+survive both classical and quantum reduction. Repeating a matching condition creates a class
+in negative degree without changing either ordinary observable algebra. On a graph, a consistent
+quantum level requires the signed charge offsets to sum to zero around every cycle. A family
+whose constraint loses rank shows that specializing a reduced algebra can miss observables of
+the exceptional fiber. We use displacement probes to compare corresponding Gaussian states
+and exhibit a composition phase invisible in every observable automorphism. For the null-frame
+boost integral we compute a regulated matching kernel and distinguish its continuum limit
+from projection onto equal discrete eigenvalues. These calculations give explicit criteria
+for comparing the area charge, preparation and gauge data attached to a causal diamond.
+\end{abstract}
+
+\section{The choice at a corner}
+\label{sec:corner}
+Suppose two observers describe the same cut using different normal frames. If each observer is
+free to change the common reference, only a relative reading can be measured. If one observer
+changes a frame while the physical field and the reference on the other side stay fixed, the
+change can act on a charged state. A prescription that calls both transformations gauge has
+already decided which observables can exist.
+
+Chandrasekaran gives this distinction a geometric expression in his null-cone construction
+\cite{nc}. His equation (3.40) varies a pullback by varying the field and the boundary
+embedding. The corner term in (3.41) contains the boost parameter and the area form. Equation
+(3.43) identifies the integrated boost generator with the corner area divided by $8\pi G_N$.
+At fixed area, a boost acts on a state by a phase in the representation of \S4.2. A correct
+dictionary for the algebra must respect this action whenever the boundary conditions retain
+it. Donnelly and Freidel describe the general distinction between gauge transformations and
+physical surface symmetries in extended phase space \cite{df}.
+
+Long's site of diamonds specifies where local data can be compared \cite[Example 4.8]{long}.
+His later finite reconstruction starts from relational data on a graph \cite{rep}. Neither
+construction specifies a quantum moment map for changing a null frame. Conversely, a reduced
+phase space for a particular null region does not specify which categorical probes distinguish
+two boundary states. The proposed comparison poses a concrete question. Which map of
+gravitational data carries two equivalent representatives to equivalent representatives and
+carries a measurable boundary quantity to the same quantity in the enlarged region?
+
+We study that question in polynomial mechanics. A boundary has a coordinate recording a frame
+and a conjugate momentum recording its charge. The diagonal shift of two frames provides one
+gauge direction. A third observer can check the matching using the difference of the two
+readings. All rings used for the explicit calculations have characteristic zero. Each model
+has finitely many canonical pairs and an infinite-dimensional polynomial algebra. No choice of
+spacetime, smearing kernel or Newton constant enters these calculations.
+
+\section{Descent and admissible observables}
+Write $\pi:X\to X/{\sim}$ for the quotient by an equivalence relation. For any set $V$, a
+function $a:X\to V$ has a unique factorization through $\pi$ exactly when $a(x)=a(x')$ for
+every related pair $x\sim x'$. Indeed, the required factor must take $[x]$ to $a(x)$, and the
+displayed equality is precisely the condition for this formula to have a value independent of
+the representative. This argument applies to completely general equivalence relations.
+Differential or operator structure on the quotient needs additional hypotheses.
+
+If $i:X\to Y$ is equivariant for two actions of the same group $G$, the pullback of a
+$G$-invariant function on $Y$ is invariant on $X$. The pullback satisfies
+\[
+ (i^*a)(gx)=a(i(gx))=a(gi(x))=a(i(x)).
+\]
+One can also transport along a group homomorphism by taking $i(gx)=\rho(g)i(x)$ and requiring
+invariance under its image. The direction of this map matters. Restricting classical fields on
+a large region to a smaller one can induce pullback of observables from the small region to
+the large one. Constructing the restriction itself requires compatible boundary conditions. An
+inclusion of point sets does not define it.
+
+Let $R$ be a commutative Poisson algebra, $I$ an ideal and $\{I,I\}\subset I$. Define
+\[
+ \cN_{\mathrm{cl}}(I)=\{a\in R:\{a,I\}\subset I\}.
+\]
+Then $I\subset\cN_{\mathrm{cl}}(I)$, and $\cN_{\mathrm{cl}}(I)/I$ inherits a Poisson bracket.
+The Leibniz and Jacobi identities prove closure under multiplication and bracket. Replacing
+one observable by a multiple of a constraint changes its bracket with another observable by an
+element of $I$. Representatives outside the normalizer can still define functions on a
+constraint surface as points; their brackets may depend on the choice of representative. For
+constraints generating a Hamiltonian action, reduction also asks that the restricted
+observable be constant on the gauge orbits. In the following examples the two descriptions
+agree explicitly.
+
+\section{A pair of boundary frames}
+\label{sec:pair}
+Let $(q_L,p_L)$ and $(q_R,p_R)$ be the coordinates of $T^*\RR^2$, with
+$\{q_j,p_k\}=\delta_{jk}$. Both momenta refer to the outward orientation on their respective
+sides. Use the matching equation and frame transformation
+\[
+ n=p_L+p_R=0,\qquad (q_L,q_R)\longmapsto(q_L+t,q_R+t).
+\]
+The transformation is generated by $n$ with the convention $X_n f=\{f,n\}$. Its zero level
+sets the two outward charges equal and opposite. The sign depends on how the right frame is
+oriented.
+
+\begin{proposition}\label{prop:class}
+For $R=\CC[q_L,q_R,p_L,p_R]$ and $I=(n)$, the classical reduced algebra is $\CC[r,k]$ with
+$\{r,k\}=1$, where $r=q_L-q_R$ and $k=p_L$ on the matching surface. The induced symplectic
+form on the real reduced space is $dr\wedge dk$ in the convention $\omega=\sum_j dq_j\wedge
+dp_j$.
+\end{proposition}
+\begin{proof}
+Set $s=q_R$. In the new coordinates the canonical one-form is
+\[
+ p_L\,dq_L+p_R\,dq_R=k\,dr+n\,ds .
+\]
+Thus $(r,k)$ and $(s,n)$ are independent canonical pairs, and $X_n=\partial_s$. At $n=0$ the
+restricted symplectic form has kernel spanned by $\partial_s$. Each orbit meets the surface
+$s=0$ once. An element of $R/(n)=\CC[r,k,s]$ is invariant under every real translation exactly
+when it is independent of $s$. The same condition is $\partial_s a\in(n)$ before taking the
+quotient, hence $\cN_{\mathrm{cl}}(I)/I=\CC[r,k]$. The bracket and form on the slice follow
+from the canonical one-form.
+\end{proof}
+
+A measurement before reduction illustrates what the normalizer discards. The single reading
+$q_L=s+r$ takes different values along the same orbit. Its difference from $q_R$ survives. The
+charge $p_R$ also survives, since it is $-k$ at the fixed level. A separate reduction on each
+side by the full translation of its frame, with each moment map fixed at zero, sets both
+charges to zero. Each singly reduced phase space is a point. Combining these points loses the
+canonical pair $(r,k)$ that the diagonal reduction retains. The choice of a common action has
+measurable content in the model.
+
+A subgroup that preserves a boundary condition can still act on the reduced observables. A
+shift of the left reading alone induces $r\mapsto r+a$ and fixes $k$. It preserves the
+matching surface and commutes with the diagonal shifts. Its generator on the quotient is $k$.
+Declaring it gauge would impose a further reduction. This is the algebraic reason to identify
+both the null directions of the restricted presymplectic form and the charged boundary
+symmetries before constructing any algebra of a subregion.
+
+\section{Regular and repeated constraints}
+For a polynomial algebra $R$ and a list of functions $f=(f_1,\ldots,f_m)$, use the
+cohomological convention for the Koszul complex
+\[
+ K(R;f)=R\otimes\Lambda(e_1,\ldots,e_m),\qquad |e_i|=-1,\qquad de_i=f_i .
+\]
+The differential vanishes on $R$ and satisfies the graded Leibniz rule. Its zeroth cohomology
+is $R/(f_1,\ldots,f_m)$. It computes the derived zero fiber of the specified map to affine
+$m$-space: resolve the origin there by its free coordinate Koszul resolution and pull that
+resolution back to $R$. Two maps with different targets can have the same ordinary zero set
+and different derived zero fibers. More general excess intersections have global geometric
+obstructions; the calculation below uses global linear coordinates \cite{derived}.
+
+\begin{proposition}\label{prop:excess}
+The complex $K(R;n)$ for the surface in Proposition~\ref{prop:class} has cohomology $R/(n)$ in
+degree zero and vanishing cohomology in negative degrees. The complex for the map given by
+$(n,n)$ has
+\[
+ H^0=R/(n),\qquad H^{-1}=(R/(n))\,\varepsilon,\qquad
+ H^j=0\quad(j<-1).
+\]
+Here $\varepsilon$ is represented by $e_2-e_1$.
+\end{proposition}
+\begin{proof}
+Multiplication by the coordinate $n$ is injective, so the two-term complex $R e_1\to R$
+resolves $R/(n)$. In the second complex set $u=e_1$ and $v=e_2-e_1$. Then $du=n$ and $dv=0$.
+As a complex this is a copy of $K(R;n)$ together with its shift by the degree of $v$. The
+class $[v]$ survives because a boundary in its summand has coefficient divisible by $n$.
+\end{proof}
+
+The negative-degree class here remembers a relation between two tests of the same charge. It
+has no interpretation as a new radiative polarization. If a boundary problem presents one
+equation twice merely as a bookkeeping convention, the intended derived fiber uses the
+independent equation. Keeping the doubled target defines a different derived problem.
+Equivalences of presentations in a derived formulation must come with quasi-isomorphisms. The
+dimensions above rule one out between these two complexes.
+
+The source of a stabilizer is a separate choice. For the single effective $\RR$-action in
+Proposition~\ref{prop:class}, every orbit is free, including the orbits on the repeated zero
+locus. One can instead declare a group $\RR^2$ to act by shifting both frames by $t_1+t_2$.
+Its subgroup $\{(t,-t)\}$ fixes every point. That group action and the map with two identical
+constraints arise together if the moment map is defined for the whole redundant Lie algebra.
+The stabilizer and the Koszul class then have related dimensions but occupy different parts of
+the reduction. A quotient by the effective group removes the ineffective subgroup. Changing
+the derived target removes the redundant equation.
+
+One can also have a stabilizer with independent constraint equations in other settings. For
+example, quotient the one-pair reduced plane by the finite symmetry $(r,k)\mapsto(-r,-k)$,
+without adding any Hamiltonian constraint. The origin has isotropy of order two. Its invariant
+functions $u=r^2$, $v=rk$, and $w=k^2$ satisfy $uw=v^2$. To see that they generate, take any
+monomial $r^ak^b$ with $a+b$ even and group factors into pairs. The quotient surface is
+singular at the origin. Its finite stabilizer arises without repeating a single equation in
+the Koszul calculation.
+
+\section{Quantum reduction at a fixed level}
+\label{sec:quantum}
+Fix a real $\hbar\ne0$. Let $\cA$ be the polynomial Weyl algebra over $\CC$ generated by
+$R_0,K,S,N$, with $[R_0,K]=[S,N]=i\hbar\,1$ and all commutators between the two pairs zero.
+Uppercase letters indicate operators. The antilinear involution fixes these four generators.
+Denote by $B$ the Weyl subalgebra generated by $R_0,K$. Classical variables can be recovered
+as principal commutative symbols in the formal-parameter family described below.
+
+The left ideal $L=\cA N$ contains the operators which visibly annihilate a vector satisfying
+$N\psi=0$, on a common invariant domain when such vectors exist. Acting by a representative of
+an observable must preserve the constraint on states. Define the right normalizer of the left
+ideal by
+\[
+ \cN(L)=\{a\in\cA:L a\subset L\}.
+\]
+Since $L$ is a left ideal, $L\subset\cN(L)$ and it is a two-sided ideal inside $\cN(L)$. Thus
+the quotient $\cN(L)/L$ has a product. The algebraic definition continues to make sense when
+solutions to the state constraint are distributions.
+
+\begin{theorem}\label{thm:weyl}
+The inclusion $B\hookrightarrow\cN(L)$ induces an isomorphism of associative algebras
+\[
+ B\xrightarrow{\ \simeq\ }\cN(L)/L .
+\]
+The same quotient has a presentation as a star algebra by the centralizer of $N$ modulo the
+ideal generated by $N$ inside that centralizer.
+\end{theorem}
+\begin{proof}
+Normal ordering puts every element uniquely in the form
+\[
+ a=\sum_{j,\ell\geq0} b_{j\ell} S^j N^\ell,\qquad b_{j\ell}\in B ,
+\]
+with finitely many terms. The ordered basis follows by commuting $N$ past $S$ using the scalar
+commutator, or by acting with multiplication and differentiation on polynomials in the two
+coordinates. In the differential representation the highest nonvanishing derivative
+coefficient detects a nonzero normally ordered operator in characteristic zero. Terms with
+$\ell>0$ span $L$. Modulo $L$ there is a unique representative $a_0(S)=\sum_j b_{j0}S^j$.
+
+It suffices to check $Na\in L$ in the definition of $\cN(L)$. Since $aN\in L$, this is
+equivalent to $[N,a]\in L$. Its class is the class of $-i\hbar\,\partial_S a_0(S)$. The
+derivative vanishes exactly on constant polynomials, giving surjectivity from $B$. Its
+intersection with $L$ is zero by the ordered basis, giving injectivity.
+
+The centralizer $\cZ(N)$ contains exactly the terms independent of $S$, by differentiating
+their coefficients before taking any quotient. Thus $\cZ(N)=B[N]$ and $\cZ(N)\cap L=B[N]N$.
+This ideal is star stable there, and evaluation at $N=0$ identifies the star quotient with
+$B$. Its image in $\cN(L)/L$ is the associative isomorphism just proved.
+\end{proof}
+
+A two-sided ideal of the full $\cA$ containing $N$ contains $[S,N]=i\hbar\,1$. At the chosen
+nonzero value of $\hbar$, the quotient by that ideal vanishes. Also $L$ itself fails star
+stability since $SN\in L$ while $(SN)^*=NS=SN-i\hbar$ has nonzero constant class. The physical
+star from the centralizer thus cannot be computed by taking an arbitrary normalizer
+representative, applying the kinematical star and passing to its class. The proof specifies
+which observables carry a well-defined adjoint.
+
+Let $B_\hbar$ now denote the polynomial algebra over $\CC[\hbar]$ with the same relative pair
+and relation $[R_0,K]=i\hbar$. Normal ordering gives a free module with basis $R_0^aK^b$. Its
+specialization at $\hbar=0$ is the reduced Poisson polynomial algebra as a commutative
+algebra, with bracket obtained from $[\,\cdot\,,\,\cdot\,]/(i\hbar)$ followed by
+specialization. The coefficient of $\hbar$ satisfies the Leibniz rule and has value one on the
+ordered generators. This proves the correspondence for all polynomials. In contrast,
+specializing the kinematical commutator condition $[N,a]=0$ at $\hbar=0$ before dividing
+removes the gauge derivative completely. The action or its divided derivation is part of the
+classical data.
+
+The fixed-parameter calculation avoids the general analytic questions of quantization and
+reduction. Bordemann, Herbig and Waldmann derive hypotheses under which their quantum BRST
+reduction deforms the full classical reduced function algebra, and exhibit examples in which
+its degree-zero cohomology has different behavior \cite{brst}. The calculation here has a
+global gauge coordinate, constant commutators and a polynomial ordering. In gravity one has to
+establish which replacement for each assumption is available.
+
+\section{Linear boundary actions}
+\label{sec:linear}
+The paired-frame calculation extends to several matching equations. Extra equations may depend
+on the others. Their dependence becomes a consistency test when choosing the quantum value of
+a charge.
+
+Let $V$ and $U$ be real vector spaces of dimensions $d$ and $m$. A linear map $T:U\to V$ sends
+gauge parameters to frame shifts. Its rank is $a$. On $T^*V$ let a vector $u\in U$ act by
+$q\mapsto q+Tu$ with $p$ fixed. The moment map $\mu:T^*V\to U^*$ satisfies
+\[
+ \mu(q,p)(u)=p(Tu).
+\]
+Write $H=\operatorname{im}T$, $F=\ker T$. The action factors through the effective additive
+group $H$. A character value $\lambda\in U^*$ determines the level $\mu=\lambda$. A nonzero
+$\lambda$ is allowed even though the group is abelian. Physically it fixes what the matching
+prescription is to count as zero total charge.
+
+Let $\cA_\hbar(V)$ be the polynomial Weyl algebra with position $Q_\xi$ linear in $\xi\in V^*$
+and momentum $P_v$ linear in $v\in V$. Take $[Q_\xi,P_v]=i\hbar\,\xi(v)1$, with commuting
+positions and commuting momenta. All real generators are self-adjoint. Work over the complex
+numbers with real $\lambda$ and fixed nonzero real $\hbar$. Define
+\[
+ C_\lambda(u)=P_{Tu}-\lambda(u)1,\qquad
+ L_\lambda=\sum_{u\in U}\cA_\hbar(V) C_\lambda(u).
+\]
+Only a basis of $U$ is needed in the sum. The constraints commute. Their effective translation
+action is free even when $F$ is nonzero, because a nonzero translation of $V$ fixes no point.
+
+\begin{theorem}\label{thm:linear}
+The level is nonempty exactly when $\lambda|_F=0$. For an inconsistent level
+$L_\lambda=\cA_\hbar(V)$. For a consistent level, after a choice of complement to $H$ the
+following descriptions hold.
+\begin{enumerate}
+\item The classical reduced phase space for the effective group is symplectomorphic to $T^*(V/H)$.
+\item The cohomology of the Koszul complex of the $m$ component equations is the ring of the unreduced level tensored with $\Lambda^\bullet F_{\CC}$, placing $F_{\CC}$ in degree $-1$. Here $F_{\CC}$ is the complexification of $F$. Its $b$th exterior power contributes in degree $-b$ for $0\le b\le m-a$.
+\item The quantum normalizer quotient $\cN(L_\lambda)/L_\lambda$ is a Weyl algebra on $d-a$ canonical pairs. Its star structure comes from the joint centralizer of the constrained momenta.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+A point on the level must satisfy $p\circ T=\lambda$, so $\lambda$ must vanish on $F$.
+Conversely such a $\lambda$ defines a functional on $H$ by $Tu\mapsto\lambda(u)$, which
+extends to $V$. For $u\in F$, the corresponding quantum constraint is $-\lambda(u)1$. If a
+nonzero scalar occurs, the ideal contains $1$.
+
+For a consistent level choose splittings $V=H\oplus W$ and $U=U_0\oplus F$. Use coordinates
+$s_j$ on $H$ and $r_b$ on $W$, with momenta $n_j,k_b$ in the corresponding dual bases. The map
+$T|_{U_0}$ is invertible onto $H$. In a basis adapted to this map the first $a$ constraints
+fix the momenta $n_j$ at numbers $\lambda_j$, and the last $m-a$ vanish identically. The
+symplectic form restricts to $\sum_b dr_b\wedge dk_b$. The quotient by translations in $s$
+leaves the stated cotangent bundle.
+
+The shifted coordinates $n_j-\lambda_j$ form a regular sequence. In fact the constraint
+complex factors over $\CC$ into independent two-term coordinate complexes, each exact in
+degree $-1$, a polynomial ring in the other variables, and an exterior algebra with zero
+differential on the generators in $F_{\CC}$. The cohomology follows by tensoring over a field.
+When taking invariants under the effective translations afterward, the polynomial dependence
+on the $s_j$ drops out. This last observation concerns ordinary invariants of the displayed
+cohomology. A general derived quotient by a group requires its own cohomological construction.
+
+For the quantum algebra put every $N_j-\lambda_j$ at the far right of each normally ordered
+monomial. The terms containing any such factor span $L_\lambda$. Modulo $L_\lambda$, each
+class has a unique representative polynomial in $S_1,\ldots,S_a$ with coefficients in the
+residual Weyl algebra. Normalizing all the constraints requires each of its partial
+derivatives in $S_j$ to vanish. Thus just the constant coefficient remains. The centralizer
+consists of residual Weyl polynomials together with polynomials in the commuting $N_j$.
+Evaluation $N_j=\lambda_j$ on this centralizer is a star map because the levels are real.
+\end{proof}
+
+At $\lambda=0$ the quotient identification needs fewer choices. The momentum $p$ then belongs
+to $\operatorname{Ann}(H)\simeq(V/H)^*$, and a gauge orbit of $q$ specifies a point of $V/H$.
+At a nonzero consistent level the allowed momenta form an affine translate of
+$\operatorname{Ann}(H)$. Choosing an extension of the character from $H$ to $V$ identifies
+this affine space with a vector space. The theorem makes no preferred choice among such
+extensions. A comparison of different diamonds could depend on this choice through its action
+on momenta.
+
+There is a useful direct form of the affine choice problem. Suppose the same boundary level is
+expressed by two real-valued linear functionals on $V$, $p_*$ and $p_*'$. Both extend the
+fixed character on $H$. Their difference $\theta$ annihilates $H$, hence defines a cotangent
+vector on the quotient. The change of origin of the reduced momentum acts by $k\mapsto
+k-\theta$. In the quantum Weyl algebra such a real shift preserves commutators and the
+adjoint. A named observable interpreted as a fixed absolute momentum nevertheless changes
+under the shift. When physical preparation data fix a preferred zero, the comparison must
+carry that zero along with the ring operations.
+
+\section{Infinitesimal gauge cochains}
+\label{sec:cochains}
+A derived zero fiber still carries the gauge action. For translations both operations can be
+examined in one complex. The following calculation also shows what it costs to retain an
+ineffective gauge generator. It uses polynomial Lie algebra cochains for an abelian Lie
+algebra. Other choices, including equivariant topological cohomology, ask different
+cohomological questions.
+
+Take a consistent character and the adapted coordinates of Theorem~\ref{thm:linear}. Write $R$
+for the ring of complex polynomials in $(r,k,s,n)$. Introduce a degree $-1$ generator for each
+component of the moment map as above. Let the entire abelian Lie algebra $U$ act by its given
+translation on position coordinates and trivially on momentum coordinates and Koszul
+generators. Form the Chevalley and Eilenberg cochains of this action on the Koszul algebra.
+The new degree $+1$ generators are linear functions on $U$. These generators anticommute with
+the odd Koszul generators under the usual total-degree sign rule.
+
+In a basis of $U_0$ mapped to the coordinate translations of $H$, write $e_j$ for the active
+Koszul generators and $c_j$ for the ghosts dual to those translations. In a basis of $F$ write
+$v_i$ for its Koszul generators and $w_i$ for the additional Lie algebra cochains. The full
+differential $D$ satisfies
+\begin{equation}
+ D e_j=n_j-\lambda_j,\qquad D s_j=c_j,\qquad
+ Dv_i=Dw_i=Dc_j=Dn_j=0 .
+ \label{eq:BRST}
+\end{equation}
+It vanishes on $r,k$. For homogeneous $x$ of total degree $|x|$ (Koszul degree plus Lie
+cochain degree), its value on a product is $D(xy)=(Dx)y+(-1)^{|x|}x(Dy)$.
+The two component differentials are
+compatible because the constraints are invariant under translations. In particular $D^2=0$ on
+each generator. Nilpotence alone does not identify the cohomology with the algebra of ordinary
+observables.
+
+\begin{proposition}\label{prop:ce}
+The cohomology of the polynomial complex \eqref{eq:BRST} is
+\[
+ \CC[r,k]\otimes
+ \Lambda^\bullet F_{\CC}\otimes
+ \Lambda^\bullet F_{\CC}^*,
+\]
+with degrees $-1$ and $+1$ on the two exterior generating spaces, respectively. Each term
+$\Lambda^i F_{\CC}\otimes\Lambda^j F_{\CC}^*$ contributes in total degree $j-i$. With
+independent constraints and the effective group, this cohomology is concentrated in degree
+zero and equals the ordinary reduced observable algebra.
+\end{proposition}
+\begin{proof}
+For each $j$ the subcomplex with variables $n_j-\lambda_j,e_j$ is the two-term coordinate
+resolution in Proposition~\ref{prop:excess}. The other factor with variables $s_j,c_j$ is the
+polynomial complex
+\[
+ \CC[s_j]\ \xrightarrow{\ \partial_{s_j}\ }\ \CC[s_j]c_j .
+\]
+Its kernel consists of constants. In characteristic zero every polynomial coefficient has a
+polynomial antiderivative, so the derivative is onto. Both factors have just $\CC$ in degree
+zero as cohomology. Taking tensor products over a field gives the assertion, since the
+residual polynomial variables, $v_i$ and $w_i$ all have zero differential.
+\end{proof}
+
+When $\dim F=1$ there is a class $v$ in degree $-1$ from the redundant equation and a class
+$w$ in degree $+1$ from the ineffective Lie algebra generator. The product $vw$ is a nonzero
+class of total degree zero with $(vw)^2=0$. Thus even degree-zero cohomology can remember a
+pair of extra choices in this complex. Dropping the ineffective Lie algebra and keeping the
+doubled equation deletes $w$ but retains $v$. Replacing both inputs by the effective ones
+deletes both classes. The reduced ordinary observable algebras in Theorem~\ref{thm:linear} are
+the ones obtained by ordinary effective reduction. This distinction prevents an inference from
+a correctly computed cohomology group to a statement about the physical observables it should
+represent.
+
+The proof uses an explicit primitive in the orbit coordinate. That primitive need not satisfy
+the boundary conditions of another problem. For comparison, replace one noncompact coordinate
+$s$ by an angular coordinate and act on smooth periodic functions. The derivative of a
+periodic function has integral zero around the circle, and any smooth zero-integral function
+has a periodic primitive. The constant coefficient of a one-form therefore gives a
+one-dimensional cokernel. The orbit action is still free. This degree-one class reflects the
+cochain complex chosen on a compact orbit. It supplies a second reason to specify the
+coefficient space and the treatment of boundary conditions in a gravitational reduction.
+
+\section{A constraint of changing rank}
+\label{sec:rank}
+The rank hypothesis of Theorem~\ref{thm:linear} can fail along a family of boundary data. The
+simplest example uses the same coordinates $(r,k,s,n)$ as the paired-frame model. Introduce a
+real parameter $\tau$ which the Poisson bracket holds fixed. A parameter $u\in\RR$ acts on $s$
+by $s\mapsto s+\tau u$. Its moment map is
+\begin{equation}
+ f_\tau=\tau n .
+ \label{eq:rank-jump}
+\end{equation}
+For each $\tau\ne0$ the ordinary zero fiber has $n=0$, and translating $s$ removes a frame
+coordinate. At $\tau=0$ every point satisfies the equation and the effective action is trivial.
+Reduction of this individual fiber leaves two canonical pairs. Extending results for the
+regular fibers to the exceptional value would miss a whole canonical pair.
+
+\subsection{The relative zero fiber}
+Over the polynomial parameter ring take $D=\CC[\tau,r,k,s,n]$. The family of ordinary zero
+fibers has coordinate ring $D/(\tau n)$. This ring has $\tau$-torsion: the nonzero class of $n$
+is killed by $\tau$. Thus this ordinary family is not flat over $\CC[\tau]$. There is a simple
+geometric explanation. Its zero set has a component $n=0$ over every value of the parameter,
+and an additional component, with $n$ arbitrary, lying entirely over $\tau=0$.
+
+The equation $\tau n$ is a nonzero divisor in $D$. Its Koszul complex
+\[
+ D e \xrightarrow{\ \tau n\ }D
+\]
+therefore has no negative-degree cohomology over the whole family. After setting $\tau=0$ in
+the complex, its differential vanishes. The exceptional fiber has a copy of $\CC[r,k,s,n]$ in
+degrees $0$ and $-1$. This calculation uses specialization of the complex of free
+$\CC[\tau]$-modules. In particular there is more information in that specialization than in
+tensoring the cohomology groups with $\CC[\tau]/(\tau)$ after computing them on the total
+space.
+
+One can see the additional term without introducing Koszul generators. Use the two-term
+resolution of $\CC[\tau]/(\tau)$ whose differential is multiplication by $\tau$. Tensor it with
+$D/(\tau n)$. The kernel of the resulting differential is the ideal $(n)$ in $D/(\tau n)$.
+Multiplication by $n$ identifies $\CC[r,k,s,n]$ with that kernel, because every term containing
+both $\tau$ and $n$ vanishes and every surviving multiple of $n$ has a unique polynomial
+coefficient at $\tau=0$. This identifies the first Tor contribution with the degree $-1$ class
+in the specialized Koszul model. Thus the surplus class can be traced either to a dependent
+equation in an individual fiber or to failure of flatness in a family.
+
+The quantum discrepancy can be computed without any homological language. Keep $\hbar$ real and
+nonzero and set $A_0=\cA_\hbar(\RR^2)$ in the variables of Theorem~\ref{thm:weyl}. For
+polynomials in $\tau$ let
+\[
+ A=A_0[\tau],\qquad L=A\tau N,\qquad
+ M=\{a\in A_0:A_0N a\subset A_0N\}.
+\]
+The rank-changing normalizer is defined using the single family of constraints. Reducing
+instead after specializing the kinematical algebra uses the individual constraint $f_0=0$.
+
+\begin{proposition}\label{prop:basechange}
+The specialized map from the family normalizer quotient to the physical quotient of the
+exceptional fiber is the strict inclusion
+\[
+ \bigl(\cN(L)/L\bigr)\big/\tau\bigl(\cN(L)/L\bigr)
+ \ \simeq\ M\ \hookrightarrow\ A_0.
+\]
+For $\tau_0\ne0$, specialization at $\tau_0$ gives the one-pair Weyl algebra $B$.
+\end{proposition}
+\begin{proof}
+It suffices to test the generator $\tau N$ in the normalizer condition. Since $\tau$ is central
+and is a nonzero divisor in $A$, the relation $\tau N a\in \tau A N$ is equivalent to $N a\in A
+N$. The latter holds coefficient by coefficient in $\tau$. Hence $\cN(L)=M[\tau]$. The
+ordered-monomial calculation in Theorem~\ref{thm:weyl} gives $M=B+A_0 N$ as vector subspaces,
+so $A_0 N\subset M$. It follows that $L\subset \tau M[\tau]$. The special fiber of $M[\tau]/L$
+is $M$.
+
+The constraint in the exceptional kinematical fiber generates the zero ideal of $A_0$. Its
+normalizer is all of $A_0$. The induced map is the inclusion $M\to A_0$, which misses $S$
+because $NS=SN-i\hbar$ lies outside $A_0N$. At $\tau=\tau_0\ne0$ the image of $L$ is $A_0N$
+since $\tau_0$ is invertible, giving $M/A_0N=B$.
+\end{proof}
+
+Two observations make the strict inclusion visible on states. In a regular fiber the
+wavefunctions solving the translation constraint have a fixed $N$-value and a free $R_0$
+argument. At the exceptional fiber a normalized kinematical packet can depend on both $r$ and
+$s$. Multiplication by $S$ distinguishes two packets translated in $s$. There is no family of
+polynomial normalizer representatives whose value at zero is this operator. Also a
+representative proportional to $N$ can survive at $\tau=0$ in the source algebra $M$, even
+though at a regular level it vanishes in the quotient. Both effects follow from performing
+different operations in a different order. The model requires no limit of Hilbert spaces as
+$\tau$ approaches zero.
+
+A regular family of null diamonds likewise needs a stated rank condition if its reduced phase
+spaces are to have a common description. Equation~\eqref{eq:rank-jump} is an example of what to
+test when that condition fails. It gives no basis for assigning this singularity to a caustic
+or marginal surface in a spacetime solution. Such an assignment would require the linearized
+constraints of that particular solution and their boundary conditions.
+
+\section{Matching around a cycle}
+\label{sec:cycle}
+A number assigned to each cut may look consistent when two neighboring pieces are examined and
+fail when the cuts close into a loop. The linear theorem turns this into a calculation.
+
+Let $G=(V_G,E_G)$ be a finite oriented graph with $c$ connected components. Retain isolated
+vertices. Put one frame position and one momentum at each vertex and assign a translation
+parameter to each edge. The column of $T:\RR^{E_G}\to\RR^{V_G}$ for the edge $e:v\to w$ is the
+vector $e_w-e_v$. The corresponding constraint fixes $p_w-p_v=\lambda_e$. Reversing the edge
+reverses the sign of its column and of $\lambda_e$. This is a charge-difference convention;
+the two-boundary convention of Section~\ref{sec:pair} reverses the momentum on one side.
+
+\begin{corollary}\label{cor:graph}
+The vertex matching problem has a nonzero quantum quotient exactly when the signed sum of
+$\lambda_e$ around every cycle vanishes. In that case the quotient has $c$ canonical pairs.
+The unreduced derived level has degree $-1$ Koszul cohomology free over the ordinary level
+ring of rank $b=|E_G|-|V_G|+c$. Its successive exterior powers fill degrees $-j$ for $0\le j\le b$.
+\end{corollary}
+\begin{proof}
+The transpose of the incidence matrix maps a vector of vertex values $p$ to its edge
+differences. Such differences have vanishing sum around every cycle. Conversely choose one
+root in each component. Set a vertex value to the signed sum of the edge assignments along any
+path from the root. Vanishing cycle sums give path independence. A constant per component
+remains free, hence $\dim\ker T^*=c$ and $\operatorname{rank}T=|V_G|-c$. Apply
+Theorem~\ref{thm:linear}.
+\end{proof}
+
+In a triangle with arrows $1\to2\to3\to1$, fix $\lambda_{12}+\lambda_{23}+\lambda_{31}=0$. One
+may solve the constraints by $p_1=t$, $p_2=t+\lambda_{12}$ and
+$p_3=t+\lambda_{12}+\lambda_{23}$. The sum $Q=q_1+q_2+q_3$ is invariant under all edge shifts.
+Its conjugate can be taken to be $K=(p_1+p_2+p_3)/3$. On this level
+$K=t+(2\lambda_{12}+\lambda_{23})/3$, so it differs from the free momentum $t$ by a fixed offset. Indeed $\{Q,K\}=1$ and the quantized
+operators satisfy $[Q,K]=i\hbar$. The Koszul class represented by $e_{12}+e_{23}+e_{31}$ is
+closed. It has degree $-1$ and spans the excess part over the ring of the unreduced level.
+Thus the classical observable pair, the quantum observable pair and the redundant matching
+equation can each be named in the same example.
+
+Now put $\lambda_{12}=\lambda_{23}=0$ and $\lambda_{31}=\hbar\alpha$ with real $\alpha\ne0$.
+Every proper two-edge subgraph of the triangle has consistent levels. Adding the third edge
+gives
+\[
+ C_\lambda(e_{12})+C_\lambda(e_{23})+C_\lambda(e_{31})
+   =-\hbar\alpha\,1 .
+\]
+The full left ideal contains a nonzero scalar and the quotient vanishes. At $\hbar=0$ all
+three level assignments reduce to the ordinary unshifted matching. This is an obstruction to
+lifting those particular levels together, despite consistency on each tree. It is an algebraic
+test of an assignment of charge offsets. Calling it a gravitational anomaly would require an
+invariant construction of the offsets in gravity and proof that no allowed redefinition
+removes it.
+
+A change of vertex momentum origins $p_v\mapsto p_v+b_v$ changes the edge character by
+$b_w-b_v$. The signed sum around any cycle stays fixed. Conversely Corollary~\ref{cor:graph}
+identifies all removable assignments as vertex differences. A spanning tree gives an
+economical measurement: calibrate vertex origins along the tree, then measure each remaining
+edge once. If an edge disagrees, no new vertex calibration can satisfy that edge while
+retaining every tree match. In the formal-parameter algebra a nonzero scalar multiple of
+$\hbar$ implies $\hbar$-torsion rather than instant collapse. Inverting $\hbar$ or
+specializing to a nonzero numerical value gives the zero quotient of the example.
+
+The dimension $c$ counts components of this chosen graph of gauge translations. It gives no
+degree-of-freedom count for a gravitational partition of spacetime. The assumptions making the
+count possible are that each frame variable is one-dimensional, translations commute,
+constraints are linear and their only dependencies are graph cycles. A nonabelian charge
+matching problem instead needs a specified composition law for changes of frame, and
+representation data can distinguish sectors with the same classical label.
+
+\section{Transport of a constraint ideal}
+\label{sec:transport}
+The arrows of a putative diamond category must do more than relate the unconstrained algebras.
+For algebras $\cA_j$ with left ideals $L_j$, $j=1,2$, suppose a unital algebra map
+$\alpha:\cA_1\to\cA_2$ satisfies
+\begin{align}
+ \alpha(L_1)&\subset L_2, \label{eq:ideal}\\
+ \alpha\bigl(\cN(L_1)\bigr)&\subset\cN(L_2). \label{eq:norm}
+\end{align}
+Then $[a]\mapsto[\alpha(a)]$ induces a unital algebra map of normalizer quotients.
+Equation~\eqref{eq:ideal} gives independence of representatives. Equation~\eqref{eq:norm}
+ensures the image represents an observable. These conditions compose. If each physical adjoint
+comes from a star-stable centralizer presentation, a sufficient additional requirement is that
+$\alpha$ act as a star map on the centralizer and preserve its chosen target centralizer. An
+embedding of unconstrained algebras by itself establishes none of the conditions concerning
+target constraints.
+
+A stronger hypothesis reduces the number of separate checks. Suppose $\alpha(L_1)\subset L_2$
+and the left ideal generated by $\alpha(L_1)$ in $\cA_2$ equals $L_2$. If $a\in\cN(L_1)$ and
+$b=\sum_i c_i\alpha(\ell_i)\in L_2$, then
+\[
+ b\,\alpha(a)=\sum_i c_i\alpha(\ell_i a)\in L_2 .
+\]
+Here multiplicativity of $\alpha$ allows each product to pass inside, and $\ell_i a\in L_1$
+because $a$ normalizes the left ideal. Thus equation~\eqref{eq:norm} holds. An enlarged boundary can acquire independent constraints,
+in which case this sufficient hypothesis may fail. The original normalizer test still makes
+sense.
+
+For a simple obstruction let $\alpha_t$ act on the two-pair algebra by $N\mapsto N+t\hbar$ and
+fix $R_0,K,S$, with $t\in\RR$. It preserves the star and all commutators. This formula also
+defines a map over $\CC[\hbar]$, and its specialization at $\hbar=0$ is the identity on all
+four generators. If both regions impose $N=0$ at the quantum level, $\alpha_t(N)$ lies in $\cA
+N$ exactly when $t=0$. A reduced representative and the same representative plus $N$ then have
+images differing by $t\hbar$ modulo the target ideal. For $t\ne0$, equation~\eqref{eq:ideal}
+fails and there is no map induced by this rule on all representatives.
+
+The abstract physical algebras in the shifted example are nevertheless isomorphic. They have
+common representatives in $B$, on which $\alpha_t$ is the identity. One can either use that
+particular section to define a different prescription, or change the target constraint to
+$N+t\hbar=0$, in which case the original map does respect the chosen levels. The distinction
+is an experimentally meaningful one when levels and observables have fixed operational
+definitions. A null-cone correspondence must specify the frame charge detected by a
+preparation before treating changes of origin as equivalent.
+
+\section{Physical states at a noncompact boundary}
+An algebraic quotient does not automatically furnish a subspace of normalized physical
+vectors. In the real-coordinate representation on $L^2(\RR^2,dr\,ds)$ take initially the
+Schwartz domain and let
+\[
+ R_0=r,\qquad K=-i\hbar\partial_r,\qquad S=s,\qquad N=-i\hbar\partial_s .
+\]
+The constraint would set a state independent of $s$. Any such function in $L^2(\RR^2)$ has
+zero norm or infinite norm in the $s$-direction, so the zero eigenspace of the self-adjoint
+momentum $N$ contains only the zero vector. The reduced Weyl algebra in Theorem~\ref{thm:weyl}
+still has its usual Schr\"odinger representation on $L^2(\RR,dr)$. One must account for the
+gauge orbit when comparing the state spaces.
+
+For Schwartz wavefunctions, consider the map
+\[
+ (\eta\psi)(r)=\int_{\RR}\psi(r,s)\,ds .
+\]
+Its normalization fixes a choice of measure on the gauge group. Integration by parts gives
+$\eta(N\psi)=0$, and $R_0,K$ commute through this averaging map on the common domain. Every
+Schwartz function $f(r)$ has a preimage $f(r)h(s)$ with $h$ Schwartz and $\int h(s)\,ds=1$.
+The positive semidefinite form
+\[
+ (\psi,\phi)_{\mathrm{red}}
+   =\int_{\RR}\overline{(\eta\psi)(r)}(\eta\phi)(r)\,dr
+\]
+therefore has quotient completion $L^2(\RR,dr)$. This identifies the physical scalar product
+for the model by a construction that can be checked on representatives. It does not turn the
+average into a bounded projection on the kinematical Hilbert space.
+
+For example choose a Schwartz function $h$ with nonzero integral and set
+$h_b(s)=b^{-1/2}h(s/b)$ for $b>0$. Its kinematical norm is constant while $\int h_b=\sqrt
+b\,\int h$. For a fixed nonzero $f(r)$, the norms of $\eta(fh_b)$ tend to infinity. No bounded
+extension of $\eta$ from the full kinematical Hilbert space can have this action on the
+Schwartz domain. Replacing the gauge average by an ordinary Hilbert projection would give a
+different answer.
+
+A real level $\lambda$ changes the test functional to
+\[
+ (\eta_\lambda\psi)(r)=\int_{\RR} e^{-i\lambda s/\hbar}\psi(r,s)\,ds .
+\]
+Then $\eta_\lambda((N-\lambda)\psi)=0$ by integration by parts. A multiplication operator
+$U_t\psi=e^{its}\psi$ satisfies $N U_t=U_t(N+t\hbar)$ and
+$\eta_{\lambda+t\hbar}(U_t\psi)=\eta_\lambda(\psi)$. The phase implements a change of level
+provided the physical state prescription changes along with the operator. The quantum shift
+that obstructs descent at two fixed equal levels now has a precise intertwiner between two
+different levels.
+
+These arguments separate three assertions about a proposed local quantum system. A polynomial
+star algebra may admit a representation on a dense domain. A bounded algebra of observables
+may be generated by exponentiating suitable self-adjoint operators. A von Neumann algebra
+depends on the selected representation and its closure. A theorem about a star-algebra
+quotient cannot by itself identify the latter two. Chandrasekaran specifies deformations of
+the action and a positive state in constructing his representation \cite[\S\S4.1, 4.2]{nc}. An
+independent categorical construction must identify the comparable operators, the state, and
+any limiting operation used to form a closure.
+
+\section{A state comparison on the relative pair}
+\label{sec:states}
+A comparison can preserve the constraint algebra and still assign different probabilities to a
+boundary measurement. The relative pair admits a direct calculation of those probabilities.
+Work in the Schr\"odinger representation of Section~\ref{sec:quantum}, after group averaging
+has removed $s$. For real $a,b$ define a bounded unitary on $L^2(\RR,dr)$ by
+\begin{equation}
+ (W(a,b)f)(r)=
+ \exp\bigl(ia(r+b/2)/\hbar\bigr)\,f(r+b).
+ \label{eq:displacement}
+\end{equation}
+Here $a$ has units of momentum and $b$ has units of position. Translation preserves Lebesgue
+measure, so $W(a,b)$ is indeed unitary. Direct multiplication gives
+\[
+ W(a,b)W(c,d)=
+ \exp\bigl(-i(ad-bc)/(2\hbar)\bigr)W(a+c,b+d).
+\]
+It follows that $W(a,b)^*=W(-a,-b)$. These are bounded probes of the pair. Their product is
+meaningful for every Hilbert vector, in contrast with a high polynomial moment of an unbounded
+generator. The symmetrically ordered characteristic function of displacement operators also
+appears in the phase-space treatment of Cahill and Glauber \cite{cahill}.
+
+For a unit vector $\psi$, write $\chi_\psi(a,b)=\langle\psi,W(a,b)\psi\rangle$. An algebra of
+measured observables may be defined as the operator norm closure of the finite linear span of
+these $W(a,b)$ in this representation. Equality of two states on all the displacements implies
+equality on that algebra by linearity and norm continuity. For the calculation it suffices to
+work with normalized vectors and the finite linear span.
+
+\begin{proposition}\label{prop:gaussian}
+Let $\sigma>0$ and $x,p\in\RR$. The normalized packet
+\[
+ g_{x,p,\sigma}(r)=
+ (2\pi\sigma^2)^{-1/4}
+ \exp\left(-\frac{(r-x)^2}{4\sigma^2}
+           +\frac{ip(r-x)}{\hbar}\right)
+\]
+has characteristic function
+\begin{equation}
+ \chi_{x,p,\sigma}(a,b)=
+ \exp\left(\frac{i(ax+bp)}{\hbar}
+           -\frac{\sigma^2 a^2}{2\hbar^2}
+           -\frac{b^2}{8\sigma^2}\right).
+ \label{eq:character}
+\end{equation}
+Equality for all $a,b$ distinguishes the three parameters within this family, up to the
+irrelevant common phase of a wavefunction.
+\end{proposition}
+\begin{proof}
+The squared modulus is the normal probability density with mean $x$ and variance $\sigma^2$. In
+the integral for $\chi$ the product of the two wavefunctions has the factor $e^{ipb/\hbar}$.
+Put $u=r-x+b/2$. Completing the square gives
+\[
+ (r-x)^2+(r+b-x)^2=2u^2+b^2/2 .
+\]
+The remaining phase in \eqref{eq:displacement} is $e^{ia(u+x)/\hbar}$. Integrating
+$e^{iau/\hbar}$ against the centered normal density yields $e^{-\sigma^2 a^2/(2\hbar^2)}$,
+proving \eqref{eq:character}. The first derivatives at the origin recover $x,p$; the modulus
+along the $a$-axis determines $\sigma^2$. Positivity of the width fixes its square root.
+\end{proof}
+
+A chosen pair of preparations can now test an affine change of boundary reference. For displacements let
+\[
+ \alpha_{\delta,\epsilon}\bigl(W(a,b)\bigr)=
+ e^{i(a\delta+b\epsilon)/\hbar}W(a,b).
+\]
+The scalar is a character of the additive parameter space. It respects products and adjoints.
+The map is unitarily implemented in this representation by conjugation with a displacement, as
+follows also from the product law. The underlying operator prescription corresponds to
+$R_0\mapsto R_0+\delta$ and $K\mapsto K+\epsilon$.
+
+Let the first observer use parameters $(x_1,p_1,\sigma_1)$ and the second use
+$(x_2,p_2,\sigma_2)$. Equality of the first state with the pullback of the second then holds on
+the displacement algebra exactly when
+\begin{equation}
+ x_1=x_2+\delta,\qquad p_1=p_2+\epsilon,\qquad \sigma_1=\sigma_2 .
+ \label{eq:state-match}
+\end{equation}
+Indeed \eqref{eq:character} gives these conditions and proves their sufficiency. A mismatch of
+means can be accounted for by an identified offset in the frame origin. A mismatch of widths
+remains after such a translation. Two preparations with zero means and different widths agree
+on the means of both generators and on the canonical commutator, yet give different values even
+for $\operatorname{Re}\chi(a,0)$ at every $a\ne0$. Thus a second moment can separate
+comparisons that a measurement of charge and position means cannot distinguish.
+
+Rescaling the unit of the frame reading changes the test. For $\gamma>0$ take
+$\alpha_\gamma(W(a,b))=W(\gamma a,b/\gamma)$. The product phase in \eqref{eq:displacement} is
+unchanged, and dilation of the Schr\"odinger coordinate implements this star automorphism.
+Pulling back the second Gaussian state gives parameters $(\gamma
+x_2,p_2/\gamma,\gamma\sigma_2)$. To use the width as a test one must fix the physical
+normalization of the probe or include its prescribed rescaling. This dependence is relevant for
+null frames, where a convention for normalizing the null normals enters a comparison of
+readings.
+
+Agreement on one commutative family of probes can also fail to identify a state. The packets
+$g_{x,p,\sigma}$ and $g_{x,p',\sigma}$ for distinct $p,p'$ have identical probability
+distributions for $R_0$. Every bounded function of $R_0$ therefore has the same expectation in
+the two states. A translation probe with $a=0$ has expectation $e^{ibp/\hbar-b^2/(8\sigma^2)}$
+and distinguishes the states for any $b$ with $b(p-p')/\hbar$ outside $2\pi\mathbb Z$. In a
+boundary measurement this distinction asks which noncommuting operations the two constructions
+allow a preparation to undergo. Knowing every probability for the charge alone would still give
+only the diagonal spectral data of that charge.
+
+The measurements in this section can be made after gauge averaging on representatives. For a
+normalized residual packet $g$ choose any Schwartz function $h$ with $\int h(s)\,ds=1$.
+Applying the bounded displacement in the $r$ variable to $g(r)h(s)$ before applying $\eta$
+produces $W(a,b)g$. Replacing $h$ by any other function with the same integral changes that
+kinematical representative but leaves every residual displacement expectation the same. For a
+nonzero level the corresponding condition is $\int e^{-i\lambda s/\hbar}h(s)\,ds=1$. Thus
+equality of the probability tests is compatible with the level-dependent state prescription,
+not just with a preferred gauge slice.
+
+\section{Translations implemented up to phase}
+\label{sec:phases}
+An algebra map can respect products on the nose when the operators implementing a boundary
+symmetry respect composition only up to a phase. This issue is independent of the level
+obstruction in Corollary~\ref{cor:graph}. In that example the global quotient vanished. The
+following example has a nonzero Hilbert space and an exact action on every bounded observable.
+
+On the reduced Hilbert space define $U(a)f(r)=f(r-a)$ and $V(b)f(r)=e^{ibr/\hbar}f(r)$. Both
+shift the surviving phase-space data. They are boundary operations on the surviving canonical
+pair and do not impose two additional gauge conditions. Direct substitution gives
+\begin{equation}
+ U(a)V(b)=e^{-iab/\hbar} V(b)U(a).
+ \label{eq:weylphase}
+\end{equation}
+The scalar disappears in the inner automorphisms $A\mapsto U(a)AU(a)^*$ and $A\mapsto
+V(b)AV(b)^*$. These automorphisms commute even when the two unitaries anticommute. They
+preserve the residual displacement algebra since conjugating a displacement multiplies it by a
+character.
+
+\begin{proposition}\label{prop:phase}
+Fix two nonzero steps $a_0,b_0$. The two commuting automorphisms associated with these steps
+define an action of $\mathbb Z^2$ on bounded operators. In the given representation there is a
+pair of implementing unitaries giving a true representation of $\mathbb Z^2$ if and only if
+$a_0b_0/(2\pi\hbar)$ is an integer.
+\end{proposition}
+\begin{proof}
+In the algebra of all bounded operators on the Hilbert space, unitaries implementing the same
+inner automorphism differ by a scalar. Indeed their quotient commutes with all bounded
+operators, including every rank-one operator, so it is a multiple of the identity. Changing
+scalar phases of $U(a_0),V(b_0)$ leaves their group commutator unchanged. Its value is
+$e^{-ia_0b_0/\hbar}1$ by \eqref{eq:weylphase}. A representation of the free abelian group on
+two generators requires that commutator to be one. When the condition holds, the assignment
+$(m,n)\mapsto U(a_0)^m V(b_0)^n$ gives the representation.
+\end{proof}
+
+A way to compute the obstruction without considering all elements of the group is to compare
+the two paths around the elementary square. For two intertwiners one first fixes the
+identifications of the endpoint Hilbert spaces. The product around the square is then central
+when it acts trivially by conjugation on the full operator algebra. For irreducible observables
+the center here is scalar, and the product of phases is therefore a number of unit modulus. A
+phase assigned to each endpoint cancels around a closed square. For \eqref{eq:weylphase} that
+number is exactly $e^{-ia_0 b_0/\hbar}$.
+
+The square also indicates which type of observation could detect the discrepancy in the model.
+Prepare a two-dimensional control in $(|0\rangle+|1\rangle)/\sqrt2$ and a normalized residual
+state $f$. On branch zero act on $f$ by the identity, and on branch one act by $UVU^*V^*$ with
+the same specified implementations. The final control has components $1$ and $e^{-ia_0
+b_0/\hbar}$, up to their common normalization. Projecting it back on its initial state gives
+probability
+\[
+ \frac{1+\cos(a_0 b_0/\hbar)}{2}.
+\]
+On the residual system alone, every expectation value is unchanged on both branches. This
+calculation relies on a coherent implementation of the controlled operations; specifying just
+the two automorphisms would not fix such an experiment. In a gravitational application one
+would have to identify a preparation and a physically calibrated relative phase. A projective
+phase of an isolated state has no separately measured value.
+
+The step area $a_0 b_0$ can be arbitrarily small compared with $\hbar$ while leaving a
+mathematically nontrivial phase. Repeating the loop $m$ times changes the phase to $e^{-im a_0
+b_0/\hbar}$. The accumulation law follows from taking a product of the same central element. It
+is a quantitative example of the difference between one local comparison of generators and a
+comparison of transition amplitudes under repeated composition. It also explains why a
+numerical verification of a single commuting square of algebra maps could consistently pass
+while an amplitude calculation disagrees.
+
+A reducible representation requires a more careful interpretation of the square. Two
+implementers giving the same action on a represented algebra can differ by a unitary in its
+commutant. For instance represent the same Weyl pair on $\mathcal H\otimes\CC^m$ by operators
+$W(a,b)\otimes 1$. Every $1\otimes M$ commutes with them. An implementation of a repeated
+operation can therefore act nontrivially on a multiplicity space even when it acts trivially on
+every measured displacement. The scalar proof above used the full bounded algebra deliberately.
+If a categorical description loses the multiplicity of a boundary preparation, identifying its
+local observable algebra will not recover this part of the state comparison.
+
+Chandrasekaran encounters an explicit endpoint phase when passing between reference actions in
+his equation (4.3) and the discussion immediately following it \cite{nc}. There the change of
+convention also changes the cap wavefunction, allowing the endpoint phases to cancel in an
+amplitude. This mechanism calls for a rule on the states as well as on the algebra. A common
+rephasing of endpoints and a nontrivial scalar left by a closed comparison have different
+observational consequences, as the square calculation shows.
+
+\section{Matching a positive boost charge}
+\label{sec:boost}
+There is a more direct contact with a gravitational calculation than an analogy between two
+canonical pairs. In Chandrasekaran's Appendix D.2, equation (D.13) integrates the intermediate
+rapidity of a shared normal frame. With his dimensionless area label $s=A/(4G_N\hbar)$, a
+relative boost by $\Gamma$ acts on that sector with phase $e^{i\Gamma s/(2\pi)}$ \cite{nc}.
+Matching two sectors with labels $s_L,s_R$ leaves a phase depending on the difference of their
+rapidities. This formula tests three pieces of a prospective dictionary at once: its area
+convention, its orientation convention and its normalization of the integration variable.
+
+To isolate the Fourier calculation, take continuum labels and test functions with compact
+support inside $(0,\infty)^2$. Suppose $\Gamma_L,\Gamma_R$ are fixed external readings. Give
+the intermediate rapidity $\alpha$ a symmetric Gaussian window with scale $B>0$. The
+corresponding kernel on the two label variables is
+\begin{align}
+ K_B(s_R,s_L)
+ &=\int_{\RR}\frac{d\alpha}{4\pi^2}
+       \exp\left(-\frac{\alpha^2}{2B^2}\right)
+       \exp\left(\frac{i}{2\pi}
+       [s_R(\Gamma_R-\alpha)+s_L(\alpha-\Gamma_L)]\right) \nonumber\\
+ &=e^{i(s_R\Gamma_R-s_L\Gamma_L)/(2\pi)}
+       \frac{B}{(2\pi)^{3/2}}
+       \exp\left(-\frac{B^2(s_L-s_R)^2}{8\pi^2}\right).
+ \label{eq:reg-match}
+\end{align}
+The second line is the elementary Fourier transform of a Gaussian. In the difference variable
+the real factor is a normalized approximate identity of standard deviation $2\pi/B$. After
+integration against the test function, its limit is evaluation on the diagonal. Compact support
+away from zero permits extension by zero without any endpoint convention. The result is the
+distribution
+\[
+ K_\infty(s_R,s_L)=
+ e^{is_R(\Gamma_R-\Gamma_L)/(2\pi)}\,\delta(s_L-s_R).
+\]
+This reproduces the rapidity dependence and the normalization of the continuum Fourier identity
+in (D.13). The Gaussian window here is a way of testing the distributional limit. It is
+independent of a choice of Gaussian state for gravitational modes.
+
+The result is sensitive to the normalization of the rapidity integral. If a construction
+integrates a variable $\beta=c\alpha$ with $c>0$, it must transform both the exponent and the
+measure. Keeping the physical phases fixed but integrating with $d\beta/(4\pi^2)$ in place of
+$d\alpha/(4\pi^2)$ multiplies the entire kernel by $c$. The sharp matching locus looks
+identical in both answers. Absolute amplitudes sewn with the two measures then disagree. Thus
+the equality of constraints $s_L=s_R$ and equality of normalized sewing kernels are
+independently testable statements.
+
+\subsection{A comparison of spectral measures}
+For a self-adjoint, nonnegative area operator $\widehat A$, a normalized state $\rho$ gives its
+spectral probability measure $\mu_\rho$ on $[0,\infty)$. The boost probe has expectation
+\begin{equation}
+ \rho\!\left(e^{i\Gamma\widehat A/(8\pi G_N\hbar)}\right)
+     =\int_{[0,\infty)} e^{i\Gamma A/(8\pi G_N\hbar)}\,d\mu_\rho(A).
+ \label{eq:boost-marginal}
+\end{equation}
+Here the bounded functional calculus or a representation supporting it is understood. For a
+vector state, $\mu_\rho(I)$ is the squared norm of the projection on the area interval $I$.
+Agreement of \eqref{eq:boost-marginal} for every real $\Gamma$, with common constants and
+rapidity convention, is equivalent to agreement of the probability measures. The forward
+direction follows from uniqueness of the Fourier transform of a finite measure. To see why,
+integrate the difference of their characteristic functions against the inverse Fourier
+transform of a smooth compactly supported test function. Fourier inversion and absolute
+integrability then give zero for the integral of every such test function against the measure
+difference. These functions determine a finite measure.
+
+For a sharp area eigenstate a single prescribed rapidity produces a periodic ambiguity. At
+$\Gamma_0\ne0$, replacing $A$ by $A+2\pi (8\pi G_N\hbar)j/\Gamma_0$ for an integer $j$ leaves
+that expectation unchanged whenever both labels are admissible. Two nonzero rapidities whose
+ratio is irrational remove this exact ambiguity for a sharp label, since equality of both
+phases would require the same nonzero area shift to be an integer period for both. For a
+general distribution two probes still provide only two Fourier samples. Verifying them cannot
+establish equality of all spectral probabilities. This distinction matters when an intended
+comparison specifies a small set of preparation amplitudes instead of an entire state.
+
+Even full equality of the area marginal does not settle the quantum state. To see this without
+any domain subtleties, take $\mathcal H=L^2(\RR_+,dA)\otimes\CC^2$ with the area acting by
+multiplication in the first factor. Fix a normalized packet $f(A)$ and take the two vectors
+$f\otimes |0\rangle$ and $f\otimes |1\rangle$. Every boost and every bounded function of area
+have identical expectation in the two states. The operator $1\otimes |0\rangle\langle0|$
+distinguishes them. The second factor represents an undetected label in this calculation. The
+gravitational proposal contains fluctuating radiative data within a fixed area in \S4.2, so a
+comparison restricted to the boost subgroup would require a separate calculation on its
+radiative observables.
+
+\subsection{Continuous and atomic matching}
+A Dirac delta on a continuum of labels and a projector on equal eigenvalues of a discrete
+operator both express matching. They act on different test spaces. To compare them let $D$ be
+the self-adjoint difference of the two area labels divided by $2\pi$ in a tensor product
+representation. The functions of area on opposite factors strongly commute. A normalized finite
+average of the corresponding one-parameter unitary group is
+\[
+ P_T=\frac1{2T}\int_{-T}^{T}e^{i\alpha D}\,d\alpha,\qquad
+ P_T=\operatorname{sinc}(TD),\qquad
+ \operatorname{sinc}(t)=
+ \begin{cases}\sin(t)/t,&t\ne0,\\1,&t=0.\end{cases}
+\]
+For any vector its scalar spectral measure for $D$ is finite. The integrand multiplier has
+absolute value at most one, equals one at zero, and tends to zero at every nonzero point.
+Applying dominated convergence to the norm squared of the difference shows $P_T\to E_D(\{0\})$
+strongly, where $E_D$ is the spectral resolution of $D$.
+
+With pure point labels on each side this projection keeps vectors with equal labels along with
+all their multiplicities. For discrete eigenvalues the list of allowed pairs and their
+degeneracies can be computed before normalizing the physical trace. With an absolutely
+continuous joint label measure on the plane, the diagonal has measure zero, hence
+$E_D(\{0\})=0$. The normalized average then converges strongly to zero in the kinematical
+Hilbert space. The unnormalized distributional pairing in \eqref{eq:reg-match} can nevertheless
+be nonzero on smooth test functions. For example a smooth nonnegative bump positive at a
+diagonal point has a positive diagonal integral when $\Gamma_L=\Gamma_R$.
+
+In the latter case the diagonal data need a physical scalar product obtained after reduction,
+just as $\eta$ did for a noncompact frame position. Substituting a symbol $\delta(0)$ for the
+diagonal measure in a countable basis would conflate the two constructions. A proposed
+identification of boundary Hilbert spaces must specify whether it preserves a spectral
+subspace, a direct integral or the physical space completed after distributional matching. The
+Fourier example decides which question to ask once the spectral measures are given. It does not
+select a spectrum for the gravitational theory.
+
+\subsection{The range of the area label}
+The global range of a charge restricts the operations that can act on it. Suppose $\widehat A$
+is a self-adjoint nonnegative operator on a nonzero Hilbert space. If for every $t\in\RR$ a
+unitary $V(t)$ obeyed
+\[
+ V(t)\widehat A V(t)^*=\widehat A+t1
+\]
+as self-adjoint operators with their domains, then invariance of the spectrum under unitary
+conjugation would give $\operatorname{spec}(\widehat A)=\operatorname{spec}(\widehat A)+t$ for
+every $t$. The only nonempty subset of $\RR$ invariant under every translation is $\RR$ itself.
+This contradicts nonnegativity. The assumption is a global unitary translation law. A
+commutator identity on a chosen test domain alone does not imply this law, a distinction
+studied in other semibounded canonical-pair problems by Galapon \cite{galapon}.
+
+Accordingly the real Weyl pair of Section~\ref{sec:quantum} cannot be identified globally with
+a positive area and a conjugate generating arbitrary additive shifts of that area. A local
+canonical coordinate can still describe fluctuations in a regular chart, and the boost itself
+acts by a phase at fixed area. These operations ask for substantially less than a global
+two-sided shift of the area spectrum.
+
+A simple alternative illustrates the importance of the range. On $L^2((0,\infty),dA/A)$ let
+$\widehat A$ multiply by $A$ and define $(V(t)f)(A)=f(e^tA)$. The invariant measure $dA/A$
+makes $V(t)$ unitary. On the self-adjoint multiplication domain it gives $V(t)\widehat A
+V(t)^*=e^t\widehat A$. Hence conjugating a boost by a dilation rescales its rapidity:
+\[
+ V(t)\exp\bigl(i\Gamma\widehat A/(8\pi G_N\hbar)\bigr)V(t)^*
+    =\exp\bigl(i e^t\Gamma\widehat A/(8\pi G_N\hbar)\bigr).
+\]
+Here zero belongs to the spectrum as a limit point and is preserved by dilation. In logarithmic
+coordinates $x=\log(A/A_*)$ for a chosen positive reference area $A_*$, $V(t)$ acts by an
+ordinary translation of $x$. This model gives a consistent pair of operations preserving
+positivity. It is a comparison example; the gravitational admissibility of a dilation would
+have to follow from the null-boundary action and its state space.
+
+There is also a finite-dimensional obstruction to importing the polynomial Weyl algebra
+unchanged into a projected size sector. For finite square matrices $X,Y$, cyclicity gives
+$\operatorname{Tr}([X,Y])=0$. If $[X,Y]=i\hbar 1$ on a nonzero finite-dimensional space, the
+right side has trace $i\hbar$ times its dimension, a contradiction. Projecting a canonical pair
+defined on a larger space need not preserve its commutator. With a projection $P$ and bounded
+operators $X,Y$ one has exactly
+\[
+ [PXP,PYP]=P[X,Y]P-PX(1-P)YP+PY(1-P)XP .
+\]
+Even for bounded inputs the two cross terms can carry the difference. For unbounded canonical
+generators further common-domain conditions are needed before writing the same expression.
+Chandrasekaran's program distinguishes a representation at the level of boundary observables
+from bounds under a restriction on the size of a diamond. A purported comparison has to
+identify the restriction and recompute what survives it. Declaring an algebraic Weyl relation
+exact on a finite block would fail the trace test.
+
+\subsection{Local smearing and the total area}
+For a smooth regular cut, the integrated generator in Chandrasekaran's equation (3.43) sums a
+charge aspect. Its value records the area of the cut but loses its angular distribution. In
+\S4.2 the incoming data at fixed total area can fluctuate in the distribution of area over the
+corner. Thus comparing a uniform boost on the whole cut and comparing separately labelled
+probes on corner patches are physically different requests \cite{nc}.
+
+A two-cell measurement makes the difference explicit with no assumption of full field
+quantization. Suppose two labelled commuting positive observables $A_1,A_2$ take values $l$ and
+$h$, with $0<l<h$. On states diagonal in the joint spectral basis the data are ordinary
+probability distributions on four pairs. Consider preparations
+\[
+ \nu_+=\tfrac12\delta_{(l,l)}+\tfrac12\delta_{(h,h)},\qquad
+ \nu_-=\tfrac12\delta_{(l,h)}+\tfrac12\delta_{(h,l)} .
+\]
+Each individual cell has the same probability for both outcomes in both preparations. All
+single-cell boost characteristic functions consequently agree at all rapidities. Yet the total
+area is either $2l$ or $2h$ in the first preparation and is always $l+h$ in the second. If $t$
+is the calibrated coefficient of $A_1+A_2$ in the phase, the two expectations are
+\[
+ e^{it(l+h)}\cos\bigl(t(h-l)\bigr)
+ \quad\hbox{and}\quad e^{it(l+h)}.
+\]
+Taking $t=\pi/(2(h-l))$ gives zero for the first expectation and unit modulus for the second.
+The discrepancy is a cross correlation, and does not come from either one-cell spectral
+measure.
+
+There is also a converse failure. Sharp preparations at $(l,h)$ and $(h,l)$ give identical
+total area and identical expectation for every uniform boost. An operation sensitive to the
+first labelled cell resolves them. Equality of total boost data would be sufficient in a model
+in which only the total area is an observable. Once a proposed class of decorated embeddings
+includes a local patch smearing, the comparison needs additional state data.
+
+In the two-cell algebra all joint information is accessible from
+\[
+ \chi(t_1,t_2)=
+ \sum_{x,y\in\{l,h\}}\nu(x,y)\,e^{i(t_1x+t_2y)} .
+\]
+For instance choose $t_*=\pi/(h-l)$. The function $e^{it_*(x-l)}$ is $+1$ at $l$ and $-1$ at
+$h$. The three expectations of the sign on the first cell, the sign on the second cell, and
+their product determine the four probabilities along with normalization. This gives a finite
+set of tests on the joint state in this particular spectrum. A physical corner would need
+independently specified smearings, operators and a family of preparations before the same
+reasoning could be applied.
+
+A change of angular coordinates on a cut provides a kinematical consistency equation for such a
+choice. Let a classical patch measurement on a surface $S$ be $A_S[f]=\int_S f\,d\mu_S$, with
+$f$ a fixed scalar test function and $d\mu_S$ the area density. For an orientation-preserving
+identification $\xi:S\to S'$ suppose $\xi^*d\mu_{S'}=d\mu_S$. Then
+\[
+ A_{S'}[f\circ\xi^{-1}]=A_S[f] .
+\]
+This follows from change of variables and is an equation on labelled measurements. A mere
+assertion that two totals agree is its special case $f=1$. In a larger diamond the old corner
+can cease to be part of the boundary, and a map $\xi$ of the required kind need not exist.
+Extending the measurement into the larger gravitational algebra would then require an explicit
+dressing or an equivalent protocol for recovering the patch. Assuming a map of angular
+coordinates fixes that problem only for cuts already identified.
+
+The finite example also clarifies a requirement on any entropy comparison. Let $M_d(\CC)$ act
+on $\CC^d\otimes\CC^m$ as $a\mapsto a\otimes 1_m$. For any density matrices $\rho,\sigma$ on
+the two factors, the state $\rho\otimes\sigma$ has expectation $\operatorname{Tr}(\rho a)$ on
+every observable in the image. If $\sigma$ is the maximally mixed state, the eigenvalues of
+$\rho\otimes\sigma$ are the eigenvalues of $\rho$ divided by $m$, each repeated $m$ times. Its
+von Neumann entropy therefore exceeds that of $\rho$ by $\log m$. The representation has
+changed while all expectations on the smaller algebra agree. A full entropy claim must
+consequently identify which degrees of freedom and which trace enter the state count. In
+particular equality of area distributions under all probes on a single cut is insufficient to
+identify a gravitational entropy across different choices of observable algebra.
+
+\section{Tests on null data}
+The transverse geometry of a null sheet differs from the model of translations on $T^*V$.
+Chandrasekaran's equations (3.39) and (3.42) exhibit shear and corner terms in the symplectic
+potential and its exterior derivative. The area-dependent boost charge couples to variations
+of the conformal metric and to changes of the null normals. In particular it would be
+unjustified to infer a direct tensor factor for the corner charge from the independent pairs
+in the present example. His Appendix D.1 also distinguishes first-class and second-class
+constraints in its reduced measure. Equating every constraint with the generator of a group
+action would lose this distinction.
+
+For comparison, on one canonical plane the constraints $s=0$ and $n=0$ have $\{s,n\}=1$. Their
+zero set is a point, and the matrix of mutual brackets is invertible. Reducing this
+second-class pair by the Dirac bracket removes the plane \cite{dirac}. Tacking on a spectator pair $(r,k)$
+leaves its bracket unchanged because the spectator functions commute with both constraints.
+Treating $s,n$ as commuting generators of gauge translations on the common zero locus would
+instead require a translation tangent to that locus. Neither translation is tangent there.
+This finite example shows how the rank of the constraint bracket, a separate piece of input,
+changes the meaning of a quotient.
+
+A physical calculation can begin on a regular family of decorated diamonds. Choose a cut
+without a generator crossing before the specified corner, choose two frame patches and specify
+the observable carried by a common smearing at their interface. Fix which perturbations obey
+the null constraints and boundary conditions. For these perturbations the kernel of the
+pulled-back symplectic form determines the available degeneracies. A transformation with a
+nonzero Hamiltonian surface charge is separately recorded whenever the boundary condition
+permits it. At this step the algebraic comparison needs an actual map on the reduced variables
+and on changes of frame.
+
+At the quantum step one can ask whether a proposed transport preserves the chosen charge
+sector, changes to another specified sector, or has an anomaly on a common domain.
+Equations~\eqref{eq:ideal} and \eqref{eq:norm} are one formulation for normalizer
+presentations. If one quantizes the reduced phase space directly, the analogous question is
+whether the map respects its reduced brackets and quantum relations and can be implemented in
+the chosen state class. A proof for boost observables alone would establish a comparison on
+that subalgebra. The radiative fields and the couplings of the corner would remain to be
+addressed.
+
+A separate question concerns the source of the categorical observable. In the cited finite
+reconstruction, relational weights give a metric on a graph \cite{rep}. To turn a collection
+of probes into a copy of the corner algebra requires an independent prescription for
+extracting the measured coordinates, relations, involution and gauge identifications. Reading
+them from the null-cone algebra and declaring those objects to be the probes would make the
+comparison tautological. An informative first observable would have a stated measurement on
+each side and a test of equality after transporting it through one nonidentity arrow.
+
+\section{Conclusion}
+A common frame constraint leaves a relative reading and its conjugate charge measurable. This
+conclusion holds in the degree-zero Poisson algebra and in the quantized normalizer quotient
+of the translation model. The dependent tests used to describe the constraint persist in
+negative Koszul degree. On a network, a quantum character inconsistent around a cycle kills
+the full quotient even when it passes every test on a tree. These calculations put a concrete
+condition on any proposed gravitational realization. It must carry the physical generators and
+their quantum constraint levels consistently across changes of boundary frame.
+
+The rank-changing family identifies an operator that disappears if one reduces before
+specializing. At fixed rank the state comparison still detects inequivalent preparations
+through their displacement widths, and two implementers can leave a phase around a square
+that every conjugation on observables misses. At a null cut, one physical test is available
+already. Two independent descriptions can compare the spectral distribution of the
+area-generated boost, the normalized rapidity pairing, and the joint measurements carried by
+identified corner patches. Agreement there would give a correspondence for specified
+boundary data while leaving the radiative algebra to be determined.
+
+\begin{thebibliography}{9}
+\small
+\bibitem{nc} V. Chandrasekaran, \emph{An algebraic quantization of gravity from the null cone} (2026). \href{https://arxiv.org/abs/2611.34924v1}{arXiv:2611.34924v1}.
+\bibitem{df} W. Donnelly and L. Freidel, \emph{Local subsystems in gauge theory and gravity}, JHEP 09 (2016) 102. \href{https://arxiv.org/abs/1601.04744}{arXiv:1601.04744}.
+\bibitem{long} M. Long, \emph{Quantum Gravity and Emergent Spacetime from Perspectival Structure}, YonedaAI Research Collective, 24 February 2026. \href{https://yonedaai.com/papers/pdf/quantum-gravity-emergent-spacetime.pdf}{Manuscript}.
+\bibitem{rep} M. Long, \emph{A Representation-Theoretic Foundation for Quantum Gravity}, YonedaAI Research Collective, 7 July 2026. \href{https://yonedaai.com/papers/pdf/library/condensed-representation/part6-condensed-quantum-gravity.pdf}{Manuscript}.
+\bibitem{derived} D. Arinkin, A. C\u{a}ld\u{a}raru and M. Hablicsek, \emph{Formality of derived intersections and the orbifold HKR isomorphism} (2014). \href{https://arxiv.org/abs/1412.5233}{arXiv:1412.5233}.
+\bibitem{brst} M. Bordemann, H.-C. Herbig and S. Waldmann, \emph{BRST cohomology and phase space reduction in deformation quantization}, Commun. Math. Phys. 210 (2000), 107 to 144. \href{https://arxiv.org/abs/math/9901015v2}{arXiv:math/9901015v2}.
+\bibitem{cahill} K. E. Cahill and R. J. Glauber, \emph{Ordered Expansions in Boson Amplitude Operators}, Phys. Rev. 177 (1969), 1857 to 1881. \href{https://doi.org/10.1103/PhysRev.177.1857}{doi:10.1103/PhysRev.177.1857}.
+\bibitem{galapon} E. A. Galapon, \emph{Pauli's Theorem and Quantum Canonical Pairs: The Consistency of a Bounded, Self-Adjoint Time Operator Canonically Conjugate to a Hamiltonian with Non-empty Point Spectrum}, \href{https://arxiv.org/abs/quant-ph/9908033}{arXiv:quant-ph/9908033}.
+\bibitem{dirac} P. A. M. Dirac, \emph{Generalized Hamiltonian Dynamics}, Canadian J. Math. 2 (1950), 129 to 148. \href{https://doi.org/10.4153/CJM-1950-012-1}{doi:10.4153/CJM-1950-012-1}.
+\end{thebibliography}
+\end{document}

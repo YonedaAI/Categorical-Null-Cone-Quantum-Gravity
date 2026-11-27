@@ -1,0 +1,1047 @@
+\documentclass[11pt,letterpaper]{article}
+\input{preamble}
+\title{The Categorical Null-Cone Realization Conjecture\series{Synthesis}}
+\begin{document}
+\ifdefined\HCode\else\papersidebar{synthesis}\fi
+\maketitle
+\begin{abstract}
+A causal diamond is the region that can receive a signal from one event and send a signal to a second event. Its boundary is also large enough to carry gravitational radiation and corner charges. These two facts suggest a comparison between a category of observational contexts and the observable algebra obtained by quantizing characteristic gravitational data. We formulate the comparison for specified embeddings of decorated diamonds and state the conditions under which an arrow can carry a quantum observable. A binary shift and phase model gives a noncommutative example in which the comparison transports observables across a proper embedding. A second example shows how enlarging the region can invalidate relations inferred from local probes. A natural isomorphism of observable algebras would identify expectation values in corresponding states. Recovering amplitudes and entropy requires the comparison to respect additional structures. For dynamics, we give a matching prescription for a doubled effective action whose vacuum limit can be compared with a one-loop null-cone calculation. The first physical test is whether two independent constructions give the same transport of one boundary observable through a nested pair of diamonds.
+\end{abstract}
+
+\section{The region and the question}
+An event that can receive a signal from $p$ and send one to $q$ lies in the closed causal diamond
+\[
+ D(p,q)=J^+(p)\cap J^-(q).
+\]
+In a smooth spacetime this formula already uses the light cones of a metric. For a timelike pair in Minkowski space the interior is an open double cone. Its closure includes the light rays and the sphere where the two null sheets meet. A site built from open double cones and an assignment that keeps the corner of a closed region answer different questions. Passing from one to the other requires a choice about the data retained on the boundary.
+
+Example 4.8 of Long's February manuscript takes diamonds in Minkowski space as objects and inclusions as arrows \cite{long}. No metric reconstruction is needed to use this example. The July manuscript separates the reconstruction of an order, topology, conformal structure and scale. Its finite metric example starts from a weighted graph \cite{cond}. One can therefore ask about the comparison with quantized gravity in a specified geometry first. Recovering that geometry intrinsically would strengthen the result.
+
+Chandrasekaran treats first-order vacuum gravity in a region with incoming and outgoing null sheets, regulated vertices and a common corner \cite[Secs.~3--4]{nc}. Constraint reduction leaves radiative data and boundary variables. A choice of Gaussian state gives a Hilbert space representation in which the specified observables generate a type I factor. The construction distinguishes an algebra before representation, its represented operators, and sector restrictions associated with the size of a diamond. A candidate comparison must specify which of these objects it identifies.
+
+\section{What a comparison must carry}
+Let $\mathcal D$ be a category of regular diamonds with chosen cap and corner data. Work first on a class where the relevant null generators reach the corner without a caustic. An object records the boundary frames or their allowed symmetry orbit, orientation, and the admissible smearings. For the first test admit embeddings that preserve a labelled boundary patch and its frame, up to the stated boundary symmetry. Record which corner measurements survive the embedding. Extending this class to all nested diamonds would require a separate transport rule. An arbitrary inclusion can move an old corner into the interior, where its former frame is absent. A class of arrows suitable for a proof might therefore be smaller than the inclusion poset. It must contain identities and be closed under composition.
+
+Write $Y,N:\mathcal D\to\mathbf{Alg}_*$ for prospective functors to unital complex involutive algebras and unital star homomorphisms. Here $Y$ is to be constructed from context and state data on a site $(\mathcal C,J)$, and $N$ from the null-cone reduction and quantization. A sheaf topos $\operatorname{Sh}(\mathcal C,J)$ alone supplies neither functor. An admissible state is a positive normalized linear functional in a chosen class. A covariant arrow $f:D\to E$ carries observables forward and pulls a state on $E$ back by precomposition.
+
+\begin{conjecture}[Categorical Null-Cone Realization]
+On a nontrivial class of regular four-dimensional vacuum diamonds there are independently defined assignments $Y$ and $N$ as above and a natural family of star isomorphisms $\eta_D:Y(D)\to N(D)$. The family intertwines the specified boundary symmetry actions and carries the admissible state classes bijectively by pullback. For a comparison of dynamics, its boundary-state maps must also intertwine the normalized sewing pairings and transition operators.
+\end{conjecture}
+Existence of the two assignments is part of the physical conjecture. Defining $Y$ by transporting $N$ along a chosen family of isomorphisms would satisfy the algebraic equation by construction and leave the physical question unresolved. The context-side reconstruction should specify its probes, observable relations and embeddings using inputs that can be given before evaluating the null-cone amplitudes.
+
+\begin{proposition}[A test on generators]
+Suppose the two functors have been constructed and every object has a candidate star isomorphism $\eta_D$. For each $D$, choose a star-algebra generating set $S_D$. Naturality holds if and only if for every admissible $f:D\to E$ and every $a\in S_D$,
+\[
+ \eta_E(Y(f)a)=N(f)\eta_D(a).
+\]
+\end{proposition}
+\begin{proof}
+For fixed $f$ the equalizer of the two composites is a unital star subalgebra of $Y(D)$. If it contains $S_D$, it contains every star polynomial in $S_D$, hence all of $Y(D)$. The converse follows by restriction.
+\end{proof}
+For a norm-dense generating algebra the same conclusion requires continuous maps into a Hausdorff target. In a von Neumann completion a corresponding density argument needs the topology of density and normal maps. An equality of formulas on unbounded fields needs common invariant domains or a bounded version of the generators.
+
+\section{An observable that can fail the test}
+Consider the algebra of complex functions on a two-point set. At each of two nested regions let both candidate theories assign this algebra. On the arrow let one theory transport functions identically and the other exchange the two labels. The rank-one indicator $e_0=(1,0)$ then has two different images under identity comparison maps. Evaluation at label zero gives probabilities one and zero for these images.
+
+A change of labels at the target would undo the exchange on this one arrow. If the two labels are independently identified by a boundary measurement, such a relabeling changes that identification. Alternatively take a square of embeddings. A transition on one edge must agree around the square with the three others before the proposed assignment is even a functor of the inclusion poset. These variants distinguish a failure of a chosen comparison from an obstruction to every possible comparison. They also explain why recognizing the same abstract algebra on two objects gives so little information.
+
+A physical version should begin with an independently defined relational boundary measurement, for example an area assigned to a labelled corner patch with specified frame and smearing. One must identify the same patch after embedding, construct a bounded observable from its area when required, and specify what transports its dressing when the corner becomes internal. An arrow for which that construction fails is an obstruction to the proposed domain. A successful test on the area subalgebra still leaves the radiative algebra and the other boundary charges to be compared.
+
+\section{A marked cut on a flat null cone}
+\label{sec:flat}
+An area measurement can be calculated in a smooth vacuum example before
+any choices about quantum representation. The example has a proper
+inclusion of spacetime regions and two different ways to transport the
+measurement. Their difference can be computed with a ruler on a single
+sphere. Put the emission event at \(p=(0,\mathbf 0)\) in Minkowski
+coordinates with \(c=1\). For \(R>0\) let \(q_R=(2R,\mathbf 0)\).
+The corresponding diamond \(D_R\) satisfies
+\[
+ 0\le t\le2R,\qquad r\le\min(t,2R-t).
+\]
+If \(S>R\), the identity on spacetime gives a proper inclusion
+\(D_R\hookrightarrow D_S\). The future sheet of \(p\) is given by \(t=r\). Both diamonds
+share this sheet up to the waist of the smaller one. Its two-sphere at
+\(t=r=R\) is the smaller diamond's corner and is a cross-section of the
+larger diamond's sheet. It is not the latter's waist, which occurs at
+\(t=r=S\).
+
+To retain the original experiment in the larger region, mark the affine
+reading \(r=R\) and the angular patch on its generators. Normalize the
+affine parameter by the inertial clock at \(p\) and use a frame there
+to identify directions. Take a smooth nonnegative weight \(f\) of
+compact support in the patch with
+\(\omega_f=\int_{S^2}f\,d\Omega>0\). A weight avoids assuming that the
+boundary defines an infinitely sharp detector. The functional to compare
+is the area of the marked cross-section smeared with \(f\).
+
+\subsection{Two calibrations of an area}
+One calculation uses the characteristic expansion of the generator
+congruence. For a small bundle of rays the expansion is the derivative
+of the logarithm of its transverse area density \(a(r,\Omega)\).
+An inertial observer in flat space sees a twist-free, shear-free
+congruence. In affine normalization the vacuum focusing equation
+on its regular portion is
+\[
+ \frac{d\theta}{dr}=-\frac12\theta^2,\qquad
+ \frac{d}{dr}\log a=\theta .
+\]
+The solution diverging at the vertex \(r=0\) has \(\theta=2/r\).
+Measure the solid angle by a calibration sphere at \(r_0>0\), with
+\(a(r_0,\Omega)d^2\Omega=r_0^2d\Omega\). Integrating the second equation
+gives \(a(r,\Omega)d^2\Omega=r^2d\Omega\). This describes a possible
+operational input on the context side: a labelled family of signals,
+their readings and an angular area calibration. A context that did not
+specify the calibration would leave the multiplicative solution for
+\(a\) undetermined.
+
+A second calculation restricts the spacetime metric to the marked
+cross-section. Its induced metric is \(q_{AB}=R^2\sigma_{AB}\), for
+\(\sigma\) the unit sphere metric. The area functional of these
+characteristic data is
+\begin{equation}
+ A_f(D_R)=\int f\sqrt{\det q}\,d^2\Omega=R^2\omega_f .
+ \label{eq:patch-area}
+\end{equation}
+In the null-boundary description the same density enters the corner
+boost charge with factor \(1/(8\pi G_N)\)
+\cite[Eq.~(3.63)]{nc}. The two calculations agree with their stated
+normalizations. The focusing equation and angular calibration already
+use continuum physical input. Eq.~\eqref{eq:patch-area} accordingly
+tests a candidate semiclassical dictionary; it makes no derivation
+of that focusing equation from a site.
+
+There are two maps one could have written for the inclusion. Transport
+the old label \((R,f)\) to the same marked cross-section in \(D_S\).
+Both calculations then evaluate the same integral \(R^2\omega_f\).
+Alternatively read the label as ``the corner of the current region''
+and assign the outer waist. One now obtains \(S^2\omega_f\).
+The discrepancy
+\((S^2-R^2)\omega_f\) is positive even though both local area formulas
+are correct. Under a further inclusion \(D_S\hookrightarrow D_T\) the
+first prescription still selects \(R\). The second ends at \(T\).
+Each rule can be composed as a rule on its own labels. They refer to
+different experiments. If a category admits only regions decorated
+with their own waist, the original measurement has no distinguished
+target at the larger object. Carrying a marked interior cut of the
+null boundary supplies the missing datum in this family.
+
+A bounded probe of this classical variable is
+\(\exp(i s A_f/A_*)\) with fixed nonzero area scale \(A_*\).
+Comparing every real frequency \(s\) distinguishes different real
+areas: differentiating at \(s=0\) recovers \(iA_f/A_*\).
+A single frequency can miss a discrepancy differing by an integral
+number of periods. For a state with a distribution of areas, these
+bounded probes are its characteristic function. They test that
+distribution when available for all frequencies. Ordering information
+in mixed area and conjugate-boost words would still be needed to compare
+their noncommutative observable algebras. In a quantum theory their common
+domain or a chosen bounded version must be specified.
+
+\subsection{A perturbation test on the same generators}
+A round congruence has a particularly simple response to an incoming
+vacuum shear. On a smooth segment \(r_0\le r\le R\), take a twist-free
+affinely parametrized congruence in four dimensions with vacuum
+\(R_{ab}\ell^a\ell^b=0\). In this convention the additional focusing
+term is \(-\sigma_{ab}\sigma^{ab}\). Consider a one-parameter family
+whose shear is \(\epsilon\sigma_1+O(\epsilon^2)\), with expansion and
+area fixed to their flat values at \(r_0\). Compare the same generator
+labels and the same affine readings in each member. The first variation
+of the expansion then solves a homogeneous equation with zero initial
+value. Writing
+\(\theta=2/r+\epsilon^2\theta_2+O(\epsilon^3)\) gives
+\begin{align}
+ (r^2\theta_2)'&=-r^2\sigma_{1\,ab}\sigma_1^{ab},\\
+ \theta_2(r,\Omega)&=-r^{-2}\int_{r_0}^r
+         u^2\sigma_{1\,ab}(u,\Omega)\sigma_1^{ab}(u,\Omega)\,du .
+ \label{eq:focus}
+\end{align}
+Indices in the coefficient are raised with the unperturbed positive
+screen metric. The second-order coefficient of
+\(\log(a/a_{\mathrm{flat}})\) is \(\int_{r_0}^r\theta_2(v,\Omega)dv\).
+It is nonpositive, and strictly negative on generators that meet
+a nonzero shear pulse before the measured cut. An apparatus sensitive only
+to the trace of the cross-sectional metric at first order can therefore
+miss a radiative perturbation detected by the same area at second order.
+Both the initial conditions and the dressing matter; allowing the labelled
+cut itself to move would add a displacement term.
+
+Eq.~\eqref{eq:focus} is a conditional calculation on a regular congruence.
+It does not specify unrestricted shear on a complete capped diamond or
+solve the remaining gravitational constraints. It gives a discriminating
+classical check on an eventual reconstruction. Given the same admissible
+incoming solution, a cut before the pulse and one after it have different
+responses. Replacing a marked early cut by the later waist would change
+the response even if a calibration had adjusted a constant area scale
+to agree on an unperturbed solution.
+
+\subsection{Which geometry the probes use}
+The common formula for a diamond cannot distinguish a metric \(g\) from
+\(\Omega^2g\) by causal order alone when \(\Omega>0\).
+The two metrics have the same future and past light cones as sets of
+directions. Their induced area elements on a two-dimensional spacelike
+cut differ by \(\Omega^2\), and the four-dimensional volume elements differ
+by \(\Omega^4\). Consequently a source of scale is needed even after
+a conformal geometry has been recovered. If a smooth conformal class
+and a positive spacetime volume density have been supplied independently,
+there is at most one metric in that class with that density: for a
+representative \(g_0\), solve
+\(\Omega^4=dV/dV_{g_0}\) pointwise. Existence under this construction
+uses a smooth positive ratio. Recovering a manifold, a differentiable
+structure and such a density from the basic relational data are further
+requirements in the July program \cite{cond}.
+
+Calibration of a round area determines one scale at one family of
+cuts. It does not by itself give a measure on every spacetime region.
+In particular, angularly integrated area only constrains a weighted
+integral of \(\Omega^2\) on a cut. Resolving that function pointwise
+would require sufficiently many independent weights. For a continuous
+function on a smooth cut, equality of the integrals against all compactly
+supported smooth test functions forces equality everywhere by localizing
+the test on a neighbourhood of any point where the difference has
+definite sign. A finite list of calibrated patches generally leaves
+an undetected subspace of variations.
+
+\section{Two tests of completeness}
+Part I studies a probe model where measured moments of words in common generator labels give positive linear functionals on a free star algebra. The invisible ideal at a region is the intersection of the kernels of the corresponding GNS representations. The use of representations matters: zero expectation of an operator in the initial vector is weaker than its vanishing on all vectors prepared by algebra elements.
+
+For example, take the local diagonal algebra $\mathbb C^2$ acting by diagonal matrices inside $M_2(\mathbb C)$. Let the ambient state be the vector state of $e_1$, and use its restriction for the single local probe. The local GNS representation sees only the first entry. Its kernel contains $e_{22}$. The ambient vector is cyclic for the full matrix algebra, whose representation is faithful. An ambient operation $e_{21}$ takes $e_1$ to $e_2$, where the previously invisible projector has expectation one. Agreement of the unconditioned states on the small region has failed to give a map of the proposed quotient algebras.
+
+There is an algebraic way to retain the missing operator. Suppose $F$ is the functor on generator algebras before imposing invisible ideals $K(D)$. Define
+\[
+ \widehat K(D)=\bigcap_{f:D\to E} F(f)^{-1}K(E).
+\]
+The identity arrow gives $\widehat K(D)\subseteq K(D)$. For $u:D\to D'$ and $v:D'\to E$, composing $v$ with $u$ proves that $F(u)\widehat K(D)\subseteq\widehat K(D')$. Conversely, every functorial ideal family contained in $K$ is contained in this intersection. The quotient by $\widehat K$ therefore keeps just the additional distinctions forced by transport. This uses the specified arrows and ambient probes. A physical use needs independent access to them, and injectivity of the induced maps calls for a separate argument.
+
+Part II studies how presentation choices can matter at a constraint. Consider a commutative polynomial ring $A$ over a field and a regular constraint $c\in A$. The complex $A e\to A$ with $de=c$ has no negative-degree homology. If a presentation lists the same equation twice, the Koszul complex of $(c,c)$ has the same ordinary quotient $A/(c)$ in degree zero. The closed element $e_2-e_1$ represents a copy of $A/(c)$ in degree $-1$: in the basis $e_1,e_2-e_1$ the differential vanishes on the second generator, leaving an exterior factor. A redundant equation has introduced an excess direction even when the effective group action is free.
+
+There is a related quantum pitfall. In a Weyl algebra over a field with fixed nonzero Planck constant, suppose the constraint is a momentum $P$ and $[P,Q]$ is a nonzero scalar. The two-sided ideal generated by $P$ contains that scalar, hence contains the unit. A quantum reduction designed to retain physical observables must take a different route, such as constraining states by a left ideal and using its right normalizer. The explicit translation model in Part II compares the surviving relative canonical pair before and after this operation. Which boundary transformations to constrain in four-dimensional gravity remains an input to be determined at the corner.
+
+\section{A realization on finite algebras}
+There is a positive comparison available before one confronts the gravitational example. Consider a calibration procedure on $m$ bits. A word records flips and sign changes. Read the labels in order and store a pair $a,b\in\mathbb F_2^m$ and an overall sign. Appending a flip at bit $j$ toggles $a_j$ and multiplies the sign by $(-1)^{b_j}$. Appending a phase toggles $b_j$. A closed word has total parity $a=b=0$. Give that word its accumulated sign as a moment and give open words moment zero. Applied linearly, the rule defines a trace on the twisted word algebra. The relation governing two ordered words is
+\[
+ w(a,b)w(c,d)=(-1)^{b\cdot c}w(a+c,b+d).
+\]
+The coefficient of the identity in $u^*u$ is the sum of absolute squares of the coefficients of $u$ in this basis, hence defines a faithful positive trace. Part I derives this quotient from the moment rule.
+
+Independently, let a shift and a phase act on the orthonormal basis indexed by $s\in\mathbb F_2^m$:
+\[
+ X(a)|s\rangle=|s+a\rangle,\qquad
+ Z(b)|s\rangle=(-1)^{b\cdot s}|s\rangle .
+\]
+The operator $X(a)Z(b)$ has the same word multiplication. Under the normalized Hilbert--Schmidt pairing these operators are orthonormal: a shift by a nonzero vector has no diagonal entries, while a nontrivial character sums to zero. There are $4^m$ operators, the complex dimension of the full matrix algebra on $2^m$ basis vectors. The assignment is therefore an isomorphism, and the normalized matrix trace agrees with the coefficient of the identity.
+
+At the one-bit object, copy a flip to both target bits but retain a phase on the first. The two image words still anticommute, since the first phase crosses exactly one first-bit flip. At the operator object define the arrow by the unitary $U|s,t\rangle=|s,t+s\rangle$ and $A\mapsto U(A\otimes 1)U^*$. Applying this operator to basis vectors shows that the single flip goes to $X\otimes X$ and the phase to $Z\otimes 1$. The comparison square commutes on both generators and hence on all of $M_2(\mathbb C)$. Its image is a proper subalgebra of $M_4(\mathbb C)$. This gives a trace-preserving natural comparison on a category with one proper arrow, and a calculation against which one can test an implementation of the dictionary.
+
+The finite model distinguishes two assertions that would otherwise look much alike. The spectra of each flip and phase are both $\{-1,1\}$. Those individual spectra also occur in an ordinary commutative binary model. The product $XZ$ squares to $-1$ in the word and operator constructions; in the commutative model the corresponding square is $+1$. Consequently a gravity calculation that compared only separate distributions of an area and a charge would leave undetermined the ordering information needed to compare their algebras.
+
+At a three-way interface there is also a compatibility condition that no one-object dictionary detects. For three oriented linear matching levels $a,b,c$ on a triangle, vertex momenta exist exactly when $a+b+c=0$. Traversing the edges telescopes the differences; conversely take vertex values $0,a,a+b$. Part II shows what happens to quantum constraints when two edges have zero level and the third is shifted by $\hbar\alpha$. Summing all three constraints gives a nonzero scalar if $\hbar\alpha\ne0$. The constrained module then vanishes, even though removing any one edge makes the levels consistent. A comparison can therefore reproduce each isolated matching problem and still fail on a closed diagram.
+
+\section{A conditional criterion for independent reconstruction}
+\label{sec:reconstruction}
+The finite word calculation can be put alongside the matching
+constraints without identifying the two input constructions by definition.
+For each decorated region \(D\), let \(F_D\) denote the free unital
+complex star algebra on declared, experimentally meaningful generator
+labels. An embedding \(f:D\to E\) specifies a star homomorphism
+\(F_f:F_D\to F_E\), possibly mapping a generator to a composite
+operation. Assume that the assignments on free algebras respect identity
+and composition. They express a hypothesis about how experiments
+transport. They contain no commutator normalization or hidden ideal
+until it has been specified.
+
+Suppose a probe reconstruction gives a surjective star homomorphism
+\(y_D:F_D\to Y_D\), and separate null-boundary reduction and
+quantization give a surjective star homomorphism \(n_D:F_D\to N_D\).
+Surjectivity means that the chosen labels generate each algebra. If the
+physical data provide only an area subalgebra, both codomains in this test
+must be restricted accordingly. Take all algebras in this paragraph to be
+algebraic, with all tested moments defined. The following criterion has
+an analytic analogue under suitable density and continuity hypotheses.
+
+\begin{theorem}[Reconstruction from separating quadratic probes]
+\label{thm:reconstruction}
+For each \(D\) let paired normalized positive functionals
+\((\omega^Y_i,\omega^N_i)_{i\in I_D}\) be jointly faithful on squares in
+their respective algebras: \(\omega^k_i(a^*a)=0\) for every \(i\) implies
+\(a=0\) in the \(k\)th algebra. Assume that for every \(w\in F_D\),
+\begin{equation}
+ \omega^Y_i(y_D(w)^*y_D(w))=
+ \omega^N_i(n_D(w)^*n_D(w))\qquad(i\in I_D).
+ \label{eq:paired-probes}
+\end{equation}
+Suppose the free transports descend on at least one side, and every
+other independently supplied arrow implements that declared transport
+on its generator labels. Then the generator dictionary extends to unique
+objectwise star isomorphisms. Free transport descends on both sides, these
+isomorphisms form a natural isomorphism, and they identify the paired
+functionals on all words. Conversely, a natural dictionary implementing
+the generator and state identifications implies Eq.~\eqref{eq:paired-probes}.
+\end{theorem}
+\begin{proof}
+If \(y_D(w)=0\), Eq.~\eqref{eq:paired-probes} and joint faithfulness on
+the null-boundary side give \(n_D(w)=0\). The reverse inclusion uses
+faithfulness on the probe side. The common kernel \(K_D\) lets one set
+\(\eta_D(y_D(w))=n_D(w)\). This is well-defined, surjective and injective.
+It respects multiplication, involution, the unit and linear combinations
+since both evaluating maps do. The prescribed action on generators fixes
+it uniquely.
+
+For an arrow \(f:D\to E\), descent on either side means
+\(F_f(K_D)\subseteq K_E\). Equality of the two kernels gives this
+condition on the other side. The quotient maps induced by \(F_f\)
+respect composition because the maps on \(F\) do. Both paths around the
+naturality square send \(y_D(w)\) to \(n_E(F_f(w))\). An independently
+given arrow agreeing on generator labels agrees on the whole algebra
+by generation. Finally, polarize the two equal quadratic forms on \(F_D\)
+in Eq.~\eqref{eq:paired-probes}. They have equal mixed terms
+\(\omega_i(y_D(v)^*y_D(w))\) and their counterparts. Setting \(v=1\)
+identifies expectations on all \(w\). The converse follows by applying
+the state-preserving star isomorphism to a square.
+\end{proof}
+
+There are three distinct uses of data in this theorem. The labels
+give candidates for the images of physical measurements. The positive
+functionals decide which combinations of their outputs vanish. The
+arrows decide whether these relations survive enlargement of the region.
+A good test supplies the labels without reading off the operator algebra
+from the answer. It then obtains the moments by a second procedure, as in
+the sign rule of the finite example. Agreement of the algebras would
+carry a paired subset of states to its counterpart. To identify an entire
+admissible class of states one still needs a characterization of
+membership preserved by the dictionary.
+
+The joint faithfulness assumption concerns elements of the entire algebra.
+For a family of cyclic states one can instead enlarge the probe family by
+all vector preparations \(\omega_b(x)=\omega(b^*xb)\), divided by
+\(\omega(b^*b)\) when this is nonzero. In the GNS representation,
+\(\omega(b^*w^*w b)\) is the squared norm of the action of \(w\) on the
+vector \([b]\). Intersecting over \(b\) tests the operator kernel. This
+explains why the lost diagonal sector in the earlier example reappears
+upon permitting suitable operations from the larger region. With
+unbounded fields this observation only tests the chosen common domain;
+passing to a completed algebra of bounded functions or Weyl operators
+adds domain and regularity questions.
+
+A physically significant failure would be a word whose squared norm
+vanishes for all context probes but is strictly positive in an admissible
+null-boundary preparation, after matching labels and normalizations.
+For instance a mismatch in the central phase of two exponentiated
+canonical observables can leave all single-generator distributions
+unchanged. A mixed loop of operations isolates the central phase. If the
+domain contains both that loop and its coherent sum with the identity,
+the norm in Eq.~\eqref{eq:paired-probes} sees the interference.
+An inaccessible relative phase for a superselected sector cannot be
+included as an experimental hypothesis without specifying a preparation
+that supplies a reference.
+
+\subsection{Restriction of states and the GNS square}
+A unital star homomorphism \(\alpha:A\to B\) does not, by itself,
+provide a unitary between two Hilbert representations. Fix a state
+\(\omega\) of \(B\) and let its pullback be \(\alpha^*\omega\).
+Take bounded \(C^*\)-algebras here to avoid the extra operator-domain
+conditions. On cyclic representatives put
+\[
+ V_{\alpha,\omega}:[a]_{\alpha^*\omega}\longmapsto
+ [\alpha(a)]_\omega .
+\]
+The squared norm of the image is \(\omega(\alpha(a^*a))\). It equals
+the squared norm in the source, so the map is well-defined and extends
+to an isometry of GNS spaces. Its range is the closed subspace generated
+by \(\pi_\omega(\alpha(A))\Omega_\omega\). It is onto exactly when that
+subalgebra is cyclic on the ambient space. This range criterion does
+not require \(\alpha\) to be onto as an algebra map.
+
+Now let \(f:D\to E\) be an admissible arrow and \(\omega\) a state of
+\(N(E)\). Use \(\omega\circ\eta_E\) for \(Y(E)\) and use the pullbacks
+along the two regional arrows at \(D\). Naturality ensures that the two
+ways of describing the state on \(Y(D)\) coincide. Denote the
+objectwise GNS unitaries from the dictionaries by \(W_D,W_E\), with
+state choices understood. Then
+\begin{equation}
+ W_E V_{Y(f),\,\omega\circ\eta_E}
+       =V_{N(f),\,\omega} W_D .
+ \label{eq:gns-square}
+\end{equation}
+On \([a]\) both sides give the class of \(N(f)\eta_D(a)\). Density and
+continuity extend the equality to the GNS space. Similarly, two
+successive state-pullback isometries compose to the isometry for the
+composite algebra arrow. These maps describe how a prepared cyclic
+subspace sits in a larger one. They have no specified time duration or
+Hamiltonian.
+
+For the normalized trace on \(M_4(\mathbb C)\), the cyclic GNS space is
+the sixteen-dimensional space of matrices with the normalized
+Hilbert-Schmidt norm. In the bit example the embedded \(M_2\) generates
+a four-dimensional subspace from the unit. Its pullback is the normalized
+trace of \(M_2\), and the inclusion of cyclic spaces in
+Eq.~\eqref{eq:gns-square} is a proper isometry. At the corresponding
+objects the two model constructions have isomorphic algebras and
+unitarily equivalent cyclic representations. The dimension change on
+this one arrow explains why that result cannot be interpreted as unitary
+time evolution from the smaller diamond to the larger one.
+
+\section{Matching at a shared boundary}
+For two extended classical regions let their interface moment maps take values in the same dual Lie algebra, after using a boundary frame to identify the two copies. With outward normals the matching condition has the form $\mu_L+\mu_R=0$. The residual diagonal boundary group acts on the matching locus. An ordinary smooth symplectic quotient requires regularity, an appropriate free and proper action, and compatibility of the symplectic structures. The corner symplectic potential depends on the formulation and determines which charges can act there \cite{corner}. Singular stabilizers give additional reasons to consider a stack or derived reduction \cite{df}. Descent of a gauge-invariant function on representatives is the first step in this reduction. It does not settle quantization of a singular quotient.
+
+Even a finite group displays the issue. Let each side have a sign $s,t\in\{1,-1\}$ and let the same boundary transformation flip both signs. Each side separately has one orbit. The pair has two orbits, distinguished by $st$. Functions invariant on each side separately cannot see $st$. Taking the diagonal quotient after forming the pair retains the relative observable. An identification of the boundary actions is therefore part of the gluing data.
+
+For a cut with finite labels, let $P_{\Sigma}$ be diagonal with entries one for allowed labels and zero otherwise. In an orthonormal basis and with a common measure the kernel for two pieces is the matrix product $K_2P_{\Sigma}K_1$. Inserting two fixed projectors in a chain of three kernels respects associativity of finite matrix multiplication. Moving the cuts changes these projectors and may change the kernel. Independence under such changes is a new requirement. In a continuum construction one must specify the measure, the operator domains and the convergence needed for each exchange of integrations.
+
+Part III asks which discrepancies a limited collection of preparations can detect. After identifying the two cut spaces by a proposed unitary, let $P$ and $Q$ be their matching projectors on the same finite Hilbert space. For preparation vectors spanning $L$ and detector vectors spanning $R$, the two amplitudes agree for all probes precisely when
+\[
+                \Pi_R(P-Q)\Pi_L=0 .
+\]
+Indeed the amplitudes are the matrix elements against those vectors. Vanishing on the two spans is equivalent to vanishing of the displayed compression. If both spans fill the space, this tests equality of the projectors themselves. With a two-dimensional interface, let $P$ and $Q$ project onto different orthogonal coordinate lines. Using the same first coordinate for preparation and detection gives amplitudes one and zero. Each cut can be sewn associatively. The disagreement tests a change of matching data, and could be removed only by supplying an appropriate identification and transporting the probes too.
+
+Section 4.4 of Chandrasekaran distinguishes matching fields across a spatial interface from resolving the identity on a physical spacelike cap. Equations (4.29) and (4.30) use completeness and Cauchy--Schwarz for a single temporal sewing sum. The projector above acts on an extended label space and becomes the identity only on its selected subspace. Appendix E.1 sets out assumptions on Lorentzian preparations. They include invariance under changes of intermediate cuts, positivity of the reflected pairing, factorization for disjoint closed configurations, continuous unitary time evolution, and finiteness for specified boundary smearings \cite{nc}. Local observable transport along an inclusion and propagation from an incoming cap to an outgoing cap have different types. A symmetric monoidal functor $Z$ from a suitable category of decorated null cobordisms to Hilbert spaces would express
+\[
+ Z(M_2\circ_{\Sigma}M_1)=Z(M_2)Z(M_1).
+\]
+The choice of morphisms, boundedness of the maps, and treatment of the cut are part of this target. The tensor product for disjoint boundaries does not prescribe the operation for a shared cut.
+
+\subsection{A spectral obstruction at a positive corner area}
+A canonical bracket inferred on one coordinate chart need not
+exponentiate to unitary translations on a physical cut Hilbert space.
+For the matched uniform boost the classical symplectic potential
+contains \(K\,\delta\gamma\), with \(K=A/(8\pi G_N)\) and relative
+rapidity \(\gamma\) in the conventions of Eq.~(3.64)
+\cite{nc}. On a chart this is a canonical pair. Suppose a proposed
+quantum dictionary for the same sector goes further and requires a
+self-adjoint area charge \(\widehat K\), bounded below, and unitary
+operators \(V_s\) on a nonzero Hilbert space for every real \(s\)
+such that \(V_s\widehat K V_s^*=\widehat K+s1\).
+For an unbounded \(\widehat K\), the equality includes the domain
+identification.
+
+This set of requirements is inconsistent. Unitary conjugation preserves
+the spectrum whereas adding \(s1\) translates it by \(s\).
+Taking infima of the spectra yields
+\(\inf\operatorname{spec}\widehat K=
+\inf\operatorname{spec}\widehat K+s\), impossible for \(s\ne0\).
+It is consistent for the boost itself to be generated by a positive
+charge; the obstruction concerns unitaries translating the charge.
+Nor does an insertion that changes area need to shift the entire
+spectrum by a constant. Chandrasekaran uses bounded spectral windows
+and area-changing insertions in a state construction
+\cite[Secs.~4.2--4.3]{nc}. The proposed global translation assumption
+is an example of an extra relation one could mistakenly impose when
+passing from local brackets to a star-algebra dictionary.
+
+A finite model makes the distinction visible. On basis vectors
+\(e_0,\ldots,e_{n-1}\) take \(\widehat K e_j=j e_j\) and
+\(S e_j=e_{j+1}\) below the top state, with \(S e_{n-1}=0\).
+Then \([\widehat K,S]=S\); the action on the top basis vector is zero
+on both sides. But \(S^*S=1-|e_{n-1}\rangle\langle e_{n-1}|\) and
+\(SS^*=1-|e_0\rangle\langle e_0|\).
+The shift changes the charge on its allowed source subspace and is not
+unitary on the full cut space. Sewing it to its reflection measures the
+missing endpoint projection. Parts I, II and III test different elements
+of this example: the word relation on a domain, preservation of that
+domain under a constraint, and the norm of the actual preparation used
+in the reflected pairing. Enforcing a regular, unrestricted Weyl
+translation on a positive area sector would fail before any of the
+semiclassical field equations were considered.
+
+\subsection{When a boundary has a dual in Hilbert spaces}
+There is a separate analytic restriction on the proposed target of
+\(Z\). A symmetric monoidal category of geometric regions might admit
+a cap and a cup implementing a categorical dual for a given boundary
+object \(B\). These are morphisms from the empty boundary to the pair
+of oppositely oriented objects and back. The two ways of creating and
+immediately gluing that pair to a cylinder must yield the identity.
+A spacelike cap used as an initial or final surface in a null
+preparation does not by its name supply these morphisms or identities.
+
+Suppose the target is ordinary Hilbert spaces with bounded linear maps
+and completed Hilbert tensor product. Write \(H=Z(B)\), let \(K\)
+be the image of a proposed dual, and let a bounded coevaluation
+\(c:\mathbb C\to H\otimes K\) and evaluation
+\(e:K\otimes H\to\mathbb C\) satisfy the triangle equality on \(H\):
+\[
+ (\mathrm{id}_H\otimes e)(c\otimes\mathrm{id}_H)=\mathrm{id}_H .
+\]
+Approximate \(c(1)\) in Hilbert norm by finite tensor sums
+\(c_n=\sum_{j=1}^{m_n}h_j\otimes k_j\). Substitution of \(c_n\)
+in the left side yields an operator with range in
+\(\operatorname{span}\{h_1,\ldots,h_{m_n}\}\).
+The operator norm of its difference from the exact triangle composite
+is at most \(\|e\|\,\|c_n-c(1)\|\).
+Thus the identity on \(H\) is compact. An infinite-dimensional Hilbert
+space contains an orthonormal sequence with no norm-convergent
+subsequence, so its identity cannot be compact. Such a dual can exist
+only for finite-dimensional \(H\). Conversely in finite dimension the
+usual inner-product evaluation and the finite sum of an orthonormal
+basis tensored with its conjugate provide the ordinary Hilbert dual.
+
+This argument restricts the conjunction of a domain with those duality
+morphisms and that specific Hilbert-space target. A category containing
+only directed evolutions and chosen sewings need not have cups and caps
+of this kind. A category restricted to genuinely finite physical cut
+sectors avoids the dimension obstruction but still has to realize the
+geometric triangle identities and the monoidal structure. An unbounded
+or distributional pairing requires an explicit different analytic
+setting. A type I factor at one representation, a fixed-clock
+finite-dimensional cut space in Sec.~5 of the source, and the existence
+of a dualizable boundary object are therefore separate assertions.
+
+\section{States, time evolution and entropy}
+If $\omega$ is an admissible state of $N(D)$ and $a\in Y(D)$, the pulled-back state assigns $a$ the number $\omega(\eta_D(a))$. A star isomorphism preserves commutators and positivity of algebraic states. For corresponding states the map on cyclic GNS vectors given by $[a]\mapsto[\eta_D(a)]$ preserves the inner product, has dense range, and extends to a unitary. This unitary has no information about the transition between two different diamonds until a compatibility equation for their kernels is imposed.
+
+On a finite matrix block a state-preserving unitary identification preserves the eigenvalues of a density matrix and hence its von Neumann entropy. For a sum of blocks the sector probabilities and the normalization of the chosen trace matter. Chandrasekaran's gravitational entropy calculation involves a trace with geometric restrictions and a particular ensemble \cite[Sec.~5]{nc}. Transporting a finite matrix unitary alone provides neither the gravitational count of states nor the logarithmic correction for a large Schwarzschild black hole. A comparison has to identify the area observable, the sector projector, the trace and the ensemble used to fix asymptotic quantities.
+\subsection{What a closed trace measures}
+In the null-cone manuscript the trace for a closure and the reflected
+form for two preparations use the physical cut space \(\mathcal H_\Sigma\)
+\cite[Eq.~(E.15)]{nc}. If a restricted space is represented inside
+an extended one by \(P\), then the identity on the physical space
+appears as \(P\) on the extended space. A frame change \(V\) sends the
+clock projector to \(VPV^*\) together with its labelled preparations
+\cite[Eq.~(E.16)]{nc}. A cyclic trace is invariant under simultaneous
+unitary conjugation. This fact explains how a change of frame acts on an
+already selected ensemble. It gives no count of the excluded states.
+
+A finite direct sum lets one calculate exactly how much extra information
+an entropy comparison needs. Take
+\(\mathcal A=\bigoplus_\alpha M_{d_\alpha}(\mathbb C)\) and fix
+positive trace weights \(m_\alpha\), so that
+\[
+ \tau(a)=\sum_\alpha m_\alpha\operatorname{Tr}(a_\alpha).
+\]
+These can be integer multiplicities in a representation that counts
+several copies of a block. A normal state has probabilities
+\(p_\alpha\ge0\) with \(\sum p_\alpha=1\), and unit-trace density
+matrices \(\rho_\alpha\) on the occupied blocks. Its expectations are
+\(\sum_\alpha p_\alpha\operatorname{Tr}(\rho_\alpha a_\alpha)\).
+To represent this same functional relative to \(\tau\), use
+\(d_\alpha^\omega=p_\alpha\rho_\alpha/m_\alpha\).
+Consequently its replica moments and entropy with this trace are
+\begin{align}
+ \tau((d^\omega)^n)&=
+ \sum_\alpha p_\alpha^n m_\alpha^{\,1-n}
+                   \operatorname{Tr}(\rho_\alpha^n),\\
+ -\tau(d^\omega\log d^\omega)&=
+ -\sum_\alpha p_\alpha\log p_\alpha+
+ \sum_\alpha p_\alpha
+     \bigl[-\operatorname{Tr}(\rho_\alpha\log\rho_\alpha)
+                       +\log m_\alpha\bigr].
+ \label{eq:block-entropy}
+\end{align}
+Zero eigenvalues contribute zero. The first equation is obtained by
+raising each block density to the specified power. Differentiation at
+\(n=1\), or diagonalization on the blocks, gives the second.
+When all \(m_\alpha=1\) this is the usual entropy of a block-diagonal
+density matrix. In a representation with integer multiplicity
+\(m_\alpha\) it gives the ordinary density matrix entropy after putting
+equal weight on the identical copies.
+
+Even pure data on one abstract block can conceal this choice.
+Take \(M_2(\mathbb C)\) and its vector state at a specified unit vector.
+The closure using the irreducible representation has trace weight one.
+A realization on two copies with observables \(a\oplus a\) and equal
+weights on the copies has the same expectation of every observable.
+The second entropy in Eq.~\eqref{eq:block-entropy} exceeds the first
+by \(\log 2\). An algebra-and-state dictionary comparing just those
+expectations cannot decide which closure was used. A reflected amplitude
+measuring the trace of the identity can decide. If the physical rule
+were to count only one copy, treating an implementation multiplicity
+as a gravitational degeneracy would give an artificial entropy term.
+
+Area weighting introduces another independent measurement.
+Suppose a particular cut ensemble has density \(d^\omega=e^{-X}/Z\)
+relative to the chosen trace, where \(X\) is a dimensionless area
+operator and \(Z=\tau(e^{-X})<\infty\). Then normalization gives
+\[
+ S_\tau=\omega(X)+\log Z .
+\]
+Writing \(X=\widehat A/(4G_N\hbar)\) in the source's units gives the
+form of Chandrasekaran's Eq.~(5.50) on the specified clock-restricted
+diamond. This identification needs his argument for the weights in the
+gravitational trace. Substituting \(X\) in the finite identity proves
+only the thermal algebra. For the horizon interpretation the source
+selects a marginally trapped cut with zero outgoing expansion and negative
+ingoing expansion, Eq.~(5.51). The round cut of a Minkowski diamond in
+Sec.~\ref{sec:flat} has positive outgoing expansion and cannot be used
+for that identification.
+
+The subleading logarithm depends on the variable used to count states.
+For a Schwarzschild black hole let \(s=A/(4G_N\hbar)\). The density
+per unit mass and the density per unit \(s\) are related by
+\[
+ s=\frac{4\pi G_N M^2}{\hbar},\qquad
+ n_M(M)=n_s(s(M))\,\left|\frac{ds}{dM}\right| .
+\]
+The Jacobian carries a power of \(s\)
+because \(ds/dM\) is proportional to \(\sqrt s\). This elementary
+change of variables describes one distinction between ensembles. The
+preprint also specifies which angular momentum fluctuations are summed
+and which clock reading is held fixed when comparing with a fixed-mass
+entropy \cite[Sec.~5.3, Eq.~(5.69)]{nc}. Moving a logarithmic coefficient
+from one trace to another without accounting for these measures would
+confound the state count with the chosen macroscopic bin width.
+
+\subsection{Open experiments and closed multiplicities}
+Let \(T_1,T_2\) be two adjacent evolution kernels and let their product
+be trace class in a chosen filtered closure. Transport of normalized
+matrix elements on a dense set of external states is sufficient to
+identify a bounded open operator on a fixed Hilbert space. A trace
+over an unknown number of equivalent blocks is another observable.
+The following example combines the cut test of Part III with the
+weight ambiguity.
+
+Let \(K=\mathbb C^2\) and \(P=|e_0\rangle\langle e_0|\).
+In the first model a physical open kernel is \(c(a)=\iota^*a\iota\)
+on \(PK\). In a second model there are two identical copies of \(K\)
+with ambient observables \(a\oplus a\), projector \(P\oplus P\) and
+a marked preparation in the first copy. Every vector measurement
+made from that preparation by the declared observables lies in the
+first copy and agrees with the first model. The physical closure of
+the extended identity is nonetheless two in the second model and one
+in the first. Including a mixed preparation equally spread over the
+copies changes no expectation of the allowed open observables.
+A categorical gluing prescription must declare whether the copied
+degrees of freedom can participate in a compatible closure. Explicit
+multiplicity data prevent this finite ambiguity from being mistaken
+for evidence for or against the gravitational entropy calculation.
+
+One helpful restricted goal is therefore to compare a cut with a single
+specified energy or clock window and an independently defined reflected
+pairing. A physical equivalence in this window must identify the
+adjoints of bounded insertions as well as their products, transport
+the projector, and preserve the norm and trace of each compatible
+preparation. Extending through an increasing family of windows needs
+control of the limiting domain. Equal traces on each of a few windows
+could miss an entire higher-energy sector. In the infinite case
+normality or a justified approximation theorem is needed to recover
+a general trace from a family of restricted traces.
+
+\section{A matching condition for dynamics}
+Write $E_{ab}[g]=G_{ab}[g]+\Lambda g_{ab}$. Consider a family of classical vacuum solutions $g(\varphi)$ labelled by incoming reduced data, with $g_0=g(\varphi_0)$. Chandrasekaran uses the Taylor coefficient convention $E[g_0+\epsilon h]=\epsilon E^{(1)}[h]+\epsilon^2 E^{(2)}[h,h]+\cdots$. The incoming Gaussian covariance is of order $\hbar$. Differentiating the classical equation twice relates the shift in the mean metric to the connected two-point function of its linearized fluctuations. With the dressing and smearing held as specified in his calculation, Eq.~(6.13) reads
+\begin{equation}
+ E_{ab}[\bar g]+\langle E^{(2)}_{ab}[h,h]\rangle_{G_{\mathrm{conn}}}
+ = O(\hbar^2).                                      \label{eq:vac}
+\end{equation}
+Here $G_{\mathrm{conn}}$ denotes the symmetrized connected graviton covariance, and $\bar g$ is the mean dressed metric. This is a vacuum, one-loop statement about the proposed quantization. It provides a matching condition for any subsequent effective action. It supplies no numerical value for a new coupling. The paper holds smearings fixed when taking coincident limits after differentiating at separated points \cite[Eq.~(6.14)]{nc}.
+
+Set $c=1$ and retain $\hbar$ to count loops. For a region $M$ with suitable boundary conditions the classical target is
+\[
+ S_{\mathrm{grav}}[g]=\frac{1}{16\pi G_N}\int_M (R-2\Lambda)\sqrt{-g}\,d^4x
+                 +S_{\mathrm{boundary}}+S_{\mathrm{joint}}.
+\]
+The null parametrization and matching conventions affect the last two terms \cite{nullaction}. Fix the boundary data before taking a metric variation. Long's Conjecture 6.3 proposes that a site consistency condition yields the Einstein equations \cite{long}. A derivation would need a functional of the relational data, a reconstruction of $g$, a rule for variations of that reconstruction, and a continuum limit with the indicated normalization. Merely evaluating $S_{\mathrm{grav}}$ after supplying $g$ does not establish those four steps.
+
+For backreaction the effective action should have a forward and a backward metric history, with a common initial density operator and matched final data \cite{jordan}. A possible organization, suppressing other sources, is
+\begin{align}
+ \Gamma[g_+,g_-] ={}&
+ S_{\mathrm{grav}}[g_+]-S_{\mathrm{grav}}[g_-]
+   +\Gamma_{\mathrm{m}}[g_+,g_-] \nonumber\\
+ &+\Gamma_{\mathrm{NC}}^{q}[g_+,g_-]
+   +\Gamma_{\mathrm{residual}}[g_+,g_-].                 \label{eq:action}
+\end{align}
+Here $\Gamma_{\mathrm{m}}$ includes the matter effects assigned to it in a fixed matching convention. If matter mean fields are retained, their two histories and stationarity equations must be included. Vary the plus inverse metric first and then set $g_+=g_-=\bar g$. Define on that diagonal
+\[
+ \langle T_{ab}\rangle_{\mathrm{ren}}
+  =\frac{-2}{\sqrt{-\bar g}}\frac{\delta\Gamma_{\mathrm{m}}}{\delta g_+^{ab}},
+ \qquad
+ \Delta^{i}_{ab}=\frac{16\pi G_N}{\sqrt{-\bar g}}
+                             \frac{\delta\Gamma_i}{\delta g_+^{ab}} .
+\]
+This convention gives the candidate stationarity equation
+\begin{equation}
+ G_{ab}[\bar g]+\Lambda\bar g_{ab}
+ +\Delta^{\mathrm{NC}}_{ab}+\Delta^{\mathrm{residual}}_{ab}
+ =8\pi G_N\langle T_{ab}\rangle_{\mathrm{ren}}.           \label{eq:target}
+\end{equation}
+Equation~\eqref{eq:target} defines a research target. To match Eq.~\eqref{eq:vac} through one loop in its vacuum domain, the sum of the corrections must reproduce the stated quadratic source in the same gauge-invariant dressing, state and prescription. A matter sector requires its own conserved renormalized stress tensor and consistent mixed graviton-matter terms. Restoring ordinary units gives $8\pi G_N/c^4$ on the matter side of the Einstein equation.
+
+There is a simple ambiguity in separating the two corrections. Add a functional $F[g_+,g_-]$ to $\Gamma^q_{\mathrm{NC}}$ and subtract it from $\Gamma_{\mathrm{residual}}$. The field equation and every variation of the total action stay the same. Hence a separate categorical correction is identifiable only after fixing the common degrees of freedom, allowable counterterms, normalization and renormalization conditions. Taking the residual to vanish is the starting hypothesis when the reconstruction just relabels the gravitational variables. A nonzero residual would need an independently specified effect that survives the matching. The diffeomorphism Ward identity for the full doubled functional supplies a conservation test. Conservation of an arbitrary term by itself would be insufficient to identify its origin.
+
+\section{The one-loop response and its causal variation}
+\label{sec:response}
+The matching in Eq.~\eqref{eq:vac} can be checked component by component
+against a family of smooth solutions before one proposes an additional
+gravitational tensor. Let \(u^I\) label a finite set of smeared
+fluctuations of the incoming data and let \(\xi^I=u^I-u^I_0\) have
+zero mean and symmetric Gaussian covariance \(\Sigma^{IJ}=O(\hbar)\).
+Write \(g_I=\partial_I g(u_0)\) and \(g_{IJ}=\partial_I\partial_Jg(u_0)\)
+in a common dressing. Keeping the mean and covariance through the first
+nonzero order gives
+\begin{align}
+ \bar g&=g_0+\tfrac12 g_{IJ}\Sigma^{IJ}+O(\hbar^2),\\
+ G_{\mathrm{conn}}(x,x')&=
+       g_I(x)\Sigma^{IJ}g_J(x')+O(\hbar^2).
+ \label{eq:transport-cov}
+\end{align}
+Tensor indices and the specified smearings are suppressed.
+Odd centered Gaussian moments vanish, and the first corrections from
+fourth moments are of order \(\hbar^2\) for a smooth regular expansion.
+The finite-dimensional notation does not remove the need for a smearing
+prescription in the field theory. In the source the derivatives include
+the change of the map attaching the observation to a boundary frame
+\cite[Eq.~(6.8)]{nc}. Differentiating a metric at a coordinate point
+with the dressing held incorrectly fixed would compare a different
+observable.
+
+Using the Taylor coefficient convention in Eq.~\eqref{eq:vac}, first
+and second derivatives of \(E[g(u)]=0\) give
+\[
+ E^{(1)}[g_I]=0,\qquad
+ E^{(1)}[g_{IJ}]+2 E^{(2)}[g_I,g_J]=0 .
+\]
+Contract the second relation with \(\Sigma^{IJ}/2\). The part linear
+in \(g_{IJ}\) equals \(E[\bar g]-E[g_0]\) to this order since
+\(\bar g-g_0=O(\hbar)\). The other part is the quadratic Einstein
+operator evaluated against the propagated covariance, with its two
+arguments kept distinct until the final prescribed coincidence limit.
+This yields Eq.~\eqref{eq:vac} under the quoted hypotheses. The
+factor of two depends on how the quadratic Taylor coefficient is
+defined. A comparison that sets \(E^{(2)}\) equal to the full second
+Fréchet derivative without changing the contraction would double the
+graviton source.
+
+For example write \(A\) for a dimensionless parameter labelling a
+one-dimensional family and let its variance be \(v\). The shift of
+the mean metric is \(v\,g''(A_0)/2\). If the family obeys
+\(E[g(A)]=0\), the corresponding one-loop source is
+\(v E^{(2)}[g'(A_0),g'(A_0)]\). Reparametrizing \(A\) nonlinearly
+changes what it means to hold the mean input fixed. For a new variable
+\(B=f(A)\) the mean shifts by \(f''(A_0)v/2\) to this order.
+Using \(f(A_0)\) as the new mean while transforming only the covariance
+therefore loses a term. Independent reconstructions must transport
+the state as well as the canonical labels before comparing a quantum
+backreaction tensor.
+
+On the linearized reduced space let \(G_R\) be the retarded inverse
+with the specified boundary conditions, for the sources for which it
+exists. Rewriting Eq.~\eqref{eq:vac} to first order in the mean shift
+\(\delta\bar g\) gives
+\begin{equation}
+ \delta\bar g=\delta g_{\mathrm{hom}}
+    -G_R\langle E^{(2)}[h,h]\rangle_{G_{\mathrm{conn}}}
+    + O(\hbar^2).
+ \label{eq:retarded}
+\end{equation}
+The homogeneous part is fixed by the actual initial data. A state
+changing the incoming fluctuations can change both the source and the
+homogeneous term if the boundary conditions for the comparison change.
+Chandrasekaran gives this retarded form in Eq.~(6.16).
+A candidate map between two models of a diamond needs to preserve this
+response at matched initial and final data, beyond the equality of the
+operator algebras on a single cut.
+
+\subsection{The two branches of the effective action}
+The generating functional for an expectation value evolves an initial
+density operator \(\rho\) forward with one metric and backward with a
+second. Schematically before Legendre transformation one has
+\[
+ {\cal Z}[g_+,g_-]=
+ \operatorname{Tr}\bigl(U[g_+]\,\rho\,U[g_-]^*\bigr).
+\]
+When the branches agree and evolution is unitary,
+\({\cal Z}[g,g]=\operatorname{Tr}\rho=1\). For the corresponding
+normalized closed-time-path description the diagonal action vanishes
+in the absence of additional sources. Restricting the fields to the
+diagonal before differentiating would erase the equation for the
+expectation value. The independent branch variation in
+Eq.~\eqref{eq:action} retains it. The physical limit holds the incoming
+state fixed and matches the histories at the final cap
+\cite{jordan,ctp}.
+
+A simple response kernel shows why the distinction matters. For a linear
+variable \(x(t)\) with a causal memory kernel \(K_R(t,t')\) supported
+at \(t'\le t\), consider a quadratic term in a single history,
+\(\tfrac12\int dt\,dt'\, x(t)K_R(t,t')x(t')\).
+Its variation involves \((K_R(t,t')+K_R(t',t))/2\); antisymmetric
+parts cancel. A strictly retarded response generally cannot be recovered
+from this scalar quadratic form by ordinary variation. Introduce
+\(x_c=(x_++x_-)/2\) and \(x_d=x_+-x_-\) instead. An effective functional
+may contain
+\[
+ \int dt\, x_d(t)\left[
+ \ddot x_c(t)+\omega_0^2x_c(t)-J(t)
+ +\int dt'\,K_R(t,t')x_c(t')\right].
+\]
+Varying \(x_d\) and then setting \(x_d=0\) gives the stated causal
+equation. For \(K_R=0\), zero initial response and \(\omega_0>0\)
+the solution is the convolution of \(J\) with
+\(\Theta(t-t')\sin[\omega_0(t-t')]/\omega_0\).
+This calculation illustrates the branch structure of a linear response.
+It assumes neither a harmonic approximation to all gravitational degrees
+of freedom nor the existence of the full functional in
+Eq.~\eqref{eq:action}.
+
+Only the terms linear in a branch difference contribute to the mean
+equation at the physical limit. For instance a term quadratic in
+\(x_d\) changes a second variation without changing this first one.
+Thus even matching the full mean equation on the vacuum sector would
+not reconstruct every part of an effective action. Matched fluctuations
+or a higher response function would carry additional information.
+Conversely, comparing a conventional in-out amplitude on one side and an
+in-in mean metric on the other would give different boundary-value
+problems regardless of the precision of the two calculations.
+
+\subsection{A bulk Ward identity}
+Suppose the full effective action has no diffeomorphism anomaly for a
+compactly supported infinitesimal transformation of the plus-branch
+fields in the bulk. The support avoids the initial state and cap and
+corner data. This assumption is stronger than invariance under varying
+both equal histories in a way that leaves a normalized diagonal
+functional identically zero. Transport all sources and dressings when
+applying the transformation, or account for their variations in the Ward
+identity. For an example with the metric and one scalar mean field,
+set on the physical branch
+\[
+ {\cal F}_{ab}=\frac{2}{\sqrt{-g}}\frac{\delta\Gamma}{\delta g_+^{ab}},
+ \qquad
+ {\cal E}_{\phi}=\frac1{\sqrt{-g}}\frac{\delta\Gamma}{\delta\phi_+}.
+\]
+With variations \(\delta_\xi g^{ab}=-2\nabla^{(a}\xi^{b)}\) and
+\(\delta_\xi\phi=\xi^b\nabla_b\phi\), integrating by parts yields
+\begin{equation}
+ \nabla^a {\cal F}_{ab}
+      +{\cal E}_\phi\nabla_b\phi=0 .
+ \label{eq:ward}
+\end{equation}
+Indeed the integrand before integrating by parts is
+\(-{\cal F}_{ab}\nabla^a\xi^b+
+{\cal E}_\phi\xi^b\nabla_b\phi\). Interior support removes the
+boundary term and arbitrariness of \(\xi\) yields the identity.
+Additional matter or external forces produce their corresponding terms.
+At a physical boundary the integration by parts instead brings in
+momentum flux and the variation of the boundary data. A test at the
+corner has to include that balance.
+
+The geometric Einstein tensor obeys its own contracted Bianchi identity
+for each metric. In the vacuum expansion, differentiating that identity
+to quadratic order gives conservation of the quadratic source when the
+background and linearized equations hold, as used in Eq.~(6.15) of the
+preprint. For Eq.~\eqref{eq:target} with quantum matter,
+Eq.~\eqref{eq:ward} tests the sum of the variations as defined in one
+renormalization prescription. If the matter action is separately
+covariant and its fields satisfy their mean equations, its stress tensor
+should be conserved in that prescription. In a split which assigns mixed
+terms to a gravitational remainder, individual pieces can instead
+exchange divergence. In curved-spacetime perturbative scalar field
+theory, Hollands and Wald construct stress tensor conservation with
+additional renormalization conditions \cite{hw}. Their setting provides
+a precedent for the matter calculation and leaves vacuum quantum gravity
+and its boundary terms to be matched independently.
+
+\subsection{A finite renormalization invisible in vacuum}
+Consider the concrete candidate shift of the effective functional
+\[
+ F_\alpha[g_+,g_-]=\alpha\left[
+  \int\!d^4x\sqrt{-g_+}\,R[g_+]^2
+ -\int\!d^4x\sqrt{-g_-}\,R[g_-]^2\right].
+\]
+Allow variations compactly supported away from the corners; the following
+formula concerns only the bulk. The plus variation on equal histories is
+\(\delta F_\alpha/\delta g_+^{ab}=\alpha\sqrt{-g}\,H_{ab}\), where
+\begin{equation}
+ H_{ab}=2R R_{ab}-\tfrac12 g_{ab}R^2
+             +2(g_{ab}\Box-\nabla_a\nabla_b)R .
+ \label{eq:r2}
+\end{equation}
+To obtain it, vary the volume element and the two factors of \(R\).
+The variation of the scalar curvature contributes \(R_{ab}\delta g^{ab}\)
+and derivatives of \(\delta g^{ab}\). Integrating those derivatives
+twice gives the last term. With the chosen field-equation convention
+the correction is \(16\pi G_N\alpha H_{ab}\).
+The divergence vanishes identically by bulk diffeomorphism invariance.
+The same conclusion follows by using the contracted Bianchi identity
+and commuting derivatives on \(\nabla_bR\).
+
+In four dimensions every vacuum Einstein background with
+\(R_{ab}=\Lambda g_{ab}\) has constant \(R=4\Lambda\).
+The first two terms in Eq.~\eqref{eq:r2} cancel and the derivatives
+vanish. Thus matching the value of a vacuum mean source on these
+backgrounds cannot determine \(\alpha\). If \(\alpha\) counts at one
+loop, evaluating this term on the \(O(\hbar)\) shift in \(\bar g\)
+would only affect a higher order. There can still be dependence in
+an off-shell response: the four-dimensional trace of \(H_{ab}\)
+is \(6\Box R\). A perturbation for which \(\delta R\) varies can
+distinguish coefficients that a family of exact Einstein metrics cannot.
+That possible discrimination requires one to specify the allowed
+sources, boundary conditions and ordering in the effective expansion.
+
+The same calculation explains two ambiguities of the candidate residual.
+One can move \(F_\alpha\) from one named term of the effective action
+to another and keep every prediction fixed. Alternatively, one can
+change the total coefficient \(\alpha\); a selected vacuum test may
+still be insensitive to the change even though the full models differ.
+The first is a convention about decomposition. The second is a
+limitation of the available observables. An evidential claim for a
+new categorical contribution has to resolve both. One possible
+comparison would fix the accessible renormalized couplings in stated
+reference geometries, hold the identical quantum matter and graviton
+degrees of freedom fixed, then compute a residual response for a
+different specified state or off-shell source. A term expressible
+entirely by adjusting the already matched coefficients would not
+identify an independent response.
+
+A putative derivation of the Einstein-Hilbert term has a related issue.
+For a local generally covariant metric-only bulk action with at most
+two derivatives in the usual derivative expansion, the volume term and
+the curvature scalar are natural leading invariants up to total
+derivatives. Choosing that expansion is an assumption about the
+long-wavelength limit, along with locality, the field content and
+availability of a smooth metric. It does not determine either coefficient
+from a Grothendieck topology. To derive them one would need, for instance,
+a specified relational functional evaluated on a family of geometries
+with controlled scalar curvature and volume, its response to independent
+metric variations, and a normalization of time or length in physical
+units. Characteristic boundaries add their own variational terms. A
+bulk expansion with a free pair of constants cannot by itself supply
+the proposed origin of those constants.
+
+\section{Tests beyond the vacuum sector}
+\label{sec:regimes}
+A scalar field gives a calculable classical signal for extending the
+comparison of Sec.~\ref{sec:flat}. In signature \((-+++)\), consider
+a real minimally coupled scalar with inverse length scale \(\mu\) and action
+\[
+ S_\phi=-\tfrac12\int_M\!
+        \left(g^{ab}\nabla_a\phi\nabla_b\phi+\mu^2\phi^2\right)
+                          \sqrt{-g}\,d^4x .
+\]
+With fixed boundary data, variation in \(\phi\) gives
+\((\Box-\mu^2)\phi=0\), and variation in the inverse metric gives
+\[
+ T_{ab}=\nabla_a\phi\nabla_b\phi-
+ \tfrac12g_{ab}\bigl(\nabla^c\phi\nabla_c\phi+\mu^2\phi^2\bigr).
+\]
+Indeed \(\nabla^aT_{ab}=(\Box\phi-\mu^2\phi)\nabla_b\phi\), by the
+symmetry of the scalar Hessian. Thus even in this elementary example
+the matter conservation condition uses the scalar field equation. In a
+joint reconstruction the matter equation and its initial state have to
+accompany any prescription for \(T_{ab}\).
+
+Along an affinely parametrized null generator \(\ell\), the trace and
+mass terms drop out and \(T_{\ell\ell}=(\partial_r\phi)^2\).
+Treat the classical Einstein-matter equation as the benchmark to be
+reproduced. Its null contraction is \(R_{\ell\ell}=8\pi G_N
+T_{\ell\ell}\), including a cosmological constant because the latter
+also drops out of the null contraction. On the regular segment of the
+flat background take \(\phi=\epsilon\phi_1+O(\epsilon^2)\) and allow
+the first-order shear used in Eq.~\eqref{eq:focus}. With the same
+fixed initial expansion, the quadratic correction obeys
+\begin{equation}
+ (r^2\theta_2)' =
+  -r^2\left(\sigma_{1\,ab}\sigma_1^{ab}
+                         +8\pi G_N(\partial_r\phi_1)^2\right).
+ \label{eq:matter-focus}
+\end{equation}
+Only profiles arising from admissible initial data are intended.
+If the incoming geometry is shear-free to first order and the scalar
+pulse is nonzero on the chosen generator, the measured cross-sectional
+area decreases relative to its unperturbed value at that affine reading.
+A pulse entirely beyond the cut cannot affect the integral on its
+earlier segment. These sign and support tests use positive classical
+null energy for this scalar. Renormalized quantum stress need not have
+the same pointwise sign, and Eq.~\eqref{eq:matter-focus} does not
+supply its renormalization. The calculation identifies which extra
+null characteristic data and metric response a matter extension would
+have to reproduce. Invoking the classical Einstein equation as a
+benchmark here does not derive it from the categorical input.
+
+\subsection{A tensor response measurement}
+A test with gravitational radiation uses the derivative of the mean
+equation with respect to a perturbation. Fix a dressed background,
+a specific incoming state and a choice of linearized physical tensor
+modes with specified boundary conditions. If a proposed causal action
+exists, let \(\mathcal L_0\) be the classical linearized operator on
+those modes and let \(\Pi_R(x,x')\) denote the matched correction kernel,
+including the necessary local terms. Driven by a fixed source \(j\), the
+linear response equation would have the form
+\[
+ \mathcal L_0 h(x)+\int_M \Pi_R(x,x')h(x')\,dV_{x'}=j(x).
+\]
+Retarded support requires the kernel to vanish outside the causal past
+of \(x\), apart from terms supported at coincidence. With the same
+initial data, write \(h_0\) for the classical driven solution. Treating
+\(\Pi_R\) to first order gives the correction
+\(-G_R(\Pi_R h_0)\), where \(G_R\) is the classical retarded inverse on
+the chosen reduced modes. Testing a wave therefore requires comparing
+the travel-time or strain measurement after specifying the waveform,
+the detector and the background causal geometry. Two models can agree
+on Eq.~\eqref{eq:vac} for a particular incoming covariance and have
+different linear response kernels when that state or its source is
+varied. Eq.~\eqref{eq:vac} contains no general value for a dispersion
+shift or a gravitational-wave speed.
+
+Comparing the unperturbed arrival times supplies a separate check.
+Changing the reconstruction of the clock at the detector changes a
+travel-time measurement even if the tensor equation is the same. A
+calculation of the retarded two-point response in common clock and
+frame conventions would distinguish such a change of measurement from
+a change of the propagating modes. In a categorical construction this
+test simultaneously uses transport of the detector observable and
+transport of the state that excites it.
+
+\subsection{A homogeneous state}
+For a spatially flat homogeneous and isotropic reconstructed metric,
+write \(ds^2=-dt^2+a(t)^2d\mathbf x^2\) and \(H=\dot a/a\).
+Suppose the entire right side after moving the corrections in
+Eq.~\eqref{eq:target} to the matter side has the perfect-fluid form.
+Define
+\[
+ T^{\mathrm{eff}}_{ab}=\langle T_{ab}\rangle_{\mathrm{ren}}
+   -\frac{\Delta^{\mathrm{NC}}_{ab}+\Delta^{\mathrm{residual}}_{ab}}
+          {8\pi G_N},
+ \qquad
+ \rho_{\mathrm{eff}}=T^{\mathrm{eff}}_{ab}u^a u^b ,
+\]
+where \(u=\partial_t\), and let \(p_{\mathrm{eff}}\) be the common
+spatial pressure in the comoving frame. With the cosmological constant
+left in the geometric part, Eq.~\eqref{eq:target} would reduce to
+\begin{align}
+ 3H^2 &= \Lambda+8\pi G_N\rho_{\mathrm{eff}},\\
+ 2\dot H+3H^2 &= \Lambda-8\pi G_N p_{\mathrm{eff}} .
+\end{align}
+The contracted Bianchi identity gives
+\(\dot\rho_{\mathrm{eff}}+3H(\rho_{\mathrm{eff}}+
+p_{\mathrm{eff}})=0\). The time and spatial equations together imply
+\(\dot H=-4\pi G_N(\rho_{\mathrm{eff}}+p_{\mathrm{eff}})\), including
+at points with \(H=0\). Differentiating the time equation alone and
+dividing by \(H\) would miss that qualification.
+
+These relations constrain an eventual correction but cannot determine
+the scale factor without further data. To see the freedom directly,
+choose any sufficiently smooth positive \(a(t)\) on an interval.
+The two geometric equations define
+\(\rho_{\mathrm{eff}}=(3H^2-\Lambda)/(8\pi G_N)\) and
+\(p_{\mathrm{eff}}=(\Lambda-2\dot H-3H^2)/(8\pi G_N)\).
+Substitution makes their conservation equation an identity.
+A claim that the categorical correction explains a particular expansion
+history would thus require an independent calculation of the stress
+and state, followed by a comparison with that history. A vacuum local
+algebra, even when known on every small diamond in the interval, does
+not choose the homogeneous state or the physical clock for this
+calculation.
+
+\section{Work in dependency order}
+\begin{description}
+\item[I. Categorical Foundations of Null-Cone Quantization.] Choose a nonidentity diamond embedding, specify its frame data and exhibit both maps on one generating family. Check the dependence on a change of boundary frame.
+\item[II. Derived Gauge Reduction and Quantum Observable Algebras.] Compare the quotient of the matching locus with the algebra built from reduced data. Calculate the invariant observables in a regular finite example, then test what changes at a stabilizer.
+\item[III. Gravitational Gluing and Categorical Descent.] Choose a decorated cut, normalize its pairing and compare the two orders of sewing three pieces. Spatial descent asks whether compatible data on overlaps extend and how many extensions exist.
+\item[IV. Emergent Lorentzian Geometry and Quantum Einstein Equations.]\hfill\break Supply the causal ordering and the volume or scale data needed to recover a metric. Derive the leading action from those data and check the vacuum matching condition before coupling matter.
+\item[V. Black Hole Entropy and Quantum Information.] Compare ensembles and sector projectors on a specified geometry. A discrepancy in the subleading entropy would probe information invisible to the classical area term.
+\item[VI. Matter Coupling and Quantum Cosmology.] Start with a specified matter model and solve the combined constraints. A cosmological observable additionally requires state selection, boundary conditions and a physical prescription for time.
+\item[VII. Lean 4 Formalization and Computational Validation.] Extend the algebraic checks to whatever comparison and gluing maps the first three parts can actually construct. A continuum statement needs domains, topologies and convergence hypotheses in its formal statement.
+\end{description}
+Gravitational-wave propagation, black holes and cosmology depend on different states and boundary conditions. The shared starting point is a local observable whose transported expectations can be calculated on both sides. An inequivalent corner charge, a failed composition square or an inconsistent matching measure would already locate the obstruction, before any prediction for these systems is attempted.
+
+\section{Conclusion}
+The most direct comparison is an arrow between two decorated diamonds. It asks what happens to a measured observable when an observer enlarges the available region. On generated algebras its naturality equation reduces to a calculation on generators. In gravity the hard part is to construct the transport of boundary data and to perform the calculation twice with independent inputs. A common effective action, a categorical origin for the Einstein term, and a residual quantum correction each ask a further question. The vacuum result supplies a concrete equation against which those later steps can be tested.
+
+\begin{thebibliography}{99}
+\bibitem{long} M. Long, \emph{Quantum Gravity and Emergent Spacetime from Perspectival Structure}, YonedaAI Research Collective (24 February 2026). \href{https://yonedaai.com/papers/pdf/quantum-gravity-emergent-spacetime.pdf}{Manuscript}.
+\bibitem{cond} M. Long, \emph{A Representation-Theoretic Foundation for Quantum Gravity}, YonedaAI Research Collective (7 July 2026). \href{https://yonedaai.com/papers/pdf/library/condensed-representation/part6-condensed-quantum-gravity.pdf}{Manuscript}.
+\bibitem{nc} V. Chandrasekaran, \emph{An algebraic quantization of gravity from the null cone} (2026). \href{https://arxiv.org/abs/2611.34924v1}{arXiv:2611.34924v1}.
+\bibitem{df} W. Donnelly and L. Freidel, \emph{Local subsystems in gauge theory and gravity}, JHEP 09 (2016) 102. \href{https://arxiv.org/abs/1601.04744}{arXiv:1601.04744}.
+\bibitem{nullaction} L. Lehner, R. C. Myers, E. Poisson and R. D. Sorkin, \emph{Gravitational action with null boundaries}, Phys. Rev. D 94 (2016) 084046. \href{https://arxiv.org/abs/1609.00207}{arXiv:1609.00207}.
+\bibitem{corner} L. Freidel, M. Geiller and D. Pranzetti, \emph{Edge modes of gravity I: Corner potentials and charges}, JHEP 11 (2020) 026. \href{https://arxiv.org/abs/2006.12527}{arXiv:2006.12527}.
+\bibitem{jordan} R. D. Jordan, \emph{Effective field equations for expectation values}, Phys. Rev. D 33 (1986) 444. \href{https://doi.org/10.1103/PhysRevD.33.444}{doi:10.1103/PhysRevD.33.444}.
+\bibitem{ctp} E. Calzetta and B. L. Hu, \emph{Closed-time-path functional formalism in curved spacetime: Application to cosmological back-reaction problems}, Phys. Rev. D 35 (1987), 495. \href{https://doi.org/10.1103/PhysRevD.35.495}{doi:10.1103/PhysRevD.35.495}.
+\bibitem{hw} S. Hollands and R. M. Wald, \emph{Conservation of the stress tensor in perturbative interacting quantum field theory in curved spacetimes}, Rev. Math. Phys. 17 (2005), 227--312. \href{https://arxiv.org/abs/gr-qc/0404074}{arXiv:gr-qc/0404074}.
+\end{thebibliography}
+\end{document}

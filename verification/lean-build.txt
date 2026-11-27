@@ -1,0 +1,7 @@
+✔ [1302/1308] Built Cmrps.Pauli (622ms)
+✔ [1303/1308] Built Cmrps.Transport (2.0s)
+✔ [1304/1308] Built Cmrps.Reduction (2.0s)
+✔ [1305/1308] Built Cmrps.Sewing (2.0s)
+✔ [1306/1308] Built Cmrps.Invisible (2.0s)
+✔ [1307/1308] Built Cmrps (848ms)
+Build completed successfully (1308 jobs).

@@ -1,0 +1,12 @@
+.git
+context/cache
+lean/.lake
+node_modules
+.vercel
+dist
+prompts
+references
+settings
+reviews
+**/__pycache__
+build

@@ -1,0 +1,16 @@
+'Cmrps.RingTransport.mem_stableKernel' depends on axioms: [propext, Quot.sound]
+'Cmrps.RingTransport.stableKernel_le' depends on axioms: [propext, Quot.sound]
+'Cmrps.RingTransport.map_mem_stableKernel' depends on axioms: [propext, Quot.sound]
+'Cmrps.RingTransport.stableKernel_greatest' depends on axioms: [propext, Quot.sound]
+'Cmrps.Pauli.product_sign' does not depend on any axioms
+'Cmrps.Pauli.cnot_involutive' does not depend on any axioms
+'Cmrps.Pauli.embedding_square' does not depend on any axioms
+'Cmrps.matching_transport' does not depend on any axioms
+'Cmrps.quotient_descent' depends on axioms: [Quot.sound]
+'Cmrps.triangle_levels' depends on axioms: [propext]
+'Cmrps.sectorProjector_idempotent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cmrps.sewing_assoc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cmrps.compression_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cmrps.agree_of_generates' depends on axioms: [propext]
+'Cmrps.natural_on_arrow' depends on axioms: [propext, Quot.sound]
+'Cmrps.star_natural_on_arrow' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,3 @@
+*.pdf binary
+website/read/** linguist-generated=true -whitespace
+reviews/*-review*.md -whitespace
