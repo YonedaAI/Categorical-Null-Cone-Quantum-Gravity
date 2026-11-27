@@ -1,8 +1,8 @@
 # Categorical Null-Cone Quantum Gravity
 
-Can a gravitational measurement reconstructed from local probes be identified with an observable obtained by quantizing null initial data, and does that identification survive an enlargement of the region? This repository develops that question for causal diamonds. It contains the first three papers in the proposed series, a synthesis, and Lean 4 proofs of selected algebraic results.
+Can a gravitational measurement reconstructed from local probes be identified with an observable obtained by quantizing null initial data, and does that identification survive an enlargement of the region? This repository develops that question for causal diamonds. It contains the first three papers in the proposed series, a synthesis, a supplement on ordered measurements, and Lean 4 proofs of selected algebraic results.
 
-[Read the series](https://categorical-null-cone-quantum-gravity.vercel.app/) · [Start with the perspective](https://categorical-null-cone-quantum-gravity.vercel.app/read/synthesis/) · [Primary source notes](context/README.md)
+[Research status](https://categorical-null-cone-quantum-gravity.vercel.app/#status) · [Start with the perspective](https://categorical-null-cone-quantum-gravity.vercel.app/read/synthesis/) · [Primary source notes](context/README.md)
 
 | Paper | Main calculation | Manuscript |
 | --- | --- | --- |
@@ -10,14 +10,21 @@ Can a gravitational measurement reconstructed from local probes be identified wi
 | II. Derived Gauge Reduction and Quantum Observable Algebras | A linear translation constraint leaves one relative canonical pair. A duplicated constraint creates a degree −1 Koszul class. On a graph, a nonzero cycle sum obstructs a consistent assignment of quantum matching levels. | [PDF](papers/pdf/reduction.pdf) · [LaTeX](papers/latex/reduction.tex) |
 | III. Gravitational Gluing and Categorical Descent | For finite boundary kernels, two choices of cut agree on specified preparations and detectors precisely when their compressed matching projectors coincide. | [PDF](papers/pdf/gluing.pdf) · [LaTeX](papers/latex/gluing.tex) |
 | The Categorical Null-Cone Realization Conjecture | The perspective states the comparison, gives a one-arrow test, and explains how a candidate effective action would have to reproduce the vacuum one-loop backreaction calculation. | [PDF](papers/pdf/synthesis.pdf) · [LaTeX](papers/latex/synthesis.tex) |
+| Supplement. Ordered probes at a marked null cut | In a model with one positive area variable, a dilation and a phase reading give different amplitudes when their order is reversed. A separate calculation in an exact vacuum plane wave shows how the local area changes if an observer reads the new waist. | [HTML](https://categorical-null-cone-quantum-gravity.vercel.app/read/marked-cut/) · [PDF](papers/pdf/marked-cut.pdf) · [LaTeX](papers/latex/marked-cut.tex) |
 
 The four-dimensional realization conjecture remains open. Its first physical test requires a specified inclusion of decorated diamonds and two independently constructed images of the same boundary observable. Matter coupling, a categorical derivation of the Einstein action, black-hole entropy matching and cosmological predictions depend on further work. Volumes IV through VII are outlined in the perspective.
+
+One concrete target is a boundary operation with a definite frequency under a boost. In the null-cone preprint, Eq. (4.12) fixes the change in area between two area eigenstates whenever this operation has a nonzero matrix element. A test across diamonds would identify that operation and both states using the retained inner frame, then compute the same nonzero transition from categorical probes. The supplement’s dilation changes area by a scale factor. Establishing which source operation the probes realize remains a physical question. [Null-cone preprint, §4.2](https://arxiv.org/html/2611.34924v1#S4.SS2)
 
 ## Formal results
 
 The Lean project covers the shift/phase product sign and controlled-NOT embedding on signed basis states, the ring-level comparison on generators, the universal property of the stable invisible ideals on an inclusion preorder, descent to an orbit-type quotient, the triangle consistency condition and finite matrix sewing. The verification notes give exact theorem names, hypotheses and reproduction commands. [Lean sources](lean/Cmrps) · [Verification notes](verification/README.md)
 
 A follow-up traces seven of the original manuscripts to dated Git commits and checks a proposed identification of observables. Two opposite matrix units prove that a homomorphism from the commutative classical observable algebra cannot be onto the full matrix algebra. The same obstruction applies to a bounded-operator algebra on a Hilbert space of dimension at least two. [Source comparison](context/manuscript-comparison.md) · [Lean proof](lean/Cmrps/ClassicalImage.lean)
+
+The supplement’s Lean module verifies the order-dependent phase, its preservation when an extra degree of freedom is a spectator, and a probe that distinguishes two different flat waists. The result for gravitational diamonds depends on whether the marked cut and the operation that changes its area are physically available after enlargement. [Marked-cut proofs](lean/Cmrps/MarkedCut.lean)
+
+To reproduce the supplement’s numerical examples, run `uv run --python 3.12 verification/check_marked_cut.py`. It integrates the two ordered Gaussian amplitudes and solves the optical deviation equation at two cuts of a vacuum plane wave. [Numerical check](verification/check_marked_cut.py)
 
 ## Build the papers and readers
 
@@ -27,7 +34,7 @@ The PDFs and HTML reading editions are included. To rebuild one manuscript, inst
 uv run scripts/render_reader.py synthesis
 ```
 
-Replace `synthesis` with `foundations`, `reduction` or `gluing` to rebuild another paper. The page-one sidebar is a manuscript label. The repository and website are the publication locations for this installment.
+Replace `synthesis` with `foundations`, `reduction`, `gluing` or `marked-cut` to rebuild another paper. The page-one sidebar is a manuscript label. The repository and website are the publication locations for this installment.
 
 ## Run the website
 
@@ -38,7 +45,9 @@ python3 scripts/build_site.py
 python3 -m http.server 8000 --directory dist
 ```
 
-With the site running and Google Chrome installed, check the readers at phone, tablet and desktop widths and verify the four PDF downloads.
+For a different local port, set `SITE_ORIGIN` to the server URL when running the build so that the social preview images point to that server.
+
+With the site running and Google Chrome installed, check the readers at phone, tablet and desktop widths and verify the five PDF downloads.
 
 ```sh
 uv run scripts/check_site.py http://127.0.0.1:8000

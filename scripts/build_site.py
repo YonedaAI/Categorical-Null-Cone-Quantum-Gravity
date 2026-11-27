@@ -6,7 +6,7 @@ import re
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
-PAPERS = ("foundations", "reduction", "gluing", "synthesis")
+PAPERS = ("foundations", "reduction", "gluing", "synthesis", "marked-cut")
 
 
 def edition_hash(source_dir, slug, pdf):
@@ -33,7 +33,9 @@ def main():
     if output.is_dir():
         shutil.rmtree(output)
     shutil.copytree(site, output)
-    project_domain = os.getenv("VERCEL_PROJECT_PRODUCTION_URL") or os.getenv("VERCEL_URL")
+    project_domain = os.getenv("VERCEL_URL") or os.getenv("VERCEL_PROJECT_PRODUCTION_URL")
+    if os.getenv("VERCEL_ENV") == "production":
+        project_domain = os.getenv("VERCEL_PROJECT_PRODUCTION_URL") or project_domain
     origin = os.getenv("SITE_ORIGIN") or (f"https://{project_domain}" if project_domain else "http://localhost:8000")
     # Home is hand-authored HTML; TeX4ht reading editions serialize attributes in a different order.
     for page in [output / "index.html", *(output / "read" / name / "index.html" for name in PAPERS)]:

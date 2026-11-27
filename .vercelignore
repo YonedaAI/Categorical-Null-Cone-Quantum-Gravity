@@ -1,5 +1,6 @@
 .git
-context/cache
+.knowledge-base.md
+context/
 lean/.lake
 node_modules
 .vercel

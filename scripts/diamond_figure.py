@@ -91,5 +91,6 @@ for card in (
     ("reduction", "Part II", "Derived Gauge Reduction and Quantum Observable Algebras"),
     ("gluing", "Part III", "Gravitational Gluing and Categorical Descent"),
     ("synthesis", "Perspective", "The Categorical Null-Cone Realization Conjecture"),
+    ("marked-cut", "Supplement", "Ordered probes at a marked null cut"),
 ):
     share_card(*card)

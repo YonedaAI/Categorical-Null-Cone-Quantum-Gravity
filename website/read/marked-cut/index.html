@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html lang="en-US" xml:lang="en-US">
+<head><title>Ordered probes at a marked null cut
+Supplement to Categorical Null-Cone Quantum Gravity</title>
+<meta charset="utf-8"/>
+<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="marked-cut.css" rel="stylesheet" type="text/css"/>
+<meta content="marked-cut.tex" name="src"/>
+<link href="/assets/site.css" rel="stylesheet"/><link href="/assets/reader.css" rel="stylesheet"/><meta content="A larger causal diamond can contain the marked waist of a smaller diamond without sharing its waist. Recording the mark resolves which area is read, but a single area reading cannot test the order of two quantum operations. We study the uniform area…" name="description"/><meta content="A larger causal diamond can contain the marked waist of a smaller diamond without sharing its waist. Recording the mark resolves which area is read, but a single area reading cannot test the order of two quantum operations. We study the uniform area…" property="og:description"/><meta content="Ordered probes at a marked null cut" property="og:title"/><meta content="/assets/og/marked-cut.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="b96bcb60e72f0bf40641d9fccfa413885106dd22d61a0e506636e4ec13ff0c38" name="paper-edition"/></head><body class="reader"><a class="skip" href="#text">Skip to paper</a><nav aria-label="Paper navigation" class="reader-nav"><a href="/#papers">← Research series</a><a href="/papers/marked-cut.pdf">Download PDF ↓</a></nav><main id="text">
+<div class="maketitle">
+<p class="series-label">
+Supplement to Categorical Null-Cone Quantum Gravity</p><h1 class="titleHead">Ordered probes at a marked null cut</h1>
+<div class="author"><span class="ec-lmr-12">Matthew Long</span>
+<br/> <span class="ec-lmr-10">The YonedaAI Collaboration, YonedaAI Research Collective</span>
+<br/> <span class="ec-lmr-10">Chicago, IL</span>
+<br/> <span class="ec-lmtt-10">matthew@yonedaai.com</span></div><br/>
+<div class="date"><span class="ec-lmr-12">26 November 2026</span></div>
+</div><details class="contents"><summary>Contents</summary><ul role="list"><li><a href="#the-matched-corner">1 The matched corner</a></li><li><a href="#two-ordered-operations">2 Two ordered operations</a></li><li><a href="#a-state-that-resolves-the-order">3 A state that resolves the order</a></li><li><a href="#a-proper-inclusion-with-a-retained-cut">4 A proper inclusion with a retained cut</a></li><li><a href="#obstruction-in-a-bounded-area-sector">5 Obstruction in a bounded area sector</a></li><li><a href="#references">References</a></li></ul></details>
+<section class="abstract" role="doc-abstract">
+<h2 class="abstracttitle">
+<span class="ec-lmbx-10">Abstract</span>
+</h2>
+<p class="noindent"><span class="ec-lmr-10">A larger causal diamond can contain the marked waist of a smaller diamond without sharing
+     its waist. Recording the mark resolves which area is read, but a single area reading cannot
+     test the order of two quantum operations. We study the uniform area and relative boost at
+     a retained cut. On a positive-area chart the logarithm of the integrated boost charge has a
+     canonical conjugate that generates dilations of area. A phase reading of the logarithm and a
+     shift of its calibration give an explicit algebra of ordered probes. Quantization of the chart gives
+     a unitarily equivalent representation, and a Gaussian preparation detects the change of order.
+     For flat diamonds with a common emission event we compute the map that retains the inner
+     cut when the added apparatus is a spectator. Reading the larger waist instead multiplies the
+     flat area by the squared ratio of radii. A vacuum plane wave gives a curvature-dependent ratio
+     for the density along a marked ray. An exact unitary dilation is impossible within any nonzero
+     area sector bounded above. The calculation isolates the extra operation, boundary decoration
+     and spectral assumptions a gravitational realization would require.</span>
+</p>
+</section>
+<h2 class="sectionHead" id="the-matched-corner"><span class="titlemark">1   </span> <a id="x1-10001"></a>The matched corner</h2>
+<p class="noindent">Two null boundaries can meet at a surface carrying an area and a relative normal frame. To
+compare a quantum measurement across regions, the same pair of operations must have a
+meaning on each side. A single commuting family of area readings cannot decide whether order
+matters. A second operation that changes the measured area provides a test. We give such an
+operation in a one-mode chart and calculate its ordered amplitudes and its transport on a proper
+                                                                                         
+                                                                                         
+inclusion.
+</p><p class="indent">   Chandrasekaran describes opposite orientations on two pieces meeting at a cut. After the angular coordinates are identified,
+let <span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">±</mo></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> be their boost
+charge aspects, and let <span class="inline-math"><math display="inline"><mrow><mi>γ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mi mathvariant="normal">Γ</mi></mrow><mrow><mi>R</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi mathvariant="normal">Γ</mi></mrow><mrow><mi>L</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>
+be the relative boost. The matching of the induced metrics gives
+<span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>K</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>.
+The surviving boost contribution to the symplectic potential is
+<span class="inline-math"><math display="inline"><mrow><mi>K</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo><mspace class="thinspace" width="0.17em"></mspace><mi mathvariant="italic">𝛿𝛾</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> per unit
+reference solid angle <span class="cite">[<a href="#Xnc">1</a>, Eqs. (3.63) and (3.64)]</span>. The integral of the charge aspect is the area in units of
+<span class="inline-math"><math display="inline"><mrow><mn>8</mn><mi>π</mi><msub><mrow><mi>G</mi></mrow><mrow><mi>N</mi></mrow></msub></mrow></math></span> <span class="cite">[<a href="#Xnc">1</a>, Eq. (3.43)]</span>.
+Write, with <span class="inline-math"><math display="inline"><mrow><mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math></span>,
+</p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<mi>K</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow><mo> ∫
+ </mo></mrow><mrow><mi>S</mi></mrow></msub><mi>K</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo><mspace class="thinspace" width="0.17em"></mspace><mi>d</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>A</mi></mrow>
+<mrow><mn>8</mn><mi>π</mi><msub><mrow><mi>G</mi></mrow><mrow><mi>N</mi></mrow></msub></mrow></mfrac><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   The positive constant <span class="inline-math"><math display="inline"><msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msub></math></span> used
+below has the same units as <span class="inline-math"><math display="inline"><mi>K</mi></math></span>,
+namely action. Relative rapidities are dimensionless.
+</p><p class="indent">   We keep a marked cut with its angular and relative frame data. Set
+<span class="inline-math"><math display="inline"><mrow><mi>γ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>γ</mi></mrow></math></span>
+uniform and take variations with fixed normalized area profile, so only its total weight
+<span class="inline-math"><math display="inline"><mi>K</mi></math></span> varies. Pulling the
+boost term back gives <span class="inline-math"><math display="inline"><mrow><mi>𝜃</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>K</mi><mspace class="thinspace" width="0.17em"></mspace><mi mathvariant="italic">𝑑𝛾</mi></mrow></math></span>.
+We study the two-dimensional chart on which the remaining contributions to the pulled-back symplectic
+form vanish. This is an assumption about the chart. Eq. (3.42) includes couplings of the area aspect to
+the conformal metric and the choice of normals. The uniform one-form by itself gives no symplectic
+splitting of the full reduced phase space. Classical work on causal-diamond symmetries also tracks
+matching between the two null boundaries <span class="cite">[<a href="#Xcp">2</a>]</span>. Discarding the mark after gluing changes the
+experiment. The source explicitly removes the frame of a cut used purely for subdivision <span class="cite">[<a href="#Xnc">1</a>,
+Sec. 3.6]</span>.
+</p><p class="indent">   On the open chart <span class="inline-math"><math display="inline"><mrow><mi>K</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mn>0</mn></mrow></math></span>
+define </p><div class="mathframe"><table class="equation"><tr><td>
+<math class="equation" display="block"><mrow>
+<mstyle class="label" id="x1-1001r1"></mstyle><mi>Q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="loglike">log</mi><mo>⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>K</mi><mo class="MathClass-bin" stretchy="false">∕</mo><msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mi>P</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">𝐾𝛾</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(1)</td></tr></table></div>
+<p class="noindent">The sign is fixed by </p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<mi>K</mi><mspace class="thinspace" width="0.17em"></mspace><mi mathvariant="italic">𝑑𝛾</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>d</mi><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝐾𝛾</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>γ</mi><mspace class="thinspace" width="0.17em"></mspace><mi mathvariant="italic">𝑑𝐾</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>d</mi><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝐾𝛾</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>P</mi><mspace class="thinspace" width="0.17em"></mspace><mi mathvariant="italic">𝑑𝑄</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   With <span class="inline-math"><math display="inline"><mrow><mo class="MathClass-open" stretchy="false">{</mo><mi>Q</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>P</mi><mo class="MathClass-close" stretchy="false">}</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math></span> this
+yields <span class="inline-math"><math display="inline"><mrow><mo class="MathClass-open" stretchy="false">{</mo><mi>γ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>K</mi><mo class="MathClass-close" stretchy="false">}</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math></span> and
+<span class="inline-math"><math display="inline"><mrow><mo class="MathClass-open" stretchy="false">{</mo><mi>K</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>P</mi><mo class="MathClass-close" stretchy="false">}</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>K</mi></mrow></math></span>. The Hamiltonian
+flow of <span class="inline-math"><math display="inline"><mi>K</mi></math></span>
+changes the relative boost and keeps the area fixed. The Hamiltonian flow of
+<span class="inline-math"><math display="inline"><mi>P</mi></math></span> scales
+<span class="inline-math"><math display="inline"><mi>K</mi></math></span> by
+<span class="inline-math"><math display="inline"><msup><mrow><mi>e</mi></mrow><mrow><mi>a</mi></mrow></msup></math></span> and
+scales <span class="inline-math"><math display="inline"><mi>γ</mi></math></span>
+by <span class="inline-math"><math display="inline"><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi>a</mi></mrow></msup></math></span>.
+These are different transformations even at a single cut. The full preprint implements a relative
+boost through the area generator and characterizes insertions of definite boost frequency by
+their area change <span class="cite">[<a href="#Xnc">1</a>, Eq. (4.12)]</span>. Those formulas do not construct the unitary dilation used
+below.
+   
+</p>
+<h2 class="sectionHead" id="two-ordered-operations"><span class="titlemark">2   </span> <a id="x1-20002"></a>Two ordered operations</h2>
+<h3 class="subsectionHead" id="an-apparatus-in-positivearea-coordinates"><span class="titlemark">2.1   </span> <a id="x1-30002.1"></a>An apparatus in positive-area coordinates</h3>
+<p class="noindent">Let <span class="inline-math"><math display="inline"><mrow><mi>k</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mn>0</mn></mrow></math></span> be the possible
+reading of <span class="inline-math"><math display="inline"><mi>K</mi></math></span>. Take a coherent
+calibration amplitude <span class="inline-math"><math display="inline"><mrow><mi>F</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>
+normalized by <span class="inline-math"><math display="inline"><mrow><msubsup><mrow><mo>∫</mo>
+</mrow><mrow><mn>0</mn></mrow><mrow><mi>∞</mi></mrow></msubsup><mo class="MathClass-rel" stretchy="false">|</mo><mi>F</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mo class="MathClass-close" stretchy="false">)</mo><msup><mrow><mo class="MathClass-rel" stretchy="false">|</mo></mrow><mrow><mn>2</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mi mathvariant="italic">𝑑𝑘</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math></span>. For real,
+dimensionless settings <span class="inline-math"><math display="inline"><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>b</mi></mrow></math></span>,
+specify the two operations by their effects on that amplitude, </p><div class="mathframe"><table class="equation"><tr><td>
+<math class="equation" display="block"><mrow>
+<mstyle class="label" id="x1-3001r2"></mstyle><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>L</mi></mrow><mrow><mi>b</mi></mrow></msub><mi>F</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mo class="MathClass-bin" stretchy="false">∕</mo><msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mi mathvariant="italic">𝑖𝑏</mi></mrow></msup><mi>F</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>S</mi></mrow><mrow>
+<mi>a</mi></mrow></msub><mi>F</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi>a</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></msup><mi>F</mi><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>e</mi></mrow><mrow><mi>a</mi></mrow></msup><mi>k</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(2)</td></tr></table></div>
+<p class="noindent">The first operation applies a phase that depends on the log reading. A phase-sensitive preparation and
+comparison are implicit. A classical detector that merely records a probability distribution would miss this
+phase. The second rescales the argument of the amplitude and compensates for the Jacobian in the
+normalization. Its sign convention means the peak of a narrow state moves towards smaller
+<span class="inline-math"><math display="inline"><mi>k</mi></math></span> for positive
+<span class="inline-math"><math display="inline"><mi>a</mi></math></span>. Conjugation of the
+multiplication observable by <span class="inline-math"><math display="inline"><msub><mrow><mi>S</mi></mrow><mrow><mi>a</mi></mrow></msub></math></span>
+sends <span class="inline-math"><math display="inline"><mi>k</mi></math></span>
+to <span class="inline-math"><math display="inline"><mrow><msup><mrow><mi>e</mi></mrow><mrow><mi>a</mi></mrow></msup><mi>k</mi></mrow></math></span>.
+</p><p class="indent">   A change of integration variable proves that both operations are unitary. Moving the rescaling past the
+phase gives </p><div class="mathframe"><table class="equation"><tr><td>
+<math class="equation" display="block"><mrow>
+<mstyle class="label" id="x1-3002r3"></mstyle><msub><mrow><mi>S</mi></mrow><mrow><mi>a</mi></mrow></msub><msub><mrow><mi>L</mi></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑎𝑏</mi></mrow></msup><msub><mrow><mi>L</mi></mrow><mrow>
+<mi>b</mi></mrow></msub><msub><mrow><mi>S</mi></mrow><mrow><mi>a</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3)</td></tr></table></div>
+<p class="noindent">Thus the order can be tested with bounded operators for every setting. Put
+<span class="inline-math"><math display="inline"><mrow><mi>V</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>L</mi></mrow><mrow><mi>b</mi></mrow></msub><msub><mrow><mi>S</mi></mrow><mrow><mi>a</mi></mrow></msub></mrow></math></span> on the
+apparatus. Multiplying two such words gives </p><div class="mathframe"><table class="equation"><tr><td>
+<math class="equation" display="block"><mrow>
+<mstyle class="label" id="x1-3003r4"></mstyle><mi>V</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>V</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi>c</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>d</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑎𝑑</mi></mrow></msup><mi>V</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>c</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>b</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>d</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mi>V</mi> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑎𝑏</mi></mrow></msup><mi>V</mi> <mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(4)</td></tr></table></div>
+<p class="noindent">These equalities use only the operation rules and the normalization of positive-area amplitudes. The labels
+were chosen to model multiplicative calibration; deriving those rules from a category of physical contexts
+is a distinct question.
+   
+                                                                                         
+                                                                                         
+</p>
+<h3 class="subsectionHead" id="quantization-in-a-corner-chart"><span class="titlemark">2.2   </span> <a id="x1-40002.2"></a>Quantization in a corner chart</h3>
+<p class="noindent">In the chart (<a href="#x1-1001r1">1</a>) take the regular Schrödinger representation on
+<span class="inline-math"><math display="inline"><mrow><mstyle mathvariant="script"><mi>H</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mi>ℝ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi mathvariant="italic">𝑑𝑞</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>. The log
+reading <span class="inline-math"><math display="inline"><mi>Q</mi></math></span>
+multiplies by <span class="inline-math"><math display="inline"><mi>q</mi></math></span>,
+<span class="inline-math"><math display="inline"><mi>K</mi></math></span> multiplies
+by <span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msub><msup><mrow><mi>e</mi></mrow><mrow><mi>q</mi></mrow></msup></mrow></math></span>, and
+<span class="inline-math"><math display="inline"><mrow><mi>P</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">𝑖ℏ</mi><msub><mrow><mi>∂</mi></mrow><mrow><mi>q</mi></mrow></msub></mrow></math></span>
+is the self-adjoint translation generator with its usual Sobolev domain. On
+<span class="inline-math"><math display="inline"><mrow><msubsup><mrow><mi>C</mi></mrow><mrow><mi>c</mi></mrow><mrow><mi>∞</mi></mrow></msubsup><mo class="MathClass-open" stretchy="false">(</mo><mi>ℝ</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>,
+</p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<mo class="MathClass-open" stretchy="false">[</mo><mi>Q</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>P</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi mathvariant="italic">𝑖ℏ</mi><mspace class="thinspace" width="0.17em"></mspace><mn>1</mn><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mo class="MathClass-open" stretchy="false">[</mo><mi>K</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>P</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi mathvariant="italic">𝑖ℏ𝐾</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   The unbounded <span class="inline-math"><math display="inline"><mi>K</mi></math></span>
+has spectrum <span class="inline-math"><math display="inline"><mrow><mo class="MathClass-open" stretchy="false">[</mo><mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mi>∞</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>,
+with zero absent as an eigenvalue. Equation (<a href="#x1-1001r1">1</a>) is used only on strictly positive
+classical readings. No self-adjoint rapidity generating arbitrary translations through
+<span class="inline-math"><math display="inline"><mrow><mi>K</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math></span> is
+needed. The position-dilation pair on the positive half-line is familiar from affine quantization <span class="cite">[<a href="#Xklauder">3</a>,
+Sec. 2.1]</span>. Here it comes from a chosen uniform corner term.
+</p><p class="indent">   The bounded operations are </p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<mi>M</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑏𝑄</mi></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑎𝑃</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mi>ℏ</mi></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mo class="MathClass-open" stretchy="false">(</mo><mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>ψ</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>q</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>q</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   Substitution of a shifted argument gives <span class="inline-math"><math display="inline"><mrow><mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>M</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑎𝑏</mi></mrow></msup><mi>M</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>.
+The following comparison also fixes which vector amplitudes should be regarded as the same
+preparation.
+                                                                                         
+                                                                                         
+</p>
+<div class="newtheorem">
+<p class="noindent"><span class="head">
+<a id="x1-4001r1"></a>
+<span class="ec-lmbx-10x-x-109">Proposition 2.1 </span>(Ordered probe comparison)<span class="ec-lmbx-10x-x-109">.</span> </span><span class="ec-lmri-10x-x-109">The unitary change of variables</span> </p><div class="mathframe"><table class="equation"><tr><td>
+<math class="equation" display="block"><mrow>
+<mstyle class="label" id="x1-4002r5"></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝐽𝐹</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>q</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msub><msup><mrow><mi>e</mi></mrow><mrow><mi>q</mi></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></msup><mi>F</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>K</mi></mrow><mrow>
+<mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msub><msup><mrow><mi>e</mi></mrow><mrow><mi>q</mi></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo>
+</mrow></math></td><td class="eq-no">(5)</td></tr></table></div>
+<p class="noindent"><span class="ec-lmri-10x-x-109">from </span><span class="inline-math"><math display="inline"><mrow><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>ℝ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mi mathvariant="italic">𝑑𝑘</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> <span class="ec-lmri-10x-x-109">to</span>
+<span class="inline-math"><math display="inline"><mstyle mathvariant="script"><mi>H</mi></mstyle></math></span> <span class="ec-lmri-10x-x-109">carries</span>
+<span class="inline-math"><math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mi>b</mi></mrow></msub></math></span> <span class="ec-lmri-10x-x-109">to</span>
+<span class="inline-math"><math display="inline"><mrow><mi>M</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> <span class="ec-lmri-10x-x-109">and</span>
+<span class="inline-math"><math display="inline"><msub><mrow><mi>S</mi></mrow><mrow><mi>a</mi></mrow></msub></math></span> <span class="ec-lmri-10x-x-109">to</span>
+<span class="inline-math"><math display="inline"><mrow><mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> <span class="ec-lmri-10x-x-109">by
+conjugation. It identifies their unital algebras of finite linear combinations of words, their operator norm
+closures and the word expectations of corresponding unit vectors.</span>
+</p>
+</div>
+<p class="indent">
+</p>
+<div class="proof">
+<p class="indent"> <span class="head">
+<span class="ec-lmri-10x-x-109">Proof.</span> </span>The measure change is <span class="inline-math"><math display="inline"><mrow><mi mathvariant="italic">𝑑𝑘</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msub><msup><mrow><mi>e</mi></mrow><mrow><mi>q</mi></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mi mathvariant="italic">𝑑𝑞</mi></mrow></math></span>.
+It gives the norm equality and the inverse <span class="inline-math"><math display="inline"><mrow><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><mi>ψ</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>k</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></msup><mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi class="loglike">log</mi><mo>⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mo class="MathClass-bin" stretchy="false">∕</mo><msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>.
+The readout phase becomes <span class="inline-math"><math display="inline"><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑏𝑞</mi></mrow></msup></math></span>.
+In the shift, the product <span class="inline-math"><math display="inline"><mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msub><msup><mrow><mi>e</mi></mrow><mrow><mi>q</mi></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></msup><msup><mrow><mi>e</mi></mrow><mrow><mi>a</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></msup></mrow></math></span>
+is the square root of <span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msub><msup><mrow><mi>e</mi></mrow><mrow><mi>q</mi><mo class="MathClass-bin" stretchy="false">+</mo><mi>a</mi></mrow></msup></mrow></math></span>,
+giving <span class="inline-math"><math display="inline"><mrow><mi>J</mi><msub><mrow><mi>S</mi></mrow><mrow><mi>a</mi></mrow></msub><mi>F</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>q</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi mathvariant="italic">𝐽𝐹</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>q</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>.
+Conjugation therefore preserves every ordered product, adjoint and norm. For a unit vector <span class="inline-math"><math display="inline"><mi>F</mi></math></span>
+its matrix elements agree with those at <span class="inline-math"><math display="inline"><mrow><mi mathvariant="italic">𝐽𝐹</mi></mrow></math></span>.
+                                                                                        □
+</p>
+</div>
+<p class="indent">   Although this comparison uses two descriptions, both describe a continuous positive-area reading with
+coherent dilations. It checks the consequences of those inputs. The physical identification is stronger: one
+would need a rule for constructing the probe phases and shifts using the original context data, and a
+gravitational operator that realizes the shift on the same prepared states. The one-mode chart assumes
+the required degrees of freedom survive the constraints. A reference rapidity shift generated by
+<span class="inline-math"><math display="inline"><mi>K</mi></math></span> would
+commute with <span class="inline-math"><math display="inline"><mrow><mi>M</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>
+and would fail the order test (<a href="#x1-3002r3">3</a>).
+   
+</p>
+<h2 class="sectionHead" id="a-state-that-resolves-the-order"><span class="titlemark">3   </span> <a id="x1-50003"></a>A state that resolves the order</h2>
+<p class="noindent">Take the normalized wavefunction </p><div class="mathframe"><table class="equation"><tr><td>
+<math class="equation" display="block"><mrow>
+<mstyle class="label" id="x1-5001r6"></mstyle><mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>q</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn><mo class="MathClass-bin" stretchy="false">∕</mo><mn>4</mn></mrow></msup> <mi class="loglike">exp</mi><mo>⁡</mo> <mrow><mo fence="true" form="prefix">[</mo><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>q</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>q</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow><mn>4</mn><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mi>i</mi><msub><mrow><mi>p</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>q</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>q</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow>
+<mrow><mi>ℏ</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">]</mo></mrow> <mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><mi>σ</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(6)</td></tr></table></div>
+<p class="noindent">The center and width of <span class="inline-math"><math display="inline"><mi>q</mi></math></span> are
+dimensionless, while <span class="inline-math"><math display="inline"><msub><mrow><mi>p</mi></mrow><mrow><mn>0</mn></mrow></msub></math></span> has units
+of action. For the ordered word <span class="inline-math"><math display="inline"><mrow><mi>W</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>M</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>
+a direct integral gives </p><div class="mathframe"><table class="equation"><tr><td>
+<math class="equation" display="block"><mrow>
+<mstyle class="label" id="x1-5002r7"></mstyle><msub><mrow><mo class="MathClass-open" stretchy="false">⟨</mo><mi>W</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">⟩</mo></mrow><mrow><mi>ψ</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="loglike">exp</mi><mo>⁡</mo> <mrow><mo fence="true" form="prefix">[</mo><mrow><mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><msup><mrow><mi>a</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow><mn>8</mn><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>b</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow><mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">]</mo></mrow><mstyle><mi class="loglike">exp</mi><mo>⁡</mo></mstyle> <mrow><mo fence="true" form="prefix">[</mo><mrow><mi mathvariant="italic">𝑖𝑏</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>q</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>a</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>i</mi><msub><mrow><mi>p</mi></mrow><mrow><mn>0</mn></mrow></msub><mi>a</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mi>ℏ</mi></mrow><mo fence="true" form="postfix">]</mo></mrow> <mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(7)</td></tr></table></div>
+<p class="noindent">Indeed, <span class="inline-math"><math display="inline"><mrow><mover accent="false" class="mml-overline"><mrow><mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>q</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mo accent="true">¯</mo></mover><mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>q</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> carries phase
+<span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>p</mi></mrow><mrow><mn>0</mn></mrow></msub><mi>a</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mi>ℏ</mi></mrow></math></span>. Its real Gaussian
+envelope is centered at <span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>q</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>a</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></math></span>
+with the prefactor <span class="inline-math"><math display="inline"><mrow><mi class="loglike">exp</mi><mo>⁡</mo><mo class="MathClass-open" stretchy="false">[</mo><mo class="MathClass-bin" stretchy="false">−</mo><msup><mrow><mi>a</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">∕</mo><mo class="MathClass-open" stretchy="false">(</mo><mn>8</mn><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">]</mo></mrow></math></span>.
+Integrating <span class="inline-math"><math display="inline"><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑏𝑞</mi></mrow></msup></math></span>
+against that envelope gives the remaining two factors. The inverse change (<a href="#x1-4002r5">5</a>) produces a lognormal area
+distribution for the apparatus and exactly the same ordered expectation.
+                                                                                         
+                                                                                         
+</p><p class="indent">   For <span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>q</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>p</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math></span>,
+<span class="inline-math"><math display="inline"><mrow><mi>σ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math></span>, and
+<span class="inline-math"><math display="inline"><mrow><mi>a</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>b</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow><mi>π</mi></mrow></msqrt></mrow></math></span>, the two orders
+have expectations <span class="inline-math"><math display="inline"><mrow> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>i</mi><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>5</mn><mi>π</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mn>8</mn></mrow></msup></mrow></math></span>
+and <span class="inline-math"><math display="inline"><mrow> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>i</mi><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>5</mn><mi>π</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mn>8</mn></mrow></msup></mrow></math></span>,
+respectively. The squared modulus alone is the same. A reference branch that performs
+the identity can recover the imaginary part by measuring the Hermitian operator
+<span class="inline-math"><math display="inline"><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>W</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>W</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-bin" stretchy="false">∕</mo><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>i</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>, or
+equivalently by a controlled interference experiment. Thus one can distinguish the operations in a specified
+state without assigning a sharp value to both conjugate coordinates. A constant change of the reference
+<span class="inline-math"><math display="inline"><msub><mrow><mi>K</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msub></math></span>
+rephases the readout in both orders by the same factor and leaves their ratio unchanged.
+   
+</p>
+<h2 class="sectionHead" id="a-proper-inclusion-with-a-retained-cut"><span class="titlemark">4   </span> <a id="x1-60004"></a>A proper inclusion with a retained cut</h2>
+<p class="noindent">In Minkowski spacetime in units <span class="inline-math"><math display="inline"><mrow><mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math></span>
+let <span class="inline-math"><math display="inline"><mrow><mi>p</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mstyle mathvariant="bold"><mn>0</mn></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> and
+<span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>q</mi></mrow><mrow><mi>R</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>R</mi><mo class="MathClass-punc" stretchy="false">,</mo><mstyle mathvariant="bold"><mn>0</mn></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> for
+<span class="inline-math"><math display="inline"><mrow><mi>R</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mn>0</mn></mrow></math></span>. The diamonds
+<span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>D</mi></mrow><mrow><mi>R</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mi>p</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">∩</mo> <msup><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>q</mi></mrow><mrow><mi>R</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> share the outgoing
+sheet <span class="inline-math"><math display="inline"><mrow><mi>r</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>t</mi></mrow></math></span> up to the smaller
+waist whenever <span class="inline-math"><math display="inline"><mrow><mn>0</mn> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>R</mi> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>S</mi></mrow></math></span>.
+On <span class="inline-math"><math display="inline"><msub><mrow><mi>D</mi></mrow><mrow><mi>R</mi></mrow></msub></math></span> the waist
+lies at <span class="inline-math"><math display="inline"><mrow><mi>t</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>r</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>R</mi></mrow></math></span>. Its
+sphere <span class="inline-math"><math display="inline"><msub><mrow><mi>C</mi></mrow><mrow><mi>R</mi></mrow></msub></math></span>
+is a cross-section of the larger diamond’s outgoing sheet. It is not the larger waist
+<span class="inline-math"><math display="inline"><msub><mrow><mi>C</mi></mrow><mrow><mi>S</mi></mrow></msub></math></span>. Normalize affine readings
+by the inertial clock at <span class="inline-math"><math display="inline"><mi>p</mi></math></span>,
+and retain <span class="inline-math"><math display="inline"><mi>R</mi></math></span>,
+the angular frame and the second normal frame defining the relative rapidity at
+<span class="inline-math"><math display="inline"><msub><mrow><mi>C</mi></mrow><mrow><mi>R</mi></mrow></msub></math></span>. The marked larger
+system is denoted by <span class="inline-math"><math display="inline"><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>D</mi></mrow><mrow><mi>S</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>C</mi></mrow><mrow><mi>R</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>.
+The larger diamond’s outer boundary alone supplies no marked second frame at that internal
+cross-section.
+</p><p class="indent">   For the flat reference geometry the total area gives
+<span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>K</mi></mrow><mrow><mi>R</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>4</mn><mi>π</mi><msup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">∕</mo><mo class="MathClass-open" stretchy="false">(</mo><mn>8</mn><mi>π</mi><msub><mrow><mi>G</mi></mrow><mrow><mi>N</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>. If the
+observer instead reads the waist of the larger diamond, the result is </p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<msub><mrow><mi>K</mi></mrow><mrow><mi>S</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>S</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mi>R</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup><msub><mrow><mi>K</mi></mrow><mrow>
+<mi>R</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>Q</mi></mrow><mrow><mi>S</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>Q</mi></mrow><mrow><mi>R</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mi class="loglike">log</mi><mo>⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>S</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mi>R</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   Accordingly the dimensionless phase <span class="inline-math"><math display="inline"><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑏𝑄</mi></mrow></msup></math></span> for
+this alternative reading acquires a factor <span class="inline-math"><math display="inline"><msup><mrow><mi>e</mi></mrow><mrow><mn>2</mn><mi mathvariant="italic">𝑖𝑏</mi><mi class="loglike">log</mi><mo>⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>S</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mi>R</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></msup></math></span>.
+The ratio applies to these two flat reference spheres. It is not a transport law for arbitrary fluctuating
+areas in the two diamonds. The geometric calculation fixes which measurement one wants to model. A
+single fixed Minkowski solution has a definite classical waist area; the state (<a href="#x1-5001r6">6</a>) belongs to the one-mode
+quantization.
+</p><p class="indent">   For a precise enlarged quantum system choose an auxiliary Hilbert space
+<span class="inline-math"><math display="inline"><mstyle mathvariant="script"><mi>B</mi></mstyle></math></span>
+of dimension at least two, representing added distinguishable operations. Assume that
+after enlarging the diamond the marked degree of freedom remains a tensor factor. Use
+<span class="inline-math"><math display="inline"><mrow><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>ℝ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mi mathvariant="italic">𝑑𝑘</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">⊗</mo><mstyle mathvariant="script"><mi>B</mi></mstyle></mrow></math></span> on the apparatus side
+and <span class="inline-math"><math display="inline"><mrow><mstyle mathvariant="script"><mi>H</mi></mstyle> <mo class="MathClass-bin" stretchy="false">⊗</mo><mstyle mathvariant="script"><mi>B</mi></mstyle></mrow></math></span> on the corner side,
+allowing auxiliary operators <span class="inline-math"><math display="inline"><mrow><mn>1</mn> <mo class="MathClass-bin" stretchy="false">⊗</mo> <mi>B</mi></mrow></math></span>
+with <span class="inline-math"><math display="inline"><mrow><mi>B</mi> <mo class="MathClass-rel" stretchy="false">∈</mo> <mi>B</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="script"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>.
+The maps on marked observables are </p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<msub><mrow><mi>ι</mi></mrow><mrow><mstyle mathvariant="normal"><mi>op</mi></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>A</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>A</mi> <mo class="MathClass-bin" stretchy="false">⊗</mo> <mn>1</mn><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>ι</mi></mrow><mrow><mstyle mathvariant="normal"><mi>c</mi></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>C</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>C</mi> <mo class="MathClass-bin" stretchy="false">⊗</mo> <mn>1</mn><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>J</mi></mrow><mrow><mi>S</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>J</mi> <mo class="MathClass-bin" stretchy="false">⊗</mo> <mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   The resulting square commutes since </p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<msub><mrow><mi>J</mi></mrow><mrow><mi>S</mi></mrow></msub><msub><mrow><mi>ι</mi></mrow><mrow><mstyle mathvariant="normal"><mi>op</mi></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>A</mi><mo class="MathClass-close" stretchy="false">)</mo><msubsup><mrow><mi>J</mi></mrow><mrow><mi>S</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝐽𝐴</mi><msup><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">⊗</mo> <mn>1</mn> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>ι</mi></mrow><mrow><mstyle mathvariant="normal">
+<mi>c</mi></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝐽𝐴</mi><msup><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   These injections are proper if the target algebras also contain the stated auxiliary
+operators. They preserve the ordered expectations for the product preparation
+<span class="inline-math"><math display="inline"><mrow><mi>F</mi> <mo class="MathClass-bin" stretchy="false">⊗</mo> <mi>ξ</mi></mrow></math></span> and its
+counterpart <span class="inline-math"><math display="inline"><mrow><mi mathvariant="italic">𝐽𝐹</mi> <mo class="MathClass-bin" stretchy="false">⊗</mo> <mi>ξ</mi></mrow></math></span>,
+where <span class="inline-math"><math display="inline"><mrow><mo class="MathClass-rel" stretchy="false">∥</mo><mi>ξ</mi><mo class="MathClass-rel" stretchy="false">∥</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math></span>.
+Further independent enlargements compose with the canonical identification of iterated tensor products. If
+the added systems couple through corner constraints or if the cut frame is removed, the spectator
+argument has no premise. A proper inclusion of spacetime regions by itself gives neither a tensor factor
+nor a gravitational algebra map.
+   
+</p>
+<h3 class="subsectionHead" id="forgetting-a-calibration-label"><span class="titlemark">4.1   </span> <a id="x1-70004.1"></a>Forgetting a calibration label</h3>
+<p class="noindent">Suppose a two-valued auxiliary label selects one of two references for the log reading. Let
+<span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-rel" stretchy="false">≠</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></math></span> be the corresponding
+shifts, and let <span class="inline-math"><math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mi>j</mi></mrow></msub></math></span>
+project onto label <span class="inline-math"><math display="inline"><mi>j</mi></math></span>
+in <span class="inline-math"><math display="inline"><msup><mrow><mi>ℂ</mi></mrow><mrow><mn>2</mn></mrow></msup></math></span>.
+Acting before forgetting this label gives the unital embedding </p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<mi>α</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>A</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>V</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi>A</mi> <mo class="MathClass-bin" stretchy="false">⊗</mo> <mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo><msup><mrow><mi>V</mi> </mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mi>V</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>c</mi></mrow><mrow>
+<mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">⊗</mo> <msub><mrow><mi>E</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">⊗</mo> <msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   Conjugation and Eq. (<a href="#x1-3002r3">3</a>) give </p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<mi>α</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>M</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>M</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">⊗</mo> <mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑏</mi><msub><mrow><mi>c</mi></mrow><mrow><mn>0</mn></mrow></msub>
+</mrow></msup><msub><mrow><mi>E</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑏</mi><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub>
+</mrow></msup><msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mi>α</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">⊗</mo> <mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   The unitarity of the diagonal label factor preserves the ordered algebra. To describe an
+apparatus that forgets the label in an equal mixture, apply the normalized partial trace
+<span class="inline-math"><math display="inline"><mrow><mi mathvariant="normal">Φ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="normal"><mi>id</mi></mstyle> <mo class="MathClass-bin" stretchy="false">⊗</mo><msub><mrow><mstyle mathvariant="normal"><mi>tr</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow></math></span>. Then
+                                                                                         
+                                                                                         
+<span class="inline-math"><math display="inline"><mrow><mi mathvariant="normal">Φ</mi><mi>α</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>M</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> multiplies
+<span class="inline-math"><math display="inline"><mrow><mi>M</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> by
+<span class="inline-math"><math display="inline"><mrow><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑏</mi><msub><mrow><mi>c</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">𝑖𝑏</mi><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></math></span>. For
+<span class="inline-math"><math display="inline"><mrow><mi>b</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>π</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>c</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> the coefficient is
+zero, whereas <span class="inline-math"><math display="inline"><mrow><mi mathvariant="normal">Φ</mi><mi>α</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>M</mi><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup><mi>M</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math></span>.
+The averaged map is unital and completely positive, and it fails multiplicativity. Keeping or forgetting
+even this small piece of frame data thus changes the answer to the algebra transport question. The
+label represents a choice of calibration. No curvature degree of freedom was quantized in this
+test.
+   
+</p>
+<h3 class="subsectionHead" id="an-optical-calibration-in-a-vacuum-plane-wave"><span class="titlemark">4.2   </span> <a id="x1-80004.2"></a>An optical calibration in a vacuum plane wave</h3>
+<p class="noindent">Curvature changes the flat square law for the area of an angular patch. In units with
+<span class="inline-math"><math display="inline"><mrow><mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math></span>, take
+the vacuum plane wave </p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<mi>d</mi><msup><mrow><mi>s</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn><mspace class="thinspace" width="0.17em"></mspace><mi mathvariant="italic">𝑑𝑢</mi><mspace class="thinspace" width="0.17em"></mspace><mi mathvariant="italic">𝑑𝑣</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>d</mi><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>d</mi><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <msup><mrow><mi>κ</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mspace class="thinspace" width="0.17em"></mspace><mi>d</mi><msup><mrow><mi>u</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mi>κ</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   Its transverse profile has zero trace, so <span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>R</mi></mrow><mrow><mi mathvariant="italic">𝑢𝑢</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math></span>.
+Work inside a sufficiently small causally convex normal neighborhood of the emission event
+<span class="inline-math"><math display="inline"><mrow><mi>p</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mn>0</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>. Put
+<span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>q</mi></mrow><mrow><mi>U</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>U</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>U</mi><mo class="MathClass-punc" stretchy="false">,</mo><mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mn>0</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> on the timelike central worldline.
+The diamonds with tips <span class="inline-math"><math display="inline"><mrow><mi>p</mi><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>q</mi></mrow><mrow><mi>R</mi></mrow></msub></mrow></math></span>
+and <span class="inline-math"><math display="inline"><mrow><mi>p</mi><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>q</mi></mrow><mrow><mi>S</mi></mrow></msub></mrow></math></span> are nested for
+<span class="inline-math"><math display="inline"><mrow><mn>0</mn> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>R</mi> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>S</mi></mrow></math></span> in this neighborhood. The
+central outgoing ray has <span class="inline-math"><math display="inline"><mrow><mi>v</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>y</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math></span>. It
+reaches the smaller waist at <span class="inline-math"><math display="inline"><mrow><mi>u</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>R</mi></mrow></math></span>
+and the larger at <span class="inline-math"><math display="inline"><mrow><mi>u</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>S</mi></mrow></math></span>.
+Indeed, the ray at fixed <span class="inline-math"><math display="inline"><mrow><mi>u</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>U</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>y</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math></span>
+from <span class="inline-math"><math display="inline"><mrow><mi>v</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math></span> to
+<span class="inline-math"><math display="inline"><mrow><mi>v</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>U</mi></mrow></math></span> is null
+and future directed. Tip chronometry and a common initial frame fix the affine and angular
+calibrations.
+</p><p class="indent">   Label nearby outgoing rays by their initial transverse slopes
+<span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>ξ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>ξ</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></math></span> with
+<span class="inline-math"><math display="inline"><mrow><mi>u</mi></mrow></math></span> as affine parameter.
+The separation matrix <span class="inline-math"><math display="inline"><mrow><mi>B</mi></mrow></math></span>
+                                                                                         
+                                                                                         
+obeys </p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<msup><mrow><mi>B</mi></mrow><mrow><mi>″</mi></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo><mi class="qopname"> diag</mi><mo> ⁡ </mo><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>κ</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo><mo class="MathClass-bin" stretchy="false">−</mo><msup><mrow><mi>κ</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mi>B</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><mi>B</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>0</mn><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><msup><mrow><mi>B</mi></mrow><mrow><mi>′</mi></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mn>0</mn><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mi>B</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>u</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>κ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><mi class="qopname"> diag</mi><mo> ⁡ </mo><mo class="MathClass-open" stretchy="false">(</mo><mstyle class="qopname"><mi class="loglike">sinh</mi><mo>⁡</mo></mstyle><mo> ⁡ </mo><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝜅𝑢</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><mstyle class="qopname"><mi class="loglike">sin</mi><mo>⁡</mo></mstyle><mo> ⁡ </mo><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝜅𝑢</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   Harte and Drivas give this Jacobi propagator in unit profile normalization <span class="cite">[<a href="#Xharte-drivas">4</a>, Eqs. (3.90)–(3.93)]</span>. The
+area per unit initial slope area, measured by separation of rays at the central generator, is
+<span class="inline-math"><math display="inline"><mrow><mi>j</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>u</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo><mi class="qopname"> det</mi><mo> ⁡ </mo><mi>B</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>u</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mn>0</mn></mrow></math></span> on
+<span class="inline-math"><math display="inline"><mrow><mn>0</mn> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>u</mi> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>π</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mi>κ</mi></mrow></math></span>. The
+same result follows from the induced cut metric. On the outgoing cone the transverse position is
+<span class="inline-math"><math display="inline"><mrow><mi>B</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>u</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>ξ</mi></mrow></math></span>. At fixed
+<span class="inline-math"><math display="inline"><mrow><mi>u</mi></mrow></math></span> the transverse metric
+in slope coordinates is <span class="inline-math"><math display="inline"><mrow><mi>B</mi><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>u</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mstyle mathvariant="sans-serif"><mi>𝖳</mi></mstyle></mrow></msup><mi>B</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>u</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>.
+Moving from that affine slice to a sloping cross-section through the same point adds multiples of the null
+generator to its tangents, which leaves their inner products unchanged. Thus this calculation also applies
+to the actual waist at the central ray. It measures a local density. A finite patch requires integration with
+its own cut function.
+</p><p class="indent">   Retaining the smaller marked section gives <span class="inline-math"><math display="inline"><mrow><mi>j</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>R</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>
+in either diamond. Reading the new waist instead multiplies the central density by </p><div class="mathframe"><table class="equation-star"><tr><td>
+<math class="equation" display="block"><mrow>
+<mfrac><mrow><mi>j</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>S</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow>
+<mrow><mi>j</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>R</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi class="loglike">sinh</mi><mo>⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝜅𝑆</mi><mo class="MathClass-close" stretchy="false">)</mo><mstyle><mi class="loglike">sin</mi><mo>⁡</mo></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝜅𝑆</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow>
+<mrow><mi class="loglike">sinh</mi><mo>⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝜅𝑅</mi><mo class="MathClass-close" stretchy="false">)</mo><mstyle><mi class="loglike">sin</mi><mo>⁡</mo></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝜅𝑅</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msup><mrow><mi>S</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow><msup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mrow><mo fence="true" form="prefix">[</mo><mrow><mn>1</mn> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><msup><mrow><mi>κ</mi></mrow><mrow><mn>4</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>S</mi></mrow><mrow><mn>4</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>R</mi></mrow><mrow><mn>4</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo></mrow>
+<mrow><mn>90</mn></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>O</mi><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="italic">𝜅𝑆</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>8</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mo fence="true" form="postfix">]</mo></mrow><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td></tr></table></div>
+<p class="indent">   where the expansion holds at fixed <span class="inline-math"><math display="inline"><mrow><mi>R</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mi>S</mi></mrow></math></span>
+for <span class="inline-math"><math display="inline"><mrow><mi mathvariant="italic">𝜅𝑆</mi> <mo class="MathClass-rel" stretchy="false">≪</mo> <mn>1</mn></mrow></math></span>. The
+trace-free tide stretches one transverse direction and focuses the other. The two effects cancel at first order
+in <span class="inline-math"><math display="inline"><mrow><msup><mrow><mi>κ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></math></span> in
+the area. Both optical measurements use the same vacuum solution. Their agreement checks the classical
+location and calibration of the cut. Integrating the inhomogeneous density over a full waist would be a
+separate calculation. The uniform quantum charge and its evolution require the corner data specified
+above.
+                                                                                         
+                                                                                         
+   
+</p>
+<h2 class="sectionHead" id="obstruction-in-a-bounded-area-sector"><span class="titlemark">5   </span> <a id="x1-90005"></a>Obstruction in a bounded area sector</h2>
+<p class="noindent">The exact scaling test implies a restriction on any proposed physical realization. Suppose a sector supports a positive
+bounded area charge <span class="inline-math"><math display="inline"><mrow><msub><mrow><mi>K</mi></mrow><mrow><mstyle mathvariant="normal"><mi>sec</mi></mstyle></mrow></msub><mo class="MathClass-rel" stretchy="false">≠</mo><mn>0</mn></mrow></math></span>
+and a unitary <span class="inline-math"><math display="inline"><mrow><mstyle mathvariant="script"><mi>𝒰</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span>
+satisfying </p><div class="mathframe"><table class="equation"><tr><td>
+<math class="equation" display="block"><mrow>
+<mstyle class="label" id="x1-9001r8"></mstyle><mstyle mathvariant="script"><mi>𝒰</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo><msub><mrow><mi>K</mi></mrow><mrow><mstyle mathvariant="normal"><mi>sec</mi></mstyle></mrow></msub><mstyle mathvariant="script"><mi>𝒰</mi></mstyle><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi>a</mi></mrow></msup><msub><mrow><mi>K</mi></mrow><mrow><mstyle mathvariant="normal">
+<mi>sec</mi></mstyle></mrow></msub>
+</mrow></math></td><td class="eq-no">(8)</td></tr></table></div>
+<p class="noindent">for one nonzero real <span class="inline-math"><math display="inline"><mi>a</mi></math></span>. Unitary
+conjugation preserves operator norm, so <span class="inline-math"><math display="inline"><mrow><mo class="MathClass-rel" stretchy="false">∥</mo><msub><mrow><mi>K</mi></mrow><mrow><mstyle mathvariant="normal"><mi>sec</mi></mstyle></mrow></msub><mo class="MathClass-rel" stretchy="false">∥</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi>a</mi></mrow></msup><mo class="MathClass-rel" stretchy="false">∥</mo><msub><mrow><mi>K</mi></mrow><mrow><mstyle mathvariant="normal"><mi>sec</mi></mstyle></mrow></msub><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></math></span>,
+a contradiction. An isolated nonzero area eigenvalue also cannot have its complete continuous scaling orbit
+in a purely discrete spectrum. For the unbounded log chart the continuous spectrum is consistent with the
+dilation.
+</p><p class="indent">   For a sharp upper cutoff the failure can be seen directly in the wavefunctions. Project in log coordinates to
+<span class="inline-math"><math display="inline"><mrow><mi>q</mi> <mo class="MathClass-rel" stretchy="false">≤</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi class="qopname">max</mi><mo> ⁡ </mo></mrow></msub></mrow></math></span>. For
+<span class="inline-math"><math display="inline"><mrow><mi>a</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mn>0</mn></mrow></math></span>,
+<span class="inline-math"><math display="inline"><mrow><mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>a</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></span> moves all such
+wavefunctions into <span class="inline-math"><math display="inline"><mrow><mi>q</mi> <mo class="MathClass-rel" stretchy="false">≤</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi class="qopname">max</mi><mo> ⁡ </mo></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>a</mi></mrow></math></span>.
+Its restriction is isometric into a proper subspace. It is not onto, and its adjoint followed in
+the other order gives only the projection onto that subspace. Compressing the full dilation
+therefore cannot supply a unitary group on the cutoff Hilbert space. A transition between
+different cutoff sectors would have different source and target spaces and must be analyzed as
+such.
+</p><p class="indent">   Chandrasekaran argues for a finite-dimensional Hilbert space and discrete area spectrum for a
+macroscopic diamond with a prescribed maximum size under the assumptions of his construction <span class="cite">[<a href="#Xnc">1</a>,
+Sec. 5.2]</span>. In such a sector Eq. (<a href="#x1-9001r8">8</a>) forbids the exact dilation on any nonzero area charge. This does
+not affect the source’s relative boosts generated by the area. Those unitaries commute with
+the area operator. A gravitational realization of the ordered test would therefore require a
+different sector admitting the requisite spectrum, appropriate inter-sector operators, or a
+controlled approximation with stated errors. The calculation has exhibited exact equality for a
+decorated kinematic model and an explicit failure for bounded sectors. Identifying dynamical
+probes and their physical domains would decide which case applies to an actual marked-cut
+experiment.
+   
+                                                                                         
+                                                                                         
+</p>
+<h2 class="likesectionHead" id="references"> <a id="x1-10000"></a>References</h2>
+<p class="noindent">
+</p><section class="thebibliography" role="doc-bibliography"><dl><dt>
+ [1]</dt><dd><a id="Xnc"></a>V.  Chandrasekaran,  <span class="ec-lmri-10x-x-109">An  algebraic  quantization  of  gravity  from  the  null  cone  </span>(2026).
+   <a href="https://arxiv.org/abs/2611.34924v1">arXiv:2611.34924v1</a>.
+   </dd><dt>
+ [2]</dt><dd><a id="Xcp"></a>V.  Chandrasekaran  and  K.  Prabhu,  <span class="ec-lmri-10x-x-109">Symmetries,  charges  and  conservation  laws  at  causal
+   diamonds in general relativity </span>(2019). <a href="https://arxiv.org/abs/1908.00017">arXiv:1908.00017</a>.
+   </dd><dt>
+ [3]</dt><dd><a id="Xklauder"></a>J. R. Klauder, <span class="ec-lmri-10x-x-109">New Affine Coherent States Based on Elements of Nonrenormalizable Scalar Field
+   Models</span>, Advances in Mathematical Physics (2010), article 191529. <a href="https://doi.org/10.1155/2010/191529">doi:10.1155/2010/191529</a>.
+   </dd><dt>
+ [4]</dt><dd><a id="Xharte-drivas"></a>A.  I.  Harte  and  T.  D.  Drivas,  <span class="ec-lmri-10x-x-109">Caustics  and  wave  propagation  in  curved  spacetimes</span>,
+   Phys. Rev. D 85 (2012), 124039. <a href="https://arxiv.org/abs/1202.0540">arXiv:1202.0540</a>.</dd></dl></section>
+</main><script defer="" src="/assets/reader.js"></script></body>
+</html>

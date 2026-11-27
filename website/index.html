@@ -10,19 +10,35 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="mast"><div class="shell nav"><a class="brand" href="/" aria-label="YonedaAI Research Collective home"><span class="mark" aria-hidden="true">◇</span> YonedaAI <span class="mast-sub">Research Collective</span></a><nav aria-label="Main"><a href="#papers">Papers</a><a href="#program">Program</a><a href="https://github.com/YonedaAI/Categorical-Null-Cone-Quantum-Gravity">Repository ↗</a></nav></div></header>
+<header class="mast"><div class="shell nav"><a class="brand" href="/" aria-label="YonedaAI Research Collective home"><span class="mark" aria-hidden="true">◇</span> YonedaAI <span class="mast-sub">Research Collective</span></a><nav aria-label="Main"><a href="#status">Research status</a><a href="#papers">Papers</a><a href="#program">Program</a><a href="https://github.com/YonedaAI/Categorical-Null-Cone-Quantum-Gravity">Repository ↗</a></nav></div></header>
 <main id="main">
 <section class="shell hero" aria-labelledby="title"><div class="intro"><div class="kicker">Mathematical physics <span>/</span> Research series</div>
 <h1 id="title">Categorical Null-Cone<br class="wide"> Quantum Gravity</h1>
 <p>Can two constructions of a gravitational observable agree when an observer’s causal diamond grows?</p>
 <div class="actions"><a class="button" href="/read/synthesis/">Read the perspective <span aria-hidden="true">↗</span></a><a class="quiet" href="#papers">Browse the papers ↓</a></div>
 </div><figure class="cone"><div class="plate"><img src="/assets/diamond.png" width="760" height="570" alt="Two null cones share a circular waist. The upper cone ends at q and the lower cone begins at p."><i class="tip q" aria-hidden="true">q</i><i class="tip p" aria-hidden="true">p</i><i class="tip waist" aria-hidden="true">S</i></div><figcaption>A causal diamond. <span>Null sheets meet at the corner <i>S</i>.</span></figcaption></figure></section>
+<section id="status" class="shell research-status" aria-labelledby="status-heading">
+<h2 id="status-heading">Research status</h2>
+<div class="status-copy">
+<p>In a model with positive area, changing the order of two operations changes their product by a phase. One operation probes the logarithm of the area at a marked cut. The other rescales the area. The phase survives when the model keeps the cut marked and adds an independent system.</p>
+<ul role="list" class="status-links" aria-label="Marked-cut note and proof">
+<li><a href="/read/marked-cut/">Read the supplementary note</a></li>
+<li><a href="/papers/marked-cut.pdf">Download the note (PDF)</a></li>
+<li><a href="https://github.com/YonedaAI/Categorical-Null-Cone-Quantum-Gravity/blob/main/lean/Cmrps/MarkedCut.lean">Lean proof for the model ↗</a></li>
+</ul>
+<p>The correspondence for a gravitational diamond remains open. In <cite>Observables as Cohomology</cite>, the classical observables commute under multiplication. A product-preserving map from that algebra cannot reach every observable in the noncommutative null-cone algebra. The next step is to construct quantum probes from gravitational data and compare their products as the diamond grows.</p>
+<ul role="list" class="status-links" aria-label="Source comparison and proof">
+<li><a href="https://github.com/YonedaAI/Categorical-Null-Cone-Quantum-Gravity/blob/main/context/manuscript-comparison.md">Dated manuscript comparison ↗</a></li>
+<li><a href="https://github.com/YonedaAI/Categorical-Null-Cone-Quantum-Gravity/blob/main/lean/Cmrps/ClassicalImage.lean">Lean proof of the obstruction ↗</a></li>
+</ul>
+</div></section>
 <section class="library" id="papers" aria-labelledby="paper-heading"><div class="shell"><div class="section-top"><h2 id="paper-heading">The papers</h2><span>Matthew Long · November 2026</span></div>
 <div class="paperlist">
 <a class="row" href="/read/foundations/"><span class="num">Part I</span><div><h3>Categorical Foundations of Null-Cone Quantization</h3><p>Which boundary measurements still define the same observable in a larger diamond?</p></div><span class="row-go" aria-hidden="true">↗</span></a>
 <a class="row" href="/read/reduction/"><span class="num">Part II</span><div><h3>Derived Gauge Reduction and Quantum Observable Algebras</h3><p>A shared constraint leaves a relative coordinate and momentum in a two-boundary model.</p></div><span class="row-go" aria-hidden="true">↗</span></a>
 <a class="row" href="/read/gluing/"><span class="num">Part III</span><div><h3>Gravitational Gluing and Categorical Descent</h3><p>Boundary probes can distinguish two ways of cutting and rejoining the same system.</p></div><span class="row-go" aria-hidden="true">↗</span></a>
 <a class="row" href="/read/synthesis/"><span class="num">Perspective</span><div><h3>The Categorical Null-Cone Realization Conjecture</h3><p>A comparison on one diamond embedding sets the first test for a shared dynamics.</p></div><span class="row-go" aria-hidden="true">↗</span></a>
+<a class="row" href="/read/marked-cut/"><span class="num">Supplement</span><div><h3>Ordered probes at a marked null cut</h3><p>A log-area reading and a dilation acquire a phase when their order is reversed.</p></div><span class="row-go" aria-hidden="true">↗</span></a>
 </div></div></section>
 <section id="program" class="shell program" aria-labelledby="program-heading"><div><div class="kicker">Research program</div><h2 id="program-heading">From a diamond to dynamics</h2><p>The first three papers work through the algebra of local measurements and shared boundaries. Four further volumes depend on constructing the physical comparison.</p>
 <a class="quiet" href="https://github.com/YonedaAI/Categorical-Null-Cone-Quantum-Gravity/tree/main/lean">Explore the Lean 4 models ↗</a></div>

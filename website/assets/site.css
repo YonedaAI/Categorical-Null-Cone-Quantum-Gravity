@@ -32,3 +32,8 @@ h2{font-size:clamp(2.65rem,4.3vw,4.2rem);line-height:1.04;letter-spacing:-.035em
 @media(max-width:400px){.nav{align-items:flex-start}.brand{width:100%}h1{font-size:3.5rem}.actions{gap:.8rem}.kicker{font-size:.65rem}}
 
 .library :focus-visible,.reader main :focus-visible{outline-color:#995000}
+
+.research-status{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(1.4rem,5vw,5rem);border-top:1px solid var(--line);padding-block:clamp(2.2rem,5vw,4.2rem)}
+.status-copy{max-width:63ch;color:#d0d9d9}.status-links{display:flex;flex-wrap:wrap;gap:.45rem 1.25rem;margin:.65rem 0 0;padding:0;list-style:none;color:var(--accent);font-size:.92rem}
+.status-links+p{margin-top:1.5rem}
+@media(max-width:740px){.research-status{grid-template-columns:minmax(0,1fr);gap:1.1rem}}
