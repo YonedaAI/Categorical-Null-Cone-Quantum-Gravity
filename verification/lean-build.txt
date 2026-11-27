@@ -1,11 +1,9 @@
-✔ [1302/1308] Built Cmrps.Pauli (622ms)
-✔ [1303/1308] Built Cmrps.Transport (2.0s)
-✔ [1304/1308] Built Cmrps.Reduction (2.0s)
-✔ [1305/1308] Built Cmrps.Sewing (2.0s)
-✔ [1306/1308] Built Cmrps.Invisible (2.0s)
-✔ [1307/1308] Built Cmrps (848ms)
-Build completed successfully (1308 jobs).
-
-After adding Cmrps.ClassicalImage
-✔ [1315/1317] Built Cmrps.ClassicalImage (3.8s)
-Build completed successfully (1317 jobs).
+✔ [2005/2013] Built Cmrps.Pauli (673ms)
+✔ [2006/2013] Built Cmrps.Transport (2.2s)
+✔ [2007/2013] Built Cmrps.Reduction (2.2s)
+✔ [2008/2013] Built Cmrps.Sewing (2.2s)
+✔ [2009/2013] Built Cmrps.Invisible (2.2s)
+✔ [2010/2013] Built Cmrps.ClassicalImage (2.2s)
+✔ [2011/2013] Built Cmrps.MarkedCut (2.4s)
+✔ [2012/2013] Built Cmrps (988ms)
+Build completed successfully (2013 jobs).

@@ -4,7 +4,7 @@ Run these commands after cloning.
 
 ```sh
 cd lean
-lake exe cache get Mathlib.Algebra.Star.Subalgebra Mathlib.Algebra.Ring.Subring.Basic Mathlib.GroupTheory.GroupAction.Basic Mathlib.Data.Matrix.Mul Mathlib.Data.Matrix.Basis Mathlib.RingTheory.TwoSidedIdeal.Operations Mathlib.Tactic.Abel
+lake exe cache get Mathlib.Algebra.Star.Subalgebra Mathlib.Algebra.Ring.Subring.Basic Mathlib.GroupTheory.GroupAction.Basic Mathlib.Data.Matrix.Mul Mathlib.Data.Matrix.Basis Mathlib.RingTheory.TwoSidedIdeal.Operations Mathlib.Tactic.Abel Mathlib.Analysis.SpecialFunctions.Log.Basic Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
 lake build
 ```
 
@@ -12,6 +12,7 @@ Lean 4.35.0 and the mathlib revision at tag v4.35.0 are pinned in the project. A
 
 | Module | Declarations | Mathematical scope |
 | --- | --- | --- |
+| MarkedCut | `logReading_rescale`, `phase_add`, `norm_phase`, `phase_shift_halfturn`, `waist_phase_flip`, `exists_waist_phase_ne`, `probe_product`, `onFirst_injective`, `lifted_probe_product`, `probe_tensor`, `forget_halfturn`, `forget_star_mul`, `forget_not_multiplicative` | A change of radius moves the logarithm of a calibrated round patch area by twice the logarithm of the scale factor. A bounded phase distinguishes the two readings. Translations and complex phase multipliers satisfy the ordered product law on arbitrary functions. Acting on the first coordinate preserves this law, intertwines product functions, and is faithful when a spectator label exists. Averaging two distinct calibration phases at a half turn kills the reading and retains its adjoint product, proving failure of multiplicativity. |
 | ClassicalImage | `not_surjective_of_noncommuting`, `not_surjective_to_matrix` | A semiring homomorphism from a commutative source cannot be onto a target containing two elements whose products depend on their order. Opposite matrix units supply witnesses in any finite matrix algebra with at least two indices over a nontrivial semiring. |
 | Transport | `agree_of_generates`, `natural_on_arrow`, `star_natural_on_arrow` | Ring maps agree under generation as a ring over the integers. The separate star-algebra theorem permits scalar coefficients and applies over the complex numbers. Both prove equality of a comparison square from its equation on generators. |
 | Invisible | `mem_stableKernel`, `stableKernel_le`, `map_mem_stableKernel`, `stableKernel_greatest` | On an inclusion preorder, intersecting preimages of local two-sided ideals gives the largest compatible family below them. The proofs assume ring transports with identity and composition. The ideals here are algebraic two-sided ideals. Involution and norm closure would require extra hypotheses. |
@@ -20,3 +21,5 @@ Lean 4.35.0 and the mathlib revision at tag v4.35.0 are pinned in the project. A
 | Sewing | `sectorProjector_idempotent`, `sewing_assoc`, `compression_eq_iff` | A diagonal choice of admissible labels gives an idempotent. Three kernels with finite intermediate label spaces and two fixed cuts can be multiplied in either order over any semiring. Compression to coordinate preparations and detectors tests exactly the entries they select. |
 
 The type parameters can range over infinite sets where a lemma does not sum over them. The sewn intermediate label types in `sewing_assoc` must be finite. The construction of gravitational algebras, their comparison, convergence of continuum amplitudes and the field equations remain conjectural research targets in this series. No physics assumptions are imported as Lean axioms.
+
+The marked-cut results assume the calibrated area formula as input. They concern pointwise functions before measure, operator closure, or a gravitational representation is chosen.

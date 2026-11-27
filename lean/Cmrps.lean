@@ -6,3 +6,4 @@ public import Cmrps.Sewing
 public import Cmrps.Invisible
 public import Cmrps.Pauli
 public import Cmrps.ClassicalImage
+public import Cmrps.MarkedCut

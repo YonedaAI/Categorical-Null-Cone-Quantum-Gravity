@@ -1,0 +1,190 @@
+\documentclass[11pt,letterpaper]{article}
+\input{preamble}
+\title{Ordered probes at a marked null cut\\[4pt]{\normalsize Supplement to \emph{Categorical Null-Cone Quantum Gravity}}}
+\ifdefined\HCode\else\papersidebar{marked-cut}\fi
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A larger causal diamond can contain the marked waist of a smaller diamond without sharing its waist. Recording the mark resolves which area is read, but a single area reading cannot test the order of two quantum operations. We study the uniform area and relative boost at a retained cut. On a positive-area chart the logarithm of the integrated boost charge has a canonical conjugate that generates dilations of area. A phase reading of the logarithm and a shift of its calibration give an explicit algebra of ordered probes. Quantization of the chart gives a unitarily equivalent representation, and a Gaussian preparation detects the change of order. For flat diamonds with a common emission event we compute the map that retains the inner cut when the added apparatus is a spectator. Reading the larger waist instead multiplies the flat area by the squared ratio of radii. A vacuum plane wave gives a curvature-dependent ratio for the density along a marked ray. An exact unitary dilation is impossible within any nonzero area sector bounded above. The calculation isolates the extra operation, boundary decoration and spectral assumptions a gravitational realization would require.
+\end{abstract}
+
+\section{The matched corner}
+
+Two null boundaries can meet at a surface carrying an area and a relative normal frame. To compare a quantum measurement across regions, the same pair of operations must have a meaning on each side. A single commuting family of area readings cannot decide whether order matters. A second operation that changes the measured area provides a test. We give such an operation in a one-mode chart and calculate its ordered amplitudes and its transport on a proper inclusion.
+
+Chandrasekaran describes opposite orientations on two pieces meeting at a cut. After the angular coordinates are identified, let $K_\pm(y)$ be their boost charge aspects, and let $\gamma(y)=\Gamma_R(y)-\Gamma_L(y)$ be the relative boost. The matching of the induced metrics gives $K_+=K_-=K(y)$. The surviving boost contribution to the symplectic potential is $K(y)\,\delta\gamma(y)$ per unit reference solid angle \cite[Eqs.~(3.63) and (3.64)]{nc}. The integral of the charge aspect is the area in units of $8\pi G_N$ \cite[Eq.~(3.43)]{nc}. Write, with $c=1$,
+\[
+ K=\int_S K(y)\,d\Omega_0=\frac{A}{8\pi G_N}.
+\]
+The positive constant $K_*$ used below has the same units as $K$, namely action. Relative rapidities are dimensionless.
+
+We keep a marked cut with its angular and relative frame data. Set $\gamma(y)=\gamma$ uniform and take variations with fixed normalized area profile, so only its total weight $K$ varies. Pulling the boost term back gives $\theta=K\,d\gamma$. We study the two-dimensional chart on which the remaining contributions to the pulled-back symplectic form vanish. This is an assumption about the chart. Eq.~(3.42) includes couplings of the area aspect to the conformal metric and the choice of normals. The uniform one-form by itself gives no symplectic splitting of the full reduced phase space. Classical work on causal-diamond symmetries also tracks matching between the two null boundaries \cite{cp}. Discarding the mark after gluing changes the experiment. The source explicitly removes the frame of a cut used purely for subdivision \cite[Sec.~3.6]{nc}.
+
+On the open chart $K>0$ define
+\begin{equation}
+ Q=\log(K/K_*),\qquad P=-K\gamma .
+ \label{eq:chart}
+\end{equation}
+The sign is fixed by
+\[
+ K\,d\gamma=d(K\gamma)-\gamma\,dK=d(K\gamma)+P\,dQ .
+\]
+With $\{Q,P\}=1$ this yields $\{\gamma,K\}=1$ and $\{K,P\}=K$. The Hamiltonian flow of $K$ changes the relative boost and keeps the area fixed. The Hamiltonian flow of $P$ scales $K$ by $e^a$ and scales $\gamma$ by $e^{-a}$. These are different transformations even at a single cut. The full preprint implements a relative boost through the area generator and characterizes insertions of definite boost frequency by their area change \cite[Eq.~(4.12)]{nc}. Those formulas do not construct the unitary dilation used below.
+
+\section{Two ordered operations}
+
+\subsection{An apparatus in positive-area coordinates}
+
+Let $k>0$ be the possible reading of $K$. Take a coherent calibration amplitude $F(k)$ normalized by $\int_0^\infty |F(k)|^2\,dk=1$. For real, dimensionless settings $a,b$, specify the two operations by their effects on that amplitude,
+\begin{equation}
+ (L_bF)(k)=(k/K_*)^{ib}F(k),\qquad
+ (S_aF)(k)=e^{a/2}F(e^ak).
+ \label{eq:apparatus}
+\end{equation}
+The first operation applies a phase that depends on the log reading. A phase-sensitive preparation and comparison are implicit. A classical detector that merely records a probability distribution would miss this phase. The second rescales the argument of the amplitude and compensates for the Jacobian in the normalization. Its sign convention means the peak of a narrow state moves towards smaller $k$ for positive $a$. Conjugation of the multiplication observable by $S_a$ sends $k$ to $e^ak$.
+
+A change of integration variable proves that both operations are unitary. Moving the rescaling past the phase gives
+\begin{equation}
+ S_a L_b=e^{iab}L_b S_a .
+ \label{eq:phase}
+\end{equation}
+Thus the order can be tested with bounded operators for every setting. Put $V(a,b)=L_bS_a$ on the apparatus. Multiplying two such words gives
+\begin{equation}
+ V(a,b)V(c,d)=e^{iad}V(a+c,b+d),\qquad
+ V(a,b)^*=e^{iab}V(-a,-b).
+ \label{eq:words}
+\end{equation}
+These equalities use only the operation rules and the normalization of positive-area amplitudes. The labels were chosen to model multiplicative calibration; deriving those rules from a category of physical contexts is a distinct question.
+
+\subsection{Quantization in a corner chart}
+
+In the chart \eqref{eq:chart} take the regular Schr\"odinger representation on $\mathcal H=L^2(\mathbb R,dq)$. The log reading $Q$ multiplies by $q$, $K$ multiplies by $K_*e^q$, and $P=-i\hbar\partial_q$ is the self-adjoint translation generator with its usual Sobolev domain. On $C_c^\infty(\mathbb R)$,
+\[
+ [Q,P]=i\hbar\,1,\qquad [K,P]=i\hbar K .
+\]
+The unbounded $K$ has spectrum $[0,\infty)$, with zero absent as an eigenvalue. Equation~\eqref{eq:chart} is used only on strictly positive classical readings. No self-adjoint rapidity generating arbitrary translations through $K=0$ is needed. The position-dilation pair on the positive half-line is familiar from affine quantization \cite[Sec.~2.1]{klauder}. Here it comes from a chosen uniform corner term.
+
+The bounded operations are
+\[
+ M(b)=e^{ibQ},\qquad U(a)=e^{iaP/\hbar},\qquad
+ (U(a)\psi)(q)=\psi(q+a).
+\]
+Substitution of a shifted argument gives $U(a)M(b)=e^{iab}M(b)U(a)$. The following comparison also fixes which vector amplitudes should be regarded as the same preparation.
+
+\begin{proposition}[Ordered probe comparison]
+The unitary change of variables
+\begin{equation}
+ (JF)(q)=(K_* e^q)^{1/2}F(K_*e^q)
+ \label{eq:intertwiner}
+\end{equation}
+from $L^2(\mathbb R_+,dk)$ to $\mathcal H$ carries $L_b$ to $M(b)$ and $S_a$ to $U(a)$ by conjugation. It identifies their unital algebras of finite linear combinations of words, their operator norm closures and the word expectations of corresponding unit vectors.
+\end{proposition}
+\begin{proof}
+The measure change is $dk=K_*e^q\,dq$. It gives the norm equality and the inverse $(J^{-1}\psi)(k)=k^{-1/2}\psi(\log(k/K_*))$. The readout phase becomes $e^{ibq}$. In the shift, the product $(K_*e^q)^{1/2}e^{a/2}$ is the square root of $K_*e^{q+a}$, giving $JS_aF(q)=JF(q+a)$. Conjugation therefore preserves every ordered product, adjoint and norm. For a unit vector $F$ its matrix elements agree with those at $JF$.
+\end{proof}
+
+Although this comparison uses two descriptions, both describe a continuous positive-area reading with coherent dilations. It checks the consequences of those inputs. The physical identification is stronger: one would need a rule for constructing the probe phases and shifts using the original context data, and a gravitational operator that realizes the shift on the same prepared states. The one-mode chart assumes the required degrees of freedom survive the constraints. A reference rapidity shift generated by $K$ would commute with $M(b)$ and would fail the order test \eqref{eq:phase}.
+
+\section{A state that resolves the order}
+
+Take the normalized wavefunction
+\begin{equation}
+ \psi(q)=(2\pi\sigma^2)^{-1/4}
+   \exp\left[-\frac{(q-q_0)^2}{4\sigma^2}
+          +\frac{i p_0(q-q_0)}{\hbar}\right],
+ \quad \sigma>0 .                                     \label{eq:state}
+\end{equation}
+The center and width of $q$ are dimensionless, while $p_0$ has units of action. For the ordered word $W(a,b)=M(b)U(a)$ a direct integral gives
+\begin{equation}
+ \langle W(a,b)\rangle_\psi
+ =\exp\left[-\frac{a^2}{8\sigma^2}-\frac{\sigma^2 b^2}{2}\right]
+  \exp\left[i b(q_0-a/2)+ i p_0a/\hbar\right].          \label{eq:gaussian}
+\end{equation}
+Indeed, $\overline{\psi(q)}\psi(q+a)$ carries phase $p_0a/\hbar$. Its real Gaussian envelope is centered at $q_0-a/2$ with the prefactor $\exp[-a^2/(8\sigma^2)]$. Integrating $e^{ibq}$ against that envelope gives the remaining two factors. The inverse change \eqref{eq:intertwiner} produces a lognormal area distribution for the apparatus and exactly the same ordered expectation.
+
+For $q_0=p_0=0$, $\sigma=1$, and $a=b=\sqrt{\pi}$, the two orders have expectations $-i e^{-5\pi/8}$ and $+i e^{-5\pi/8}$, respectively. The squared modulus alone is the same. A reference branch that performs the identity can recover the imaginary part by measuring the Hermitian operator $(W-W^*)/(2i)$, or equivalently by a controlled interference experiment. Thus one can distinguish the operations in a specified state without assigning a sharp value to both conjugate coordinates. A constant change of the reference $K_*$ rephases the readout in both orders by the same factor and leaves their ratio unchanged.
+
+\section{A proper inclusion with a retained cut}
+
+In Minkowski spacetime in units $c=1$ let $p=(0,\mathbf 0)$ and $q_R=(2R,\mathbf 0)$ for $R>0$. The diamonds $D_R=J^+(p)\cap J^-(q_R)$ share the outgoing sheet $r=t$ up to the smaller waist whenever $0<R<S$. On $D_R$ the waist lies at $t=r=R$. Its sphere $C_R$ is a cross-section of the larger diamond's outgoing sheet. It is not the larger waist $C_S$. Normalize affine readings by the inertial clock at $p$, and retain $R$, the angular frame and the second normal frame defining the relative rapidity at $C_R$. The marked larger system is denoted by $(D_S,C_R)$. The larger diamond's outer boundary alone supplies no marked second frame at that internal cross-section.
+
+For the flat reference geometry the total area gives $K_R=4\pi R^2/(8\pi G_N)$. If the observer instead reads the waist of the larger diamond, the result is
+\[
+ K_S=(S/R)^2K_R,\qquad
+ Q_S-Q_R=2\log(S/R).
+\]
+Accordingly the dimensionless phase $e^{ibQ}$ for this alternative reading acquires a factor $e^{2ib\log(S/R)}$. The ratio applies to these two flat reference spheres. It is not a transport law for arbitrary fluctuating areas in the two diamonds. The geometric calculation fixes which measurement one wants to model. A single fixed Minkowski solution has a definite classical waist area; the state \eqref{eq:state} belongs to the one-mode quantization.
+
+For a precise enlarged quantum system choose an auxiliary Hilbert space $\mathcal B$ of dimension at least two, representing added distinguishable operations. Assume that after enlarging the diamond the marked degree of freedom remains a tensor factor. Use $L^2(\mathbb R_+,dk)\otimes\mathcal B$ on the apparatus side and $\mathcal H\otimes\mathcal B$ on the corner side, allowing auxiliary operators $1\otimes B$ with $B\in B(\mathcal B)$. The maps on marked observables are
+\[
+ \iota_{\mathrm{op}}(A)=A\otimes 1,\qquad
+ \iota_{\mathrm{c}}(C)=C\otimes 1,\qquad J_S=J\otimes1.
+\]
+The resulting square commutes since
+\[
+ J_S\iota_{\mathrm{op}}(A)J_S^*=(JAJ^*)\otimes1
+                            =\iota_{\mathrm{c}}(JAJ^*) .
+\]
+These injections are proper if the target algebras also contain the stated auxiliary operators. They preserve the ordered expectations for the product preparation $F\otimes\xi$ and its counterpart $JF\otimes\xi$, where $\|\xi\|=1$. Further independent enlargements compose with the canonical identification of iterated tensor products. If the added systems couple through corner constraints or if the cut frame is removed, the spectator argument has no premise. A proper inclusion of spacetime regions by itself gives neither a tensor factor nor a gravitational algebra map.
+
+\subsection{Forgetting a calibration label}
+
+Suppose a two-valued auxiliary label selects one of two references for the log reading. Let $c_0\ne c_1$ be the corresponding shifts, and let $E_j$ project onto label $j$ in $\mathbb C^2$. Acting before forgetting this label gives the unital embedding
+\[
+ \alpha(A)=V(A\otimes1)V^*,\qquad
+ V=U(c_0)\otimes E_0+U(c_1)\otimes E_1 .
+\]
+Conjugation and Eq.~\eqref{eq:phase} give
+\[
+ \alpha(M(b))=M(b)\otimes(e^{ibc_0}E_0+e^{ibc_1}E_1),
+ \qquad \alpha(U(a))=U(a)\otimes1 .
+\]
+The unitarity of the diagonal label factor preserves the ordered algebra. To describe an apparatus that forgets the label in an equal mixture, apply the normalized partial trace $\Phi=\mathrm{id}\otimes\mathrm{tr}_2$. Then $\Phi\alpha(M(b))$ multiplies $M(b)$ by $(e^{ibc_0}+e^{ibc_1})/2$. For $b=\pi/(c_1-c_0)$ the coefficient is zero, whereas $\Phi\alpha(M(b)^*M(b))=1$. The averaged map is unital and completely positive, and it fails multiplicativity. Keeping or forgetting even this small piece of frame data thus changes the answer to the algebra transport question. The label represents a choice of calibration. No curvature degree of freedom was quantized in this test.
+
+\subsection{An optical calibration in a vacuum plane wave}
+\label{sec:plane-calibration}
+
+Curvature changes the flat square law for the area of an angular patch. In units with \(c=1\), take the vacuum plane wave
+\[
+ ds^2=-2\,du\,dv+dx^2+dy^2+\kappa^2(x^2-y^2)\,du^2,\qquad \kappa>0.
+\]
+Its transverse profile has zero trace, so \(R_{uu}=0\). Work inside a sufficiently small causally convex normal neighborhood of the emission event \(p=(0,0,0,0)\). Put \(q_U=(U,U,0,0)\) on the timelike central worldline. The diamonds with tips \(p,q_R\) and \(p,q_S\) are nested for \(0<R<S\) in this neighborhood. The central outgoing ray has \(v=x=y=0\). It reaches the smaller waist at \(u=R\) and the larger at \(u=S\). Indeed, the ray at fixed \(u=U,x=y=0\) from \(v=0\) to \(v=U\) is null and future directed. Tip chronometry and a common initial frame fix the affine and angular calibrations.
+
+Label nearby outgoing rays by their initial transverse slopes \(\xi_1,\xi_2\) with \(u\) as affine parameter. The separation matrix \(B\) obeys
+\[
+ B''=\operatorname{diag}(\kappa^2,-\kappa^2)B,\quad
+ B(0)=0,\quad B'(0)=1,\qquad
+ B(u)=\kappa^{-1}\operatorname{diag}(\sinh(\kappa u),\sin(\kappa u)).
+\]
+Harte and Drivas give this Jacobi propagator in unit profile normalization \cite[Eqs.~(3.90)--(3.93)]{harte-drivas}. The area per unit initial slope area, measured by separation of rays at the central generator, is \(j(u)=\det B(u)>0\) on \(0<u<\pi/\kappa\). The same result follows from the induced cut metric. On the outgoing cone the transverse position is \(B(u)\xi\). At fixed \(u\) the transverse metric in slope coordinates is \(B(u)^{\mathsf T}B(u)\). Moving from that affine slice to a sloping cross-section through the same point adds multiples of the null generator to its tangents, which leaves their inner products unchanged. Thus this calculation also applies to the actual waist at the central ray. It measures a local density. A finite patch requires integration with its own cut function.
+
+Retaining the smaller marked section gives \(j(R)\) in either diamond. Reading the new waist instead multiplies the central density by
+\[
+ \frac{j(S)}{j(R)}
+ =\frac{\sinh(\kappa S)\sin(\kappa S)}{\sinh(\kappa R)\sin(\kappa R)}
+ =\frac{S^2}{R^2}\left[1-\frac{\kappa^4(S^4-R^4)}{90}
+       +O((\kappa S)^8)\right],
+\]
+where the expansion holds at fixed \(R/S\) for \(\kappa S\ll 1\). The trace-free tide stretches one transverse direction and focuses the other. The two effects cancel at first order in \(\kappa^2\) in the area. Both optical measurements use the same vacuum solution. Their agreement checks the classical location and calibration of the cut. Integrating the inhomogeneous density over a full waist would be a separate calculation. The uniform quantum charge and its evolution require the corner data specified above.
+
+\section{Obstruction in a bounded area sector}
+
+The exact scaling test implies a restriction on any proposed physical realization. Suppose a sector supports a positive bounded area charge $K_{\mathrm{sec}}\ne0$ and a unitary $\mathcal U(a)$ satisfying
+\begin{equation}
+ \mathcal U(a)K_{\mathrm{sec}}\mathcal U(a)^*=e^aK_{\mathrm{sec}}
+ \label{eq:cutoff}
+\end{equation}
+for one nonzero real $a$. Unitary conjugation preserves operator norm, so $\|K_{\mathrm{sec}}\|=e^a\|K_{\mathrm{sec}}\|$, a contradiction. An isolated nonzero area eigenvalue also cannot have its complete continuous scaling orbit in a purely discrete spectrum. For the unbounded log chart the continuous spectrum is consistent with the dilation.
+
+For a sharp upper cutoff the failure can be seen directly in the wavefunctions. Project in log coordinates to $q\le q_{\max}$. For $a>0$, $U(a)$ moves all such wavefunctions into $q\le q_{\max}-a$. Its restriction is isometric into a proper subspace. It is not onto, and its adjoint followed in the other order gives only the projection onto that subspace. Compressing the full dilation therefore cannot supply a unitary group on the cutoff Hilbert space. A transition between different cutoff sectors would have different source and target spaces and must be analyzed as such.
+
+Chandrasekaran argues for a finite-dimensional Hilbert space and discrete area spectrum for a macroscopic diamond with a prescribed maximum size under the assumptions of his construction \cite[Sec.~5.2]{nc}. In such a sector Eq.~\eqref{eq:cutoff} forbids the exact dilation on any nonzero area charge. This does not affect the source's relative boosts generated by the area. Those unitaries commute with the area operator. A gravitational realization of the ordered test would therefore require a different sector admitting the requisite spectrum, appropriate inter-sector operators, or a controlled approximation with stated errors. The calculation has exhibited exact equality for a decorated kinematic model and an explicit failure for bounded sectors. Identifying dynamical probes and their physical domains would decide which case applies to an actual marked-cut experiment.
+
+\begin{thebibliography}{9}
+\bibitem{nc} V. Chandrasekaran, \emph{An algebraic quantization of gravity from the null cone} (2026). \href{https://arxiv.org/abs/2611.34924v1}{arXiv:2611.34924v1}.
+\bibitem{cp} V. Chandrasekaran and K. Prabhu, \emph{Symmetries, charges and conservation laws at causal diamonds in general relativity} (2019). \href{https://arxiv.org/abs/1908.00017}{arXiv:1908.00017}.
+\bibitem{klauder} J. R. Klauder, \emph{New Affine Coherent States Based on Elements of Nonrenormalizable Scalar Field Models}, Advances in Mathematical Physics (2010), article 191529. \href{https://doi.org/10.1155/2010/191529}{doi:10.1155/2010/191529}.
+\bibitem{harte-drivas} A. I. Harte and T. D. Drivas, \emph{Caustics and wave propagation in curved spacetimes}, Phys.\ Rev.\ D 85 (2012), 124039. \href{https://arxiv.org/abs/1202.0540}{arXiv:1202.0540}.
+\end{thebibliography}
+\end{document}
